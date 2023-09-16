@@ -360,7 +360,7 @@ ul {
 
     .navbar__phone, .navbar__social-media {
         position: absolute;
-        left: 57%; /* adjust as needed */
+        left: 55%; /* adjust as needed */
         top: 50%; /* adjust as needed */
         transform: translateY(-50%); /* centers vertically */
         display: flex;
@@ -368,6 +368,10 @@ ul {
         gap: 10px; /* adjust as needed for more or less space between icons */
     }
 
+    .navbar__social-media i {
+        font-size: 16px;  /* adjust this value to make it smaller on mobile */
+    }
+    
     .dropdown-content {
         display: none;
         padding: 0;
