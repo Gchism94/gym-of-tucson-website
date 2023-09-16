@@ -1019,12 +1019,22 @@ ul {
     .membership__card {
       flex-direction: column;
       align-items: center;
+      width: 100%;  /* Make the card wider */
+      padding: 1rem;  /* Reduce padding */
     }
     
     .card-image {
-      width: 80%;
+      width: 100%;
       text-align: center;
     }
+
+    .card-image img {
+        width: 100%;  /* Increase width */
+      }
+
+    .card-content {
+        width: 100%;  /* Increase width */
+      }
     
     .membership__card .card-content {
       margin-top: 1rem;
