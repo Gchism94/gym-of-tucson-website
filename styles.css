@@ -671,7 +671,8 @@ ul {
 }
 
 .team__content h2 {
-    word-wrap: break-word;
+    max-width: 70%;  /* Adjust this percentage according to your needs */
+    overflow-wrap: break-word;
 }
 
 
