@@ -947,7 +947,7 @@ ul {
       }
 
       #main-page .team__card::after {
-        height: 125px; /* Adjust this to change the height of the black block */
+        height: 140px; /* Adjust this to change the height of the black block */
     }
 }
 
@@ -1679,7 +1679,7 @@ ul {
 
 .footer__form {
     width: 100%;
-    padding: 0em 1em 1em;
+    padding: 0em 2em 2em;
 }
 
 .footer__form select {
