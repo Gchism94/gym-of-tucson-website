@@ -943,7 +943,6 @@ ul {
     }
     
     .team__card{
-        width: 100%; /* or any max-width you prefer */
         display: flex;
         flex-direction: column;
         align-items: center;
