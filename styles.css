@@ -919,7 +919,7 @@ ul {
         font-size: clamp(1rem, 6vw, 5rem);
     }
 
-    .team__card p {
+    .team p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
@@ -938,7 +938,7 @@ ul {
         display: none;
       }
 
-    .team__card p {
+    .team p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 }
@@ -957,7 +957,7 @@ ul {
         justify-content: center;  /* Centered content */
     }
 
-    .team__card p {
+    .team p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
