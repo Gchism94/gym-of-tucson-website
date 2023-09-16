@@ -360,7 +360,7 @@ ul {
 
     .navbar__phone, .navbar__social-media {
         position: absolute;
-        left: 60%; /* adjust as needed */
+        left: 57%; /* adjust as needed */
         top: 50%; /* adjust as needed */
         transform: translateY(-50%); /* centers vertically */
         display: flex;
@@ -375,9 +375,7 @@ ul {
     }
 
     .dropdown-content.active {
-        display: block;
-        top: -20px; /* Adjust the value 20px as needed */
-        background-color: black; /* Restores background-color */
+        display: none;;
     }
        
     .navbar__link,
@@ -395,6 +393,7 @@ ul {
 
     .navbar__logo {
         font-size: clamp(1.25rem, 1.25vw, 1.75rem); /* adjust these values as needed */
+        padding-left: 1rem;  /* Reduced from 3rem to 1rem */
     }
 
     .navbar__menu{
