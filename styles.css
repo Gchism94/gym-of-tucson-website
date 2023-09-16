@@ -1114,7 +1114,7 @@ ul {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
-    .membership__link {
+    .card-content .membership__link {
         font-size: 18px;  /* Increase font size */
         display: flex;
         flex-direction: column;
