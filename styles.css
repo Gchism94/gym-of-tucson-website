@@ -945,6 +945,10 @@ ul {
     .team_desc p {
         font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
+
+      #main-page .team__card::after {
+        height: 30%; /* Adjust this to change the height of the black block */
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -1614,7 +1618,6 @@ ul {
 
     .bottom-band p {
         font-size: 16px;
-        padding: 0 2em;  /* adjust the padding as you see fit */
     }
 }
 
@@ -1633,7 +1636,6 @@ ul {
 
     .bottom-band p {
         font-size: 16px;
-        padding: 0 2em;  /* adjust the padding as you see fit */
     }
 }
 
