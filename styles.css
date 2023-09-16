@@ -1307,6 +1307,14 @@ ul {
         margin: 0 auto;
     }
 
+    .grid figure {
+        display: flex;
+     }
+     
+    .grid figure img {
+        object-fit: cover; /* also try `contain` and `fill` */
+     }
+
     .trainers__wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
