@@ -707,7 +707,7 @@ ul {
     margin-bottom: 1rem;
 }
 
-.team__text .topline, .team__text .team_desc {
+.team__text .topline, .team__text .team_desc p {
     font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 1.5;
 }
@@ -728,7 +728,7 @@ ul {
 }
 
 .team__desc{
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
     line-height: 1.4;
 }
 
