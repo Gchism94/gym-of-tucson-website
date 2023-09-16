@@ -103,6 +103,13 @@ p, a, li {
     background: #000000;  /* Adjust thumb hover color */
 }
 
+@media screen and (max-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 5px;  /* For vertical scrollbars */
+      height: 5px;  /* For horizontal scrollbars */
+    }
+  }
+
 /* Hide only the vertical scrollbar */
 body {
     overflow-x: hidden;
