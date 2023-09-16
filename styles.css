@@ -1303,13 +1303,12 @@ ul {
 
     .trainers__card {
         flex-basis: auto; /* Reset flex-basis */
-        width: 100%; /* take up all available space */
         margin-left: auto; /* Center align */
         margin-right: auto; /* Center align */
     }
 
     .trainers__wrapper {
-      justify-content: center; /* Center the cards */
+      justify-content: center !important; /* Center the cards */
       width: 100%; /* take up all available space */
     }
   
