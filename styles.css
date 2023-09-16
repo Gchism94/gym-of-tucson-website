@@ -1309,10 +1309,9 @@ ul {
     }
 
     .trainers__wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center !important; /* Center the cards */
-      width: 100%; /* take up all available space */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
   
     .card-image {
