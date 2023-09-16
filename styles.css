@@ -928,7 +928,7 @@ ul {
       }
 
     .team_desc {
-        font-size: clamp(1.5rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
+        font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
 
 }
@@ -947,7 +947,7 @@ ul {
     }
 
     .team_desc {
-        font-size: clamp(1.5rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
+        font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
 }
 
@@ -964,13 +964,9 @@ ul {
         align-items: center;
         justify-content: center;  /* Centered content */
     }
-
-    .team__text.topline .team__text.team_desc p {
-        font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
-    }
     
     .team_desc {
-        font-size: clamp(1.5rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
+        font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
 
 }
