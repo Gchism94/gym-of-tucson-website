@@ -1016,6 +1016,10 @@ ul {
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 720px) {
+    .membership__desc {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase paragraph font size */
+    }
+
     .membership__card {
       flex-direction: column;
       align-items: center;
@@ -1032,7 +1036,7 @@ ul {
     }
 
     .membership__link {
-        font-size: 22px;  /* Increase font size */
+        font-size: 18px;  /* Increase font size */
     }
     
     .card-image {
@@ -1292,6 +1296,10 @@ ul {
     .trainers__card {
       flex-direction: column;
       align-items: center;
+    }
+
+    .trainers__wrapper {
+      justify-content: center; /* Center the cards */
     }
   
     .card-image {
