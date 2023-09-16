@@ -394,7 +394,7 @@ ul {
     }
 
     .navbar__logo {
-        font-size: clamp(1.25rem, 1.25vw, 1.75rem); /* adjust these values as needed */
+        font-size: clamp(1.5rem, 1.25vw, 1.75rem); /* adjust these values as needed */
         padding-left: 1rem;  /* Reduced from 3rem to 1rem */
     }
 
@@ -412,7 +412,7 @@ ul {
         opacity: 1;
         z-index: 99;
         height: 100vh;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         background: var(--black);
         grid-template-rows: 120px 80px 80px 60px; /* Adjust the number of rows as needed */
     }
