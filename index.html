@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" type="image/png">
+        <!-- Add Legacy Polyfills Below -->
+        <meta name="description" content="The Gym of Tucson is Tucson, Arizona's only boutique studio that offers results-driven personal training, challenging small group fitness classes and power lifting under one roof.&nbsp;Conveniently located off Ina and I-10. Serving Tucson, Marana and Oro Valley customers. Your one-stop-shop for personal fitness training. ">
+        <meta property="og:title" content="The Gym of Tucson - Best Gyms of Tucson">
+        <meta property="og:description" content="The Gym of Tucson is Tucson, Arizona's only boutique studio that offers results-driven personal training, challenging small group fitness classes and dynamic yoga under one roof.&nbsp;Conveniently located off Ina and I-10. Serving Tucson, Marana and Oro Valley customers. Your one-stop-shop for personal fitness training. ">
+        <!-- Add GoT logo image to og:image -->
+        <meta property="og:image" content="https://static.wixstatic.com/media/6a6ed0_a45a5b2b7e594d5db8ade71ff785d328~mv2_d_2000_2000_s_2.jpg/v1/fill/w_2000,h_2000,al_c/6a6ed0_a45a5b2b7e594d5db8ade71ff785d328~mv2_d_2000_2000_s_2.jpg">
+        <meta property="og:image:width" content="2000">
+        <meta property="og:image:height" content="2000">
+        <!-- Change og:url -->
+        <meta property="og:url" content="https://www.thegymoftucson.com">
+        <meta property="og:site_name" content="The Gym of Tucson">
+        <meta property="og:type" content="website">
+        <!-- <script type="application/ld+json">{"@context":"https://schema.org/","@type":"LocalBusiness","name":"The Gym of Tucson","url":"https://www.thegymoftucson.com","image":"https://static.wixstatic.com/media/50b547_2ca721e940d34931bbd37b758a829ec3~mv2_d_2000_2000_s_2.jpg","address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Tucson","addressRegion":"AZ","postalCode":"85741","streetAddress":"4140 West Ina Road"},"telephone":"1 5203898890"}</script> -->
+        <!-- <meta name="google-site-verification" content="bXZMsdHeCG2kwC5M6c1Zz6hMeVqA1O6OKlo5SjD8I9M"> -->
+        <!-- Change/add keywords -->
+        <meta name="keywords" content="Gym near me, Local gym, Fitness classes near me, Gym membership, Gyms, Marana group fitness, Marana gym, Best gyms in Tucson, Gyms near Tucson, Gyms near Marana, Tucson group fitness, Marana Personal Trainer, Personal Training, Small Group Classes, Tucson Personal Trainer, workout, power lifting">
+        <!-- Change alternate href -->
+        <link rel="alternate" href="https://www.thegymoftucson.com/blog-feed.xml" type="application/rss+xml" title="The Gym of Tucson - RSS">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="The Gym of Tucson - Best Gyms of Tucson">
+        <!-- Change twitter:description content -->
+        <meta name="twitter:description" content="The Gym of Tucson is Tucson, Arizona's only boutique studio that offers results-driven personal training, challenging small group fitness classes and dynamic yoga under one roof.&nbsp;Conveniently located off Ina and I-10. Serving Tucson, Marana and Oro Valley customers. Your one-stop-shop for personal fitness training. ">
+        <!-- Add GoT logo image to twitter:image -->
+        <meta name="twitter:image" content="https://static.wixstatic.com/media/6a6ed0_a45a5b2b7e594d5db8ade71ff785d328~mv2_d_2000_2000_s_2.jpg/v1/fill/w_2000,h_2000,al_c/6a6ed0_a45a5b2b7e594d5db8ade71ff785d328~mv2_d_2000_2000_s_2.jpg">
+        <title>The Gym of Tucson</title>
+        <link rel="stylesheet" href="output.css" />
+        <link rel="stylesheet" 
+            href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" 
+            integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" 
+            crossorigin="anonymous"
+        /> 
+    </head>
+    <body id="main-page">
+        <!-- Navigation Bar-->
+        <nav class="navbar">
+            <a href="/" class="navbar__logo">
+                Better Every Day
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="navbar__menu">
+                <a href="/" class="navbar__link">Home</a>
+                <div class="dropdown" id="servicesDropdown">
+                    <a href="/services.html" class="navbar__link">Services</a>
+                    <div class="dropdown-content">
+                        <a href="/group-classes.html">Group Classes</a>
+                        <a href="/personal-training.html">Personal Training</a>
+                        <a href="/nutrition-consult.html">Nutrition Consults</a>
+                        <a href="#">Stretch/Recovery</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="programsDropdown">
+                    <a href="/plans.html" class="navbar__link">Programs</a>
+                    <div class="dropdown-content">
+                        <a href="#">Plump Rumps</a>
+                        <a href="#">Powerlifting</a>
+                        <a href="#">Commit</a>
+                    </div>
+                </div>
+                <a href="/trainers.html" class="navbar__link">Trainers</a>
+                <div id="marker"></div>
+            </div>
+            <div class="navbar__social-media">
+                <a class="navbar__social-link" href="tel:+1 520-389-8890"><i title="Call Us" class="fa-solid fa-phone fa-2x"></i></a>
+                <a class="navbar__social-link" href="https://www.instagram.com/thegymoftucson/?hl=en" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                <a class="navbar__social-link" href="https://www.facebook.com/thegymoftucson" target="_blank" title="Like us on Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+        </nav>
+        <!-- / Navigation Bar-->
+        <!--Hero Section-->
+        <section class="outter hero-video">
+            <section class="video-container">
+              <video src="./images/gym-test.mp4" autoplay loop playsinline muted></video>
+              <div class="callout">
+                <img src="/images/gym-of-tucson-hero.svg" alt="The Gym Logo Light" class="hero-image">
+                <h2>Better Every Day</h2>
+                <!-- <div class="desc">An optional description</div> -->
+                <a class="button" href="https://www.wellnessliving.com/catalog/the_gym_of_tucson" target="_blank">Get Started</a>
+              </div>
+              </div>
+            </section>
+        </section>
+        <!-- / Hero Section-->
+        <!--Membership Section -->
+        <div class="memberships">
+            <h1 class="animate-membership">What we offer</h1>
+            <p class="membership__desc animate-membership">Our services provide a full fitness experience</p>
+            <div class="membership__wrapper">
+                <div class="membership__card animate-card">
+                    <div class="card-image">
+                        <img src="./images/group-classes.jpeg" alt="Group Classes">
+                    </div>
+                    <div class="card-content">
+                        <div class="membership__title">
+                            <!-- Small Group Classes SVG-->
+                            <svg id="Layer_1_group" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 519.01 427.76" width="80px" height="80px">
+                                <defs>
+                                  <style>
+                                    .cls-1-group {
+                                      stroke: #231f20;
+                                    }
+                              
+                                    .cls-1-group, .cls-2-group {
+                                      fill: none;
+                                      stroke-miterlimit: 10;
+                                      stroke-width: 15px;
+                                    }
+                              
+                                    .cls-2-group {
+                                      stroke: #79992f;
+                                    }
+                                  </style>
+                                </defs>
+                                <circle class="cls-1-group" cx="110.98" cy="126.48" r="25.27"/>
+                                <path class="cls-2-group" d="m10.13,101.61c1.09,1.5,3.21,1.82,4.71.73l1.21-.88c1.5-1.09,1.82-3.21.73-4.71l-.77-1.06,6.19-4.54,58.4,79.42v64.35l-9.58,117.49c-.62,7.65,5.07,14.35,12.71,14.97s14.35-5.07,14.97-12.71l8.35-102.32h7.87l8.35,102.32c.62,7.65,7.33,13.34,14.97,12.71s13.34-7.32,12.71-14.97l-9.58-117.49v-64.35l40.03-54.43-11.16-15.17-42.06,57.19h-34.39l-57.08-77.62,5.74-4.2.77,1.06c1.09,1.5,3.21,1.82,4.71.73l1.21-.88c1.5-1.09,1.82-3.21.73-4.71l-5.97-8.16c-1.09-1.5-3.21-1.82-4.71-.73l-1.21.88c-1.5,1.09-1.82,3.21-.73,4.71l.77,1.06-7.59,5.56c-2.42-.52-5.04-.04-7.2,1.54-2.14,1.57-3.37,3.92-3.61,6.37l-8.04,5.89-.78-1.06c-1.09-1.5-3.21-1.82-4.71-.73l-1.21.88c-1.5,1.09-1.82,3.21-.73,4.71l5.97,8.16h.01Z"/>
+                                <circle class="cls-1-group" cx="408.04" cy="126.48" r="25.27"/>
+                                <path class="cls-2-group" d="m377.66,170.57v64.35l-9.58,117.49c-.62,7.65,5.07,14.35,12.71,14.97,7.64.62,14.35-5.07,14.97-12.71l8.35-102.32h7.87l8.35,102.32c.62,7.65,7.33,13.34,14.97,12.71s13.34-7.32,12.71-14.97l-9.58-117.49v-64.35l58.4-79.41,6.19,4.54-.77,1.06c-1.09,1.5-.77,3.61.73,4.71l1.21.88c1.5,1.09,3.61.77,4.71-.73l5.97-8.16c1.09-1.5.77-3.61-.73-4.71l-1.21-.88c-1.5-1.09-3.61-.77-4.71.73l-.77,1.06-8.04-5.89c-.24-2.45-1.47-4.8-3.61-6.37-2.15-1.58-4.77-2.06-7.2-1.54l-7.59-5.56.77-1.06c1.09-1.5.77-3.61-.73-4.71l-1.21-.88c-1.5-1.09-3.61-.77-4.71.73l-5.97,8.16c-1.09,1.5-.77,3.61.73,4.71l1.21.88c1.5,1.09,3.61.77,4.71-.73l.77-1.06,5.74,4.2-57.08,77.62h-34.39l-42.06-57.19-11.16,15.17,40.03,54.43h0Z"/>
+                                <circle class="cls-1-group" cx="259.51" cy="91.24" r="34.93"/>
+                                <path class="cls-1-group" d="m217.52,152.17v88.94l-13.24,162.39c-.86,10.57,7.01,19.83,17.57,20.69,10.57.86,19.83-7,20.69-17.57l11.53-141.42h10.87l11.53,141.42c.86,10.57,10.13,18.43,20.69,17.57s18.43-10.12,17.57-20.69l-13.24-162.39v-88.94l80.71-109.76,8.56,6.27-1.07,1.46c-1.51,2.07-1.06,5,1.01,6.51l1.67,1.22c2.07,1.51,5,1.06,6.51-1.01l8.25-11.27c1.51-2.07,1.06-5-1.01-6.51l-1.67-1.22c-2.07-1.51-5-1.06-6.51,1.01l-1.07,1.46-11.11-8.13c-.33-3.39-2.03-6.63-4.99-8.8-2.97-2.19-6.6-2.84-9.95-2.13l-10.49-7.68,1.07-1.46c1.51-2.07,1.06-5-1.01-6.51l-1.67-1.22c-2.07-1.51-5-1.06-6.51,1.01l-8.25,11.27c-1.51,2.07-1.06,5,1.01,6.51l1.67,1.22c2.07,1.51,5,1.06,6.51-1.01l1.07-1.46,7.93,5.81-78.89,107.28h-47.54L156.85,27.74l7.93-5.81,1.07,1.46c1.51,2.07,4.44,2.52,6.51,1.01l1.67-1.22c2.07-1.51,2.52-4.44,1.01-6.51l-8.25-11.27c-1.51-2.07-4.44-2.52-6.51-1.01l-1.67,1.22c-2.07,1.51-2.52,4.44-1.01,6.51l1.07,1.46-10.49,7.68c-3.35-.71-6.97-.06-9.95,2.13-2.96,2.18-4.66,5.42-4.99,8.8l-11.11,8.14-1.07-1.46c-1.51-2.07-4.44-2.52-6.51-1.01l-1.67,1.22c-2.07,1.51-2.52,4.44-1.01,6.51l8.25,11.27c1.51,2.07,4.44,2.52,6.51,1.01l1.67-1.22c2.07-1.51,2.52-4.44,1.01-6.51l-1.07-1.46,8.56-6.27,80.71,109.76h0Z"/>
+                              </svg>
+                              <!-- / Small Group Classes SVG-->
+                            <h3>Group Classes</h3>
+                        </div>
+                        <div class="membership__perks">
+                            <p><b>Unlimited Classes </b></p>
+                            <p>12 Months: $150/ month</p>
+                            <p>6 Months: $155/ month</p>
+                            <p>3 Months: $160/ month</p>
+                        </div>
+                        <a href="/group-classes.html" class="membership__link">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="membership__card animate-card second-card">
+                    <div class="card-image">
+                        <img src="./images/personal-training.png" alt="Personal Training">
+                    </div>
+                    <div class="card-content">
+                        <div class="membership__title">
+                            <svg height="80px" viewBox="1 -56 511.99924 511" width="80px" xmlns="http://www.w3.org/2000/svg"><path fill = #79992F d="m218.835938 205.96875c-3.296876 0-6.207032-2.15625-7.167969-5.3125l-22.765625-74.78125h-68.1875c-4.140625 0-7.496094-3.355469-7.496094-7.496094 0-4.136718 3.355469-7.492187 7.496094-7.492187h73.738281c3.300781 0 6.210937 2.15625 7.171875 5.3125l17.210938 56.542969 25.140624-82.578126c.957032-3.15625 3.871094-5.3125 7.167969-5.3125s6.207031 2.15625 7.167969 5.3125l10.878906 35.738282h65.90625c4.136719 0 7.492188 3.355468 7.492188 7.496094 0 4.136718-3.355469 7.492187-7.492188 7.492187h-71.457031c-3.296875 0-6.210937-2.15625-7.167969-5.308594l-5.328125-17.503906-25.140625 82.578125c-.957031 3.15625-3.867187 5.3125-7.167968 5.3125zm0 0"/><path d="m496.191406 63.578125c-2.035156-3.609375-6.605468-4.882813-10.210937-2.847656-3.601563 2.03125-4.878907 6.601562-2.84375 10.207031 9.042969 16.039062 13.84375 34.253906 13.875 52.675781.09375 49.113281-28.128907 103.75-83.875 162.390625-45.386719 47.742188-96.316407 84.203125-116.105469 97.660156-3.308594 2.253907-7.585938 2.253907-10.898438 0-17.542968-11.929687-60.1875-42.375-101.488281-82.832031h69.917969v30.367188c0 9.640625 7.84375 17.484375 17.484375 17.484375h16.324219c9.644531 0 17.488281-7.84375 17.488281-17.484375v-.632813c.816406.117188 1.648437.199219 2.496094.199219h16.324219c9.640624 0 17.484374-7.84375 17.484374-17.484375v-85.523438c0-9.640624-7.84375-17.484374-17.484374-17.484374h-16.324219c-.847657 0-1.679688.082031-2.496094.203124v-.636718c0-9.640625-7.84375-17.484375-17.488281-17.484375h-16.324219c-9.640625 0-17.484375 7.84375-17.484375 17.484375v29.628906h-23.625c-4.140625 0-7.496094 3.355469-7.496094 7.492188 0 4.140624 3.355469 7.496093 7.496094 7.496093h23.625v31.390625h-166.957031v-31.390625h109.4375c4.140625 0 7.496093-3.355469 7.496093-7.496093 0-4.136719-3.355468-7.492188-7.496093-7.492188h-66.019531c-29.839844-41.277344-44.9375-80.242188-44.871094-115.851562.109375-59.65625 48.707031-108.128907 108.363281-108.128907h.152344c32.960937.042969 63.71875 14.847657 84.386719 40.613281 3.0625 3.820313 7.628906 6.007813 12.527343 6.007813 4.898438 0 9.464844-2.191406 12.527344-6.007813 20.667969-25.765624 51.425781-40.566406 84.386719-40.613281h.152344c27.699218 0 54.097656 10.546875 74.359374 29.710938 3.003907 2.84375 7.75 2.710937 10.59375-.292969 2.84375-3.007812 2.710938-7.75-.296874-10.59375-23.054688-21.8125-53.109376-33.8125-84.65625-33.8125-.054688 0-.117188 0-.175782 0-37.519531.050781-72.53125 16.898438-96.054687 46.226562-.425781.527344-1.25.527344-1.671875 0-23.523438-29.324218-58.535156-46.171874-96.054688-46.226562-.0625 0-.113281 0-.175781 0-67.902344 0-123.226563 55.183594-123.351563 123.089844-.066406 36.238281 13.90625 75.167968 41.554688 115.878906h-25.113281v-29.632812c0-9.640626-7.84375-17.484376-17.484375-17.484376h-16.328125c-9.640625 0-17.484375 7.84375-17.484375 17.484376v.636718c-.816406-.117187-1.648438-.199218-2.496094-.199218h-16.328125c-9.640625 0-17.484375 7.84375-17.484375 17.484374v85.519532c0 9.640625 7.84375 17.484375 17.484375 17.484375h16.328125c.847656 0 1.679688-.082031 2.496094-.199219v.636719c0 9.640625 7.84375 17.484375 17.484375 17.484375h16.328125c9.640625 0 17.484375-7.84375 17.484375-17.484375v-30.367188h75.894531c45.289062 46.617188 94.796875 82.027344 114.203125 95.226563 4.214844 2.867187 9.046875 4.300781 13.875 4.300781 4.832031 0 9.664063-1.433594 13.878906-4.300781 20.191407-13.730469 72.15625-50.9375 118.539063-99.730469 58.492187-61.527344 88.101562-119.648437 88.003906-172.742187-.039062-20.988282-5.507812-41.738282-15.808594-60.007813zm-187.835937 161.683594h16.328125c1.375 0 2.496094 1.121093 2.496094 2.496093v85.519532c0 1.378906-1.121094 2.5-2.496094 2.5h-16.328125c-1.375 0-2.496094-1.121094-2.496094-2.5v-85.519532c0-1.375 1.121094-2.496093 2.496094-2.496093zm-38.804688-15.425781c0-1.375 1.117188-2.496094 2.496094-2.496094h16.324219c1.378906 0 2.5 1.121094 2.5 2.496094v121.363281c0 1.375-1.121094 2.496093-2.5 2.496093h-16.324219c-1.378906 0-2.496094-1.121093-2.496094-2.496093zm-196.933593 121.363281c0 1.378906-1.121094 2.5-2.496094 2.5h-16.328125c-1.375 0-2.496094-1.121094-2.496094-2.5v-59.253907c0-4.136718-3.355469-7.492187-7.496094-7.492187-4.136719 0-7.492187 3.355469-7.492187 7.492187v41.332032c0 1.378906-1.121094 2.5-2.5 2.5h-16.324219c-1.375 0-2.496094-1.121094-2.496094-2.5v-85.519532c0-1.375 1.121094-2.496093 2.496094-2.496093h16.328125c1.375 0 2.496094 1.121093 2.496094 2.496093v9.207032c0 4.140625 3.355468 7.492187 7.496094 7.492187 4.136718 0 7.492187-3.351562 7.492187-7.492187v-27.128906c0-1.375 1.121094-2.496094 2.5-2.496094h16.324219c1.375 0 2.496094 1.121094 2.496094 2.496094zm0 0"/>
+                            </svg>
+                            <h3>Personal Training</h3>
+                        </div>
+                        <div class="membership__perks">
+                            <p><b>1-Hour Sessions </b></p>
+                            <p>1 one-hour session: $60</p>
+                            <p>4 one-hour sessions: $220</p>
+                            <p>8 one-hour sessions: $440</p>
+                            <p>12 one-hour sessions: $660</p>
+                        </div>
+                        <a href="/personal-training.html" class="membership__link">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="membership__card animate-card">
+                    <div class="card-image">
+                        <img src="./images/nutrition.webp" alt="Nutrition Consults">
+                    </div>
+                    <div class="card-content">
+                        <div class="membership__title">
+                            <svg id="Capa_1" enable-background="new 0 0 512 512" height="80px" viewBox="0 0 512 512" width="80px" xmlns="http://www.w3.org/2000/svg"><path d="m293.396 151.209h-126.295c-4.151 0-7.515 3.365-7.515 7.515s3.364 7.515 7.515 7.515h126.295c4.151 0 7.515-3.365 7.515-7.515 0-4.151-3.364-7.515-7.515-7.515z"/><path d="m167.101 193.203h70.984c4.151 0 7.515-3.365 7.515-7.515s-3.364-7.515-7.515-7.515h-70.984c-4.151 0-7.515 3.365-7.515 7.515.001 4.15 3.365 7.515 7.515 7.515z"/><path fill=#79992F d="m129.28 148.141-27.66 28.363-11.966-11.636c-2.975-2.894-7.733-2.826-10.626.148-2.893 2.976-2.827 7.733.149 10.627l17.345 16.868c2.932 2.853 7.763 2.786 10.618-.141l32.899-33.736c2.898-2.971 2.839-7.729-.133-10.627-2.974-2.898-7.729-2.836-10.626.134z"/><path d="m293.396 227.742h-126.295c-4.151 0-7.515 3.364-7.515 7.515 0 4.15 3.364 7.515 7.515 7.515h126.295c4.151 0 7.515-3.365 7.515-7.515s-3.364-7.515-7.515-7.515z"/><path d="m238.085 254.706h-70.984c-4.151 0-7.515 3.364-7.515 7.515s3.364 7.515 7.515 7.515h70.984c4.151 0 7.515-3.365 7.515-7.515s-3.364-7.515-7.515-7.515z"/><path fill=#79992F d="m129.28 224.675-27.66 28.363-11.966-11.636c-2.977-2.894-7.733-2.826-10.626.149s-2.827 7.733.149 10.626l17.345 16.867c2.932 2.853 7.763 2.786 10.618-.141l32.899-33.735c2.898-2.971 2.839-7.729-.133-10.627s-7.729-2.837-10.626.134z"/><path fill=#79992F d="m129.28 301.208-27.66 28.363-11.966-11.636c-2.975-2.894-7.733-2.826-10.626.149s-2.827 7.733.149 10.626l17.345 16.867c2.932 2.853 7.763 2.786 10.618-.141l32.899-33.735c2.898-2.971 2.839-7.729-.133-10.627-2.972-2.897-7.729-2.836-10.626.134z"/><path fill=#79992F d="m129.28 377.742-27.66 28.363-11.966-11.636c-2.975-2.894-7.733-2.826-10.626.148-2.893 2.975-2.827 7.733.149 10.627l17.345 16.868c2.932 2.853 7.763 2.786 10.618-.141l32.899-33.735c2.898-2.971 2.839-7.729-.133-10.627-2.972-2.9-7.729-2.838-10.626.133z"/><path d="m439.411 261.963c15.895-23.915 12.319-56.822 12.138-58.378-.402-3.464-3.135-6.197-6.599-6.599-1.748-.202-43.095-4.696-66.772 18.982-1.284 1.284-2.464 2.633-3.587 4.012v-52.028c0-4.15-3.364-7.515-7.515-7.515s-7.515 3.364-7.515 7.515v71.69c-5.014-7.934-11.699-15.893-20.595-23.124v-131.434c0-4.15-3.364-7.515-7.515-7.515h-52.399v-21.012h68.559c6.589 0 11.949 5.361 11.949 11.949v69.387c0 4.15 3.364 7.515 7.515 7.515s7.515-3.365 7.515-7.515v-69.386c0-14.876-12.103-26.978-26.978-26.978h-70.029c-3.005-7.482-10.322-12.786-18.866-12.786h-24.872v-11.054c.002-9.754-7.934-17.689-17.687-17.689h-47.288c-9.754 0-17.69 7.935-17.69 17.689v11.053h-24.87c-8.545 0-15.861 5.303-18.866 12.786h-70.029c-14.876 0-26.978 12.102-26.978 26.978v416.316c0 14.876 12.103 26.978 26.978 26.978h294.589c12.687 1.049 24.697-2.738 35.071-11.198 9.218 7.525 19.73 11.396 30.95 11.396 2.182 0 4.392-.147 6.623-.441 25.154-3.322 50.412-24.822 69.298-58.988 2.008-3.632.692-8.204-2.941-10.212-3.63-2.007-8.204-.691-10.211 2.941-16.312 29.508-38.036 48.708-58.112 51.359-11.262 1.484-21.414-2.377-30.197-11.479-2.913-3.017-7.902-3.018-10.815 0-11.174 11.581-24.4 14.671-39.317 9.18-17.019-6.265-34.543-23.551-48.08-47.428-14.966-26.397-24.364-59.519-26.465-93.264-1.387-22.281 4.856-40.969 18.553-55.544 18.304-19.479 50.189-31.425 88.639-33.486.702 2.042 1.356 4.116 1.919 6.25 2.481 9.4 3.034 17.776 3.04 23.336-13.938-1.925-23.036-8.842-23.116-8.904-3.256-2.573-7.982-2.021-10.555 1.235s-2.021 7.982 1.236 10.555c.653.516 16.256 12.637 39.546 12.639.005 0 .011.001.016.001.013 0 .025-.002.038-.002 23.268-.017 38.853-12.123 39.505-12.639 3.731-2.948 3.732-8.757.033-11.732 7.626-2.39 15.276-6.014 21.93-11.444 50.586 17.823 59.416 53.007 57.753 79.733-1.423 22.852-5.979 44.81-13.542 65.263-1.365 3.692.443 7.926 4.051 9.496 3.906 1.7 8.57-.293 10.045-4.284 8.072-21.829 12.932-45.227 14.446-69.542 2.674-42.967-19.24-75.519-61.934-92.634zm-318.407-212.885c0-2.926 2.381-5.306 5.306-5.306h32.385c4.151 0 7.515-3.364 7.515-7.515v-18.568c0-1.467 1.194-2.66 2.66-2.66h47.288c1.467 0 2.66 1.193 2.66 2.66v18.568c0 4.15 3.364 7.515 7.515 7.515h32.386c2.926 0 5.306 2.38 5.306 5.306v35.288c0 2.926-2.381 5.307-5.306 5.307h-132.409c-2.926 0-5.306-2.381-5.306-5.307zm134.405 238.753c-4.784 5.091-8.795 10.586-12.08 16.445h-76.227c-4.151 0-7.515 3.364-7.515 7.515 0 4.15 3.364 7.515 7.515 7.515h69.706c-1.228 3.852-2.204 7.827-2.893 11.935h-66.813c-4.151 0-7.515 3.365-7.515 7.515s3.364 7.515 7.515 7.515h65.516c-.033 2.733.015 5.504.191 8.331.552 8.874 1.559 17.626 2.988 26.208h-68.695c-4.151 0-7.515 3.365-7.515 7.515s3.364 7.515 7.515 7.515h71.683c.931 4.027 1.952 8.009 3.077 11.935h-74.76c-4.151 0-7.515 3.365-7.515 7.515s3.364 7.515 7.515 7.515h79.651c4.028 11.086 8.844 21.659 14.447 31.541 1.238 2.183 2.507 4.309 3.799 6.387h-203.91v-157.284c0-4.15-3.364-7.515-7.515-7.515s-7.515 3.365-7.515 7.515v164.796c0 4.15 3.364 7.515 7.515 7.515h221.946c6.585 8.325 13.63 15.391 20.949 21.012h-259.054c-6.589 0-11.949-5.361-11.949-11.949v-416.316c0-6.589 5.36-11.949 11.949-11.949h68.559v21.012h-52.4c-4.151 0-7.515 3.364-7.515 7.515v188.305c0 4.15 3.364 7.515 7.515 7.515s7.515-3.365 7.515-7.515v-180.791h46.643c3.168 7.119 10.296 12.103 18.578 12.103h132.408c8.282 0 15.41-4.983 18.578-12.103h46.642v113.917c-3.296-1.07-7 .256-8.81 3.372-2.085 3.589-.867 8.188 2.721 10.273 2.113 1.228 4.131 2.528 6.089 3.874v29.39c-28.867 5.84-52.819 17.687-68.529 34.406zm83.559-36.84v-13.833c3.568 3.975 6.695 8.268 9.377 12.875-3.169.254-6.295.575-9.377.958zm36.027 43.12c-.002-1.322-.031-2.762-.099-4.311.264.002.511.007.784.007 4.394 0 9.941-.248 16.007-1.104-3.902 1.994-9.651 4.326-16.692 5.408zm-1.197-19.372c-.19-11.114 1.228-34.362 15.009-48.143 13.781-13.783 37.061-15.199 48.141-15.009.191 11.113-1.227 34.362-15.008 48.143-13.782 13.782-37.019 15.194-48.142 15.009z"/>
+                            </svg>
+                            <h3>Nutrition Consults</h3>
+                        </div>
+                        <div class="membership__perks">
+                            <p><b>Nutrition Plan</b></p>
+                            <p>Initial evaluation & plan: $100</p>
+                            <p>Nutrition adjustment: $75</p>
+                            <p>WarFuel Kitchen pre-made meals:<br>
+                            Prices vary <!--Add link-->
+                            </p>
+                        </div>
+                        <a href="/nutrition-consult.html" class="membership__link">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="membership__card animate-card second-card">
+                    <div class="card-image">
+                        <img src="" alt="Group Classes">
+                    </div>
+                    <div class="card-content">
+                        <div class="membership__title">
+                            <!--Start Stretch Sessions SVG-->
+                            <svg id="Capa_1" enable-background="new 0 0 512 512" height="80" viewBox="0 0 512 512" width="80" xmlns="http://www.w3.org/2000/svg"><g><path d="m499.681 377.324h-30.372c7.415-6.251 13.026-15.065 15.984-27.504 1.95-8.208 1.063-15.872.125-23.987-1.078-9.311-2.192-18.938.605-31.412v-.001c2.15-9.593.585-16.792-4.651-21.398-6.338-5.575-16.69-5.811-30.771-.698-4.462 1.623-8.456 4.073-11.852 7.195-8.418-3.175-17.487-4.344-26.547-3.381-16.423 1.752-31.621 11.605-41.302 25.933-9.861-6.634-21.936-11.916-35.434-15.442-4.012-1.049-8.105 1.354-9.152 5.361-1.047 4.008 1.353 8.105 5.361 9.152 12.589 3.288 23.637 8.222 32.319 14.385-.232.628-.457 1.26-.669 1.897-2.473 7.52-3.373 15.301-2.601 22.498 1.576 14.79 7.763 27.784 17.283 37.401h-73.39v-23.325h19.939c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-86.327v-28.028c.901-.397 1.841-.872 2.833-1.452 14.54-8.498 35.401-13.164 57.236-12.81.042.001.083.001.125.001 4.085 0 7.429-3.277 7.497-7.377.068-4.142-3.235-7.555-7.376-7.622-8.647-.138-17.069.424-25.108 1.615v-39.863c6.647-4.86 12.924-11.149 17.792-19.591 7.17-12.443 7.456-19.258 7.975-31.629.083-1.98.174-4.148.301-6.56.004-.067-.001-.133 0-.2.002-.065.01-.129.01-.195v-18.397c0-21.814-17.747-39.562-39.56-39.562h-2.622c11.11-11.358 18.541-26.087 18.541-39.329v-15.391c0-19.334-6.191-35.762-17.904-47.506-10.494-10.522-24.616-16.449-39.764-16.688-.079-.002-.158-.002-.237 0-15.149.239-29.275 6.166-39.776 16.687-11.724 11.746-17.92 28.174-17.92 47.508v15.391c0 13.237 7.432 27.966 18.553 39.329h-2.635c-19.445 0-29.021 11.887-34.535 20.831l-43.67 70.919c-4.939-8.869-17.183-27.944-31.661-29.053-4.03-.305-9.083-.182-12.452 3.55-3.545 3.929-2.655 8.847-2.006 12.438l10.552 60.169c.936 5.335 1.674 9.549 5.197 12.411 3.69 2.999 7.935 2.546 12.853 2.018 1.009-.107 2.145-.229 3.433-.347 20.815-1.919 36.605 4.134 42.425 6.822 6.301 2.914 11.88 6.084 16.82 9.358v40.198c-.233 0-.453.002-.688.002h-60.35c-8.821 0-9.059-.502-10.197-2.901-1.468-3.11-14.87-30.43-33.138-31.829-4.041-.313-9.11-.187-12.478 3.558-3.547 3.942-2.673 8.689-1.971 12.503l10.391 59.349h-22.424c-6.777-.001-12.291 5.513-12.291 12.29v58.792c0 6.793 5.514 12.319 12.291 12.319h18.692v13.931c0 15.952 12.978 28.931 28.93 28.931h392.146c15.952 0 28.93-12.979 28.93-28.931v-13.931h18.692c6.792 0 12.319-5.526 12.319-12.319v-58.792c0-6.777-5.526-12.291-12.319-12.291zm-52.629-44.59c-6.033-13.112-7.238-25.405-3.395-34.615 2.353-5.637 6.526-9.682 12.067-11.696 5.963-2.165 9.989-2.772 12.492-2.772 1.903 0 2.926.352 3.249.635.257.227.998 2.053-.079 6.856v-.001c-3.354 14.955-1.976 26.855-.87 36.418.817 7.06 1.522 13.156.183 18.793-4.256 17.897-14.623 26.52-39.062 29.598.064-.055.129-.11.193-.166 20.744-17.907 19.725-33.3 15.222-43.05zm-71.413 5.596c-.547-5.101.122-10.709 1.926-16.194 4.674-14.046 17.689-29.104 36.228-31.082 5.419-.579 10.839-.106 16.007 1.326-5.46 13.119-4.174 29.674 3.629 46.633 7.341 15.895-20.598 32.802-29.459 37.67-15.663-5.942-26.416-20.371-28.331-38.353zm-86.022 15.669v23.325h-65.278c-5.924-.565-10.573-5.566-10.573-11.635 0-6.446 5.244-11.69 11.69-11.69zm-31.181-67.588c-9.193 2.472-17.623 5.877-24.945 10.156-.144.084-.277.161-.402.232-.835-.986-1.916-2.373-2.915-3.653-1.22-1.564-2.738-3.512-4.561-5.747-3.887-4.736-9.447-10.428-15.183-15.647l41.309-16.666c2.156-.872 4.405-1.838 6.696-2.904v34.229zm-65.136-23.921c-2.286.915-4.808.876-7.102-.105-2.292-.982-4.058-2.782-4.978-5.088-.92-2.286-.887-4.809.093-7.102.983-2.3 2.79-4.072 5.086-4.989.067-.026.133-.055.2-.083l37.889-16.417 8.908 17.608zm24.786-239.077c18.661.347 38.567 13.09 42.201 40.142-16.386-3.124-49.812-9.815-53.698-10.822-.002-.001-.003-.001-.005-.002-2.177-.562-4.189-.807-6.06-.807-7.092 0-12.138 3.51-16.366 6.451-2.594 1.805-5.106 3.552-8.253 4.83 3.761-26.811 23.589-39.446 42.181-39.792zm-42.815 64.587v-8.939c8.035-1.837 13.349-5.518 17.453-8.373 4.92-3.422 6.5-4.368 10.105-3.435v-.001c2.692.696 41.589 8.654 58.043 11.682v9.066c0 12.891-12.305 31.783-29.263 39.855-.237.094-.469.198-.693.314-.93.423-1.869.822-2.824 1.177-3.898 1.428-6.984 2.064-10.006 2.064-3 0-6.189-.656-9.999-2.052-.912-.339-1.818-.724-2.719-1.135-.24-.129-.49-.243-.744-.346-15.757-7.563-29.353-25.655-29.353-39.877zm60.119 54.586v2.25c0 10.917-7.762 19.799-17.303 19.799-9.557 0-17.332-8.882-17.332-19.799v-2.253c.709.298 1.421.581 2.138.848 5.55 2.033 10.378 2.98 15.194 2.98 4.796 0 9.616-.947 15.199-2.992.704-.262 1.406-.541 2.104-.833zm-80.964 13.443c5.998-9.73 12.304-13.699 21.764-13.699h9.564v2.507c0 19.188 14.504 34.799 32.332 34.799 17.812 0 32.303-15.61 32.303-34.799v-2.507h9.564c13.542 0 24.56 11.019 24.56 24.562v18.207c-.124 2.386-.215 4.544-.298 6.516-.5 11.916-.651 15.512-5.984 24.767-6.067 10.52-15.358 17.828-30.883 24.285l-9.142-18.072c3.492-1.827 5.978-3.758 9.488-7.44.373-.39.701-.819.981-1.28l9.042-14.883c2.151-3.54 1.025-8.153-2.515-10.304-3.539-2.153-8.153-1.025-10.304 2.515l-8.611 14.173c-2.862 2.937-4.166 3.66-8.484 5.546l-47.077 20.399c-4.22 1.708-7.779 4.526-10.413 8.123-6.697-3.691-13.919-6.397-21.374-8.418l15.271-24.827c2.17-3.528 1.069-8.147-2.459-10.318-3.528-2.169-8.147-1.068-10.317 2.459l-18.079 29.391c-7.246-1.162-14.518-1.898-21.566-2.459zm-49.239 109.746c-6.738-.886-14.368-1.211-22.656-.447-1.369.125-4.511.461-4.932.504-.154-.804-10.596-60.364-10.596-60.364 5.925 2.52 14.85 14.187 19.748 24.469 2.785 5.894 5.744 8.391 9.707 9.338 4.668.601 8.067.501 9.606.607 1.984.142 3.998.299 6.022.467zm52.959 42.599c11.768 11.27 16.841 21.752 17.476 25.7-2.264 1.157-8.124 1.926-17.476 2.302zm-62.925 43.272h47.237c29.113 0 39.133-1.719 44.67-7.661 1.804-1.937 3.879-5.323 3.518-10.441-.947-13.842-20.043-42.506-58.025-60.072-2.636-1.218-6.991-3.016-12.717-4.651l7.281-26.837c13.738 1.92 27.323 5.274 38.367 12.043.02 3.001.597 5.997 1.747 8.852 2.4 6.011 7.014 10.731 12.992 13.293 3.087 1.323 6.339 1.986 9.592 1.986 1.521 0 3.043-.146 4.547-.436 7.017 5.779 14.865 13.437 19.575 19.177 1.705 2.09 3.105 3.886 4.341 5.471 1.635 2.098 3.21 4.11 4.884 5.781v30.949c-13.678 1.136-24.463 12.624-24.463 26.59 0 4.169.962 8.116 2.674 11.635h-106.22zm-36.869-11.487c5.052 10.652 13.783 11.425 21.869 11.481v25.684h-30.278l-10.5-60.008c5.968 2.342 14.364 13.215 18.909 22.843zm438.648 105.568h-223.099c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h192.088v13.931c0 7.682-6.249 13.931-13.93 13.931h-392.146c-7.681 0-13.93-6.249-13.93-13.931v-13.931h194.922c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-225.905v-53.402h28.611c.007 0 .015.001.022.001.005 0 453.367-.001 453.367-.001z"/></g></svg>
+                              <!-- / Stretch Sessions SVG-->
+                            <h3>Stretch / Recovery Sessions</h3>
+                        </div>
+                        <div class="membership__perks">
+                            <p><b>Sessions</b></p>
+                        </div>
+                        <a href="/" class="membership__link">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / Membership Section -->
+
+        <!-- Teams Section -->
+        <div class="team">
+            <div class="team__wrapper">
+                <div class="team__text animate-team">
+                    <p class="topline">Gym of Tucson Coaching</p>
+                    <h1>Meet our Trainers</h1>
+                    <p class="team_desc">
+                        All our personal trainers are well experienced.
+                        Each trainer specializes in strength and mobility workouts.
+                    </p>                   
+                </div>
+                <div id="rosemary-card" class="team__card animate-team">
+                    <img src="./images/rosemary-lopez.jpeg"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#rosemary-trainer"><h2><b>Rosemary Lopez</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/thecoach_rose/" target="_blank" title="Follow Rosemary on Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/rbietendorf" target="_blank" title="Connect with Rosemary on Facebook">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__card animate-team">
+                    <img src="./images/jenn-oneill.jpeg"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#jenn-trainer"><h2><b>Jennifer O'Neil</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/thecoach_jen/" target="_blank" title="Follow Jennifer on Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/jenoneil74" target="_blank" title="Connect with Jennifer on Facebook">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__card animate-team">
+                    <img src="./images/jade-blair.png"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#jade-trainer"><h2><b>Jade Blair</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/jadebl_ir/" target="_blank" title="Follow Jade on Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/YO.BFIT" target="_blank" title="Connect with Jade on Facebook">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__card animate-team">
+                    <img src="./images/kyle-bowman.png"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#kyle-trainer"><h2><b>Kyle Bowman</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/thekylebowman/" target="_blank" title="Follow Kyle on Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/kyle.bowman.75641" target="_blank" title="Connect with Kyle on Facebook">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__card animate-team">
+                    <img src="./images//dustin-schroeder.jpeg"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#dustin-trainer"><h2><b>Dustin Schroeder</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/dustinschroeder1/" target="_blank" title="Follow Dustin on Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/dustin.schroeder.503" target="_blank" title="Connect with Dustin on Facebook">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__card animate-team">
+                    <img src="./images/pascale-fajardo.jpeg"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#pascale-trainer"><h2><b>Pascale Fajardo</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/pascale.vaughan/" target="_blank" title="Follow Pascale on Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/pascale.vaughan" target="_blank" title="Connect with Pascale on Facebook">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__card animate-team">
+                    <img src="./images/kristen-fitz.jpeg"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#kristen-trainer"><h2><b>Kristen Fitzpatrick</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/kris.fitz_/" target="_blank" title="Follow Kristen on Instagram">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/kristen.doyle.315" target="_blank" title="Connect with Kristen on Facebook">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team__text_1 animate-team">
+                    <div class="team__content">
+                    </div>
+                    <!--Begin Gym of Tucson logo light SVG-->
+                    <svg version="1.1" id="Layer_1" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480.6 480.6"
+                        xml:space="preserve">
+                    <g>
+                    
+                            <linearGradient id="Hex_x0020_figure_00000084507499887191696700000016020262324044013471_" gradientUnits="userSpaceOnUse" x1="3339.6111" y1="7680.5952" x2="8106.542" y2="7680.5952" gradientTransform="matrix(0.0705 0 0 0.0705 -163.5945 -304.2214)">
+                            <stop  offset="0" style="stop-color:#4B4B4B"/>
+                            <stop  offset="0.1294" style="stop-color:#313133"/>
+                            <stop  offset="0.2588" style="stop-color:#595959"/>
+                            <stop  offset="0.3882" style="stop-color:#2F2F31"/>
+                            <stop  offset="0.5216" style="stop-color:#474747"/>
+                            <stop  offset="0.6118" style="stop-color:#616161"/>
+                            <stop  offset="0.7804" style="stop-color:#424244"/>
+                            <stop  offset="0.8902" style="stop-color:#39383D"/>
+                            <stop  offset="1" style="stop-color:#454547"/>
+                        </linearGradient>
+
+                            <path id="Hex_x0020_figure" style="opacity:0.5;fill-rule:evenodd;clip-rule:evenodd;fill:url(#Hex_x0020_figure_00000084507499887191696700000016020262324044013471_);stroke:#2B2B29;stroke-width:0.48;stroke-miterlimit:10;" d="
+                            M239.8,43.2l16,9.2c-3.5,4.1-5.7,9.6-5.7,15.5c0,13,10.2,23.5,22.8,23.5c10.3,0,18.9-7,21.8-16.6l29.2,16.8l11.7,6.8
+                            c-43.2,26.7-83.3,27.1-132.4,19.6l-3.2,1.7c27.7,15.7,46.5,22.1,78.2,25.4c31.5,3.3,82.7-1.2,95.2-17.9c1.7-2.2,0.4-5.4-0.5-7.3
+                            l34.9,20.2v97v6c-8.8-20.7-22.3-36.4-29.1-42.2c-9-7.6-24.4-16.5-29.6-18.7s-17.9-6.2-32.8-2.7s-32.8,20.6-36.9,25.2
+                            c-4.1,4.6-14.9,12.7-24.1,20.1c-9.2,7.3-36.6,2.2-46.7-0.8c-10-3-20.6-13.3-22-21.2s13.8-23.3,16-29.8s-5-24.6-18.7-37.7
+                            s-29.4-16.8-43-18.7c-8.4-1.2-22.1,0.4-31.4,1.7l46.3-26.7L239.8,43.2L239.8,43.2L239.8,43.2z M407.8,301.9v32.2l-84,48.5l-84,48.5
+                            l-60-34.6c39.8-6.6,61.5-42.2,68.7-73.2c3.7-16.2-4.7-52.6-4.7-52.6c11.4,0.7,21.2,0.5,31.5-0.2c10.2-0.7,26.1-15,34.8-22
+                            c8.7-7.1,20.6-13.6,36.4-16c15.7-2.4,30.1,14.2,34.7,24.4c4.7,10.2,7,23.7-6.8,45.8c-13.7,22.1-35.4,27-51.4,25.9
+                            c-15.9-1.1-29.9-15.3-33-20.8s-2.5-7.3-4.6-7.3s-3.8,3.5-4.6,10.6c-3.3,28.7,26.1,47.1,52,49.8c30.6,3.2,43.7-11.6,52.4-19.2
+                            C393.2,334.7,403.6,314.6,407.8,301.9L407.8,301.9L407.8,301.9z M71.8,320.2v-83v-53.9l8.8,15.2c9-22.9,29.4-44.5,55.9-44.5
+                            c16.5,0,26.3,3.9,28.8,12.5s-5.1,28.3-17.7,38.7c-12.6,10.3-37.8,11.3-39.5,13.9c-1.6,2.4,1.8,9.9,1.8,9.9s7.1,19.9,7.7,22.4
+                            c0.5,2.4,2.4,6.2,5.7,5.4c12.4-3.1,8.4-14.9,36.1-15.7c9.2-0.3,25.6,6.4,34.5,15.3c8.9,9,17.2,40.8,16.5,54.4s-9.8,40-32,42.3
+                            c-22.3,2.4-41.1-12.8-50.7-19C107.4,321.1,94,317.1,71.8,320.2L71.8,320.2L71.8,320.2z"/>
+                        <path class="st1" d="M102.9,175.9h32.4V190l-9.6-0.2l-0.1,61.9l-14.4-0.8v-60.8L103,190L102.9,175.9L102.9,175.9z M138.1,275.4
+                            v16.3c0,0.6,0.1,1.6,1.5,1.6s1.5-0.7,1.5-1.6v-16.5c0-0.3-0.2-1.3-1.5-1.3C138.3,274,138.1,275.2,138.1,275.4L138.1,275.4
+                            L138.1,275.4z M132,273.7c0-2.9,2.9-5.3,5.9-5.3h3.1c3.4,0,6,2.3,6,5.3v19.7c0,3.3-2.7,6-6,6h-3c-3.2,0-5.9-2.7-5.9-6L132,273.7
+                            L132,273.7z M159.5,268.4h12.4v6.2h-6l0.1,4.8l5.9,0.1v5.9h-6v14h-6.4V268.4L159.5,268.4L159.5,268.4z M293.7,274.4v3h-6v-1.5
+                            c0-1.3-0.7-2.2-1.5-2.2c-0.6,0-1.3,0.4-1.3,1.1v1.2c0,2,1.5,3.2,5.2,6.1c2,1.6,3.6,5,3.6,6.8v4.2c0,2.3-2.1,6.5-5.8,6.4l-3-0.1
+                            c-3.8-0.1-6.1-3-6.1-5.7v-6h6.1v4.6c0,1,0.5,1.4,1.5,1.4s1.3-0.8,1.3-1.3v-2.1c0-3.8-8.9-7.4-9-12.7V275c0-4.7,4.4-6.6,6.1-6.6h3.1
+                            C289.4,268.4,293.7,271.6,293.7,274.4L293.7,274.4L293.7,274.4z M332.9,268.4h6l3.1,15.3v-15.3h5.9l0.2,30.9l-6-0.2l-3-15.3v15.5
+                            h-6L332.9,268.4L332.9,268.4z M200.9,268.4H214v6.2h-3.4v24.7h-6.2l-0.2-24.7H201L200.9,268.4L200.9,268.4z M225.5,268.4h6v23.8
+                            c0,0.8,0.6,1.4,1.4,1.4c0.9,0,1.3-0.6,1.3-1.5v-23.8h6l0.1,25.2c0,4-2.8,5.7-7.4,5.7c-5.3,0-7.5-2.9-7.5-5.7L225.5,268.4
+                            L225.5,268.4L225.5,268.4z M267.6,274.6v6.7h-6.4v-5.8c0-0.5-0.1-0.9-0.3-1.1c-0.2-0.2-0.5-0.3-1-0.3c-0.4,0-0.7,0.1-0.9,0.3
+                            c-0.2,0.2-0.3,0.6-0.3,1.1v16.9c0,0.5,0.1,0.8,0.3,1c0.2,0.2,0.5,0.3,1,0.3c0.4,0,0.8-0.1,0.9-0.3c0.2-0.2,0.3-0.5,0.3-1v-6.6h6.4
+                            v7.7c0,3.3-3.1,6-6.4,6h-2.6c-3.6,0-6.6-3.1-6.6-5.7v-19.1c0-3.5,3-6.2,6.6-6.2h2.6C263.8,268.4,267.6,270.2,267.6,274.6
+                            L267.6,274.6L267.6,274.6z M82.2,183H97v57.4H82.2V183z M60.7,192.9h14.8v38.4H60.7C60.7,231.3,60.7,192.9,60.7,192.9z M38.9,202.8
+                            h14.8v19.1H38.9V202.8z M398.3,183.7h-14.8v57.4h14.8V183.7z M419.9,193.6h-14.8V232h14.8V193.6z M441.7,203.5h-14.8v19.1h14.8
+                            V203.5z M311.5,275.6v16.3c0,0.6,0.1,1.6,1.5,1.6s1.5-0.7,1.5-1.6v-16.5c0-0.3-0.2-1.3-1.5-1.3
+                            C311.8,274.1,311.5,275.4,311.5,275.6L311.5,275.6L311.5,275.6z M305.5,273.8c0-2.9,2.9-5.3,5.9-5.3h3.1c3.4,0,6,2.3,6,5.3v19.7
+                            c0,3.3-2.7,6-6,6h-3.1c-3.2,0-5.9-2.7-5.9-6V273.8L305.5,273.8L305.5,273.8z M139,175.9h15v26.9h6.7v-26.9h14.7v74.4h-14.7v-33.9
+                            H154v33.9h-15C139,250.3,139,175.9,139,175.9z M182.2,175.9h30V190l-14.9-0.7V205l15.4-0.2l-0.4,13.8h-14.9V236h14.9v14.3h-30
+                            v-74.4H182.2L182.2,175.9z M265.8,175.9c5.1,0,8.3,7.2,8.3,14.1v11.3l-14.8,0.2v-8.3c0-2.7-1.7-3.2-3.5-3.2s-4.1,0.3-4.1,2.6v39.2
+                            c0,5.1,1.9,5.1,4.1,5.1s3.5-0.4,3.5-5.4v-11.3h-3.8l0.3-13.3l18.3,0.1v43.3H267l-1.4-6.4c-1.7,1.8-3.3,6.4-6.3,6.4
+                            c-2.9,0-3.5,0-8.3,0c-7.6,0-13.7-2.4-13.7-14.3v-45.9c0-6.6,7.9-14.1,14.4-14.1 M276.5,175.9h15l4.2,25.7l4.1-25.7h14.5l-11.8,50
+                            l-0.1,24.4h-14v-24.8L276.5,175.9L276.5,175.9L276.5,175.9z M318.4,175.9h21.8l6.1,41.7h0.8l6.1-41.6l22.6-0.1v74.4h-13.3
+                            l-0.6-52.9l-8.2,52.9h-13.6L331,197l0.4,53.3h-13.1L318.4,175.9L318.4,175.9L318.4,175.9z"/>
+                    </g>
+                    </svg>
+                    <!-- / Gym of Tucson logo light SVG-->
+                </div>
+                <div class="team__card animate-team">
+                    <img src="./images/victoria-jones.jpeg"  alt="person" class="team__img" />
+                    <div class="team__content">
+                        <a href="/trainers.html#victoria-trainer"><h2><b>Victoria Jones</b></h2></a>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/thattrainertori/" title="Follow Victoria on Instagram" target="_blank">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/victoriaquijadaserrano" title="Connect with Victoria on Facebook" target="_blank">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / Teams Section-->
+
+        <!--Footer Section-->
+        <div class="footer" id="contact-us">
+            <div class="footer__content">
+                <div class="footer__wrapper">
+                    <div class="map-container"> <!-- New container for the map -->
+                        <div id="map">
+                        </div>
+                    </div>
+                </div>
+                <!-- Form Section -->
+                <div class="footer__form">
+                    <h2 class="animate-email">
+                        Email us with questions!
+                    </h2>
+                    <form action="https://formspree.io/f/xqkowrlq" method="POST">
+                        <input name="name" type="text" class="feedback-input" placeholder=" Name" />   
+                        <input name="email" type="text" class="feedback-input" placeholder=" Email" />
+                        <select title="submit form" name="subject" class="feedback-input">
+                            <option value="" selected="">Interest</option>
+                            <option value="Personal Training">Personal Training</option>
+                            <option value="Group Classes">Group Classes</option>
+                            <option value="Nutrition Consult">Nutrition Consult</option>
+                            <option value="Stretch/Recovery Session">Stretch/Recovery Session</option>
+                            <option value="Other">Other (tell us more below!)</option>
+                          </select>
+                        <textarea name="text" class="feedback-input" placeholder=" Comment"></textarea>
+                        <input name="submit" type="submit" value="SUBMIT"/>
+                    </form>
+                </div>
+                <!-- / Form Section -->
+            </div>
+            <div class="footer__content">
+                <div class="footer__wrapper">
+                    <div class="footer__desc">
+                        <br>
+                        <h1>The Gym of Tucson</h1>
+                        <p>Personal Training, Small Group Classes, Nutrition, Recovery</p>
+                        <p class="phone-link"><i class="fas fa-phone-square"></i> +1 520-389-8890</p>
+                    </div>
+                    <div class="footer__link-wrapper">
+                        <div class="footer__links">
+                        <a href="index.html#contact-us" class="footer__link"><h2 class="footer__title">Contact Us</h2></a>
+                        <a href="https://www.google.com/maps/place/The+Gym+of+Tucson/@32.3386859,-111.0564662,17z/data=!3m1!4b1!4m6!3m5!1s0x86d60b1c4e751df5:0x2a94a77555c9c73!8m2!3d32.3386814!4d-111.0538859!16s%2Fg%2F11h2q49j89?entry=ttu" class="footer__link" target="_blank"> 4140 W Ina Rd <br>Suite 118 <br>Tucson,AZ 85741</a>
+                        </div>
+                        <div class="footer__links">
+                            <h2 class="footer__title">The Gym</h2>
+                            <a class="footer__link" href="/services.html">Services</a>
+                            <a class="footer__link" href="/plans.html">Programs</a>
+                            <a class="footer__link" href="/trainers.html">Trainers</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/theGymLogoCrop.svg" alt="The Gym Logo" class="footer-image">
+                </div>
+            </div>        
+        </div>
+        </div>
+        <!-- / Footer Section-->
+        <!--Bottom Band Section-->
+        <div class="bottom-band">
+            <div class="bottom-band__left">
+                <a href="/terms-and-conditions.html">Terms & Conditions</a> | <a href="/privacy-policy.html">Privacy Policy</a>
+            </div>
+            <div class="bottom-band__right">
+                <p>© THE GYM OF TUCSON 2023. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+        <!-- / Bottom Band Section-->
+        <!--Popup-->
+        <div>
+            <div class="needsclick popup-set popup-container-outer hidden">
+            <div role="dialog" aria-label="POPUP Form" aria-modal="true" class="needsclick popup-set popup-container-inner">
+                <div data-testid="POPUP" class="needsclick popup-set">
+                    <div class="needsclick go3241907364 popup-set">
+                        <div class="popup-overlay">
+                            <div class="popup-wrapper">
+                              <div class="popup-container">
+                                <button tabindex="0" class="close-button" id="close-popup-btn" aria-label="Close form 1">
+                                  <svg class="svg-hover" role="img" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <title id="title-Close form 1">Close form 1</title>
+                                    <circle cx="10" cy="10" r="9.5" fill="rgba(180,187,195,0)" stroke="rgba(255,255,255,0)"></circle>
+                                    <path d="M6 6L14 14M6 14L14 6L6 14Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </button>
+                            <div class="popup-content">
+                                <!--Add Formspree here-->
+                                <form action="https://formbold.com/s/oej8k" method="POST" class="popup-image-section needsclick klaviyo-form klaviyo-form-version-cid_1 popup-set" data-testid="klaviyo-form-QScHRq" novalidate="" tabindex="-1">
+                                    <div class="needsclick popup-set">
+                                        <div data-testid="form-row" class="needsclick popup-set">
+                                            <div  component="[object Object]" data-testid="form-component" class="needsclick popup-set">
+                                                <div class="popup-set go3176171171">
+                                                    <p>
+                                                        <span>BETTER EVERY DAY</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-testid="form-row" class="needsclick popup-set">
+                                            <div component="[object Object]" data-testid="form-component" class="needsclick popup-set">
+                                                <div class="popup-set go3176171171">
+                                                    <p>
+                                                        <span class="ql-font-kanit">Unlock your first class below!</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Begin Gym of Tucson logo light SVG-->
+                                        <svg version="1.1" id="Layer_1" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003"
+	                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480.6 480.6"
+	                                        xml:space="preserve">
+                                        <g>
+                                            
+		                                        <linearGradient id="Hex_x0020_figure_00000084507499887191696700000016020262324044013471_" gradientUnits="userSpaceOnUse" x1="3339.6111" y1="7680.5952" x2="8106.542" y2="7680.5952" gradientTransform="matrix(0.0705 0 0 0.0705 -163.5945 -304.2214)">
+		                                        <stop  offset="0" style="stop-color:#4B4B4B"/>
+		                                        <stop  offset="0.1294" style="stop-color:#313133"/>
+		                                        <stop  offset="0.2588" style="stop-color:#595959"/>
+		                                        <stop  offset="0.3882" style="stop-color:#2F2F31"/>
+		                                        <stop  offset="0.5216" style="stop-color:#474747"/>
+		                                        <stop  offset="0.6118" style="stop-color:#616161"/>
+		                                        <stop  offset="0.7804" style="stop-color:#424244"/>
+		                                        <stop  offset="0.8902" style="stop-color:#39383D"/>
+		                                        <stop  offset="1" style="stop-color:#454547"/>
+	                                        </linearGradient>
+	
+		                                        <path id="Hex_x0020_figure" style="opacity:0.5;fill-rule:evenodd;clip-rule:evenodd;fill:url(#Hex_x0020_figure_00000084507499887191696700000016020262324044013471_);stroke:#2B2B29;stroke-width:0.48;stroke-miterlimit:10;" d="
+		                                        M239.8,43.2l16,9.2c-3.5,4.1-5.7,9.6-5.7,15.5c0,13,10.2,23.5,22.8,23.5c10.3,0,18.9-7,21.8-16.6l29.2,16.8l11.7,6.8
+		                                        c-43.2,26.7-83.3,27.1-132.4,19.6l-3.2,1.7c27.7,15.7,46.5,22.1,78.2,25.4c31.5,3.3,82.7-1.2,95.2-17.9c1.7-2.2,0.4-5.4-0.5-7.3
+		                                        l34.9,20.2v97v6c-8.8-20.7-22.3-36.4-29.1-42.2c-9-7.6-24.4-16.5-29.6-18.7s-17.9-6.2-32.8-2.7s-32.8,20.6-36.9,25.2
+		                                        c-4.1,4.6-14.9,12.7-24.1,20.1c-9.2,7.3-36.6,2.2-46.7-0.8c-10-3-20.6-13.3-22-21.2s13.8-23.3,16-29.8s-5-24.6-18.7-37.7
+		                                        s-29.4-16.8-43-18.7c-8.4-1.2-22.1,0.4-31.4,1.7l46.3-26.7L239.8,43.2L239.8,43.2L239.8,43.2z M407.8,301.9v32.2l-84,48.5l-84,48.5
+		                                        l-60-34.6c39.8-6.6,61.5-42.2,68.7-73.2c3.7-16.2-4.7-52.6-4.7-52.6c11.4,0.7,21.2,0.5,31.5-0.2c10.2-0.7,26.1-15,34.8-22
+		                                        c8.7-7.1,20.6-13.6,36.4-16c15.7-2.4,30.1,14.2,34.7,24.4c4.7,10.2,7,23.7-6.8,45.8c-13.7,22.1-35.4,27-51.4,25.9
+		                                        c-15.9-1.1-29.9-15.3-33-20.8s-2.5-7.3-4.6-7.3s-3.8,3.5-4.6,10.6c-3.3,28.7,26.1,47.1,52,49.8c30.6,3.2,43.7-11.6,52.4-19.2
+		                                        C393.2,334.7,403.6,314.6,407.8,301.9L407.8,301.9L407.8,301.9z M71.8,320.2v-83v-53.9l8.8,15.2c9-22.9,29.4-44.5,55.9-44.5
+		                                        c16.5,0,26.3,3.9,28.8,12.5s-5.1,28.3-17.7,38.7c-12.6,10.3-37.8,11.3-39.5,13.9c-1.6,2.4,1.8,9.9,1.8,9.9s7.1,19.9,7.7,22.4
+		                                        c0.5,2.4,2.4,6.2,5.7,5.4c12.4-3.1,8.4-14.9,36.1-15.7c9.2-0.3,25.6,6.4,34.5,15.3c8.9,9,17.2,40.8,16.5,54.4s-9.8,40-32,42.3
+		                                        c-22.3,2.4-41.1-12.8-50.7-19C107.4,321.1,94,317.1,71.8,320.2L71.8,320.2L71.8,320.2z"/>
+	                                        <path class="st1" d="M102.9,175.9h32.4V190l-9.6-0.2l-0.1,61.9l-14.4-0.8v-60.8L103,190L102.9,175.9L102.9,175.9z M138.1,275.4
+		                                        v16.3c0,0.6,0.1,1.6,1.5,1.6s1.5-0.7,1.5-1.6v-16.5c0-0.3-0.2-1.3-1.5-1.3C138.3,274,138.1,275.2,138.1,275.4L138.1,275.4
+		                                        L138.1,275.4z M132,273.7c0-2.9,2.9-5.3,5.9-5.3h3.1c3.4,0,6,2.3,6,5.3v19.7c0,3.3-2.7,6-6,6h-3c-3.2,0-5.9-2.7-5.9-6L132,273.7
+		                                        L132,273.7z M159.5,268.4h12.4v6.2h-6l0.1,4.8l5.9,0.1v5.9h-6v14h-6.4V268.4L159.5,268.4L159.5,268.4z M293.7,274.4v3h-6v-1.5
+		                                        c0-1.3-0.7-2.2-1.5-2.2c-0.6,0-1.3,0.4-1.3,1.1v1.2c0,2,1.5,3.2,5.2,6.1c2,1.6,3.6,5,3.6,6.8v4.2c0,2.3-2.1,6.5-5.8,6.4l-3-0.1
+		                                        c-3.8-0.1-6.1-3-6.1-5.7v-6h6.1v4.6c0,1,0.5,1.4,1.5,1.4s1.3-0.8,1.3-1.3v-2.1c0-3.8-8.9-7.4-9-12.7V275c0-4.7,4.4-6.6,6.1-6.6h3.1
+		                                        C289.4,268.4,293.7,271.6,293.7,274.4L293.7,274.4L293.7,274.4z M332.9,268.4h6l3.1,15.3v-15.3h5.9l0.2,30.9l-6-0.2l-3-15.3v15.5
+		                                        h-6L332.9,268.4L332.9,268.4z M200.9,268.4H214v6.2h-3.4v24.7h-6.2l-0.2-24.7H201L200.9,268.4L200.9,268.4z M225.5,268.4h6v23.8
+		                                        c0,0.8,0.6,1.4,1.4,1.4c0.9,0,1.3-0.6,1.3-1.5v-23.8h6l0.1,25.2c0,4-2.8,5.7-7.4,5.7c-5.3,0-7.5-2.9-7.5-5.7L225.5,268.4
+		                                        L225.5,268.4L225.5,268.4z M267.6,274.6v6.7h-6.4v-5.8c0-0.5-0.1-0.9-0.3-1.1c-0.2-0.2-0.5-0.3-1-0.3c-0.4,0-0.7,0.1-0.9,0.3
+		                                        c-0.2,0.2-0.3,0.6-0.3,1.1v16.9c0,0.5,0.1,0.8,0.3,1c0.2,0.2,0.5,0.3,1,0.3c0.4,0,0.8-0.1,0.9-0.3c0.2-0.2,0.3-0.5,0.3-1v-6.6h6.4
+		                                        v7.7c0,3.3-3.1,6-6.4,6h-2.6c-3.6,0-6.6-3.1-6.6-5.7v-19.1c0-3.5,3-6.2,6.6-6.2h2.6C263.8,268.4,267.6,270.2,267.6,274.6
+		                                        L267.6,274.6L267.6,274.6z M82.2,183H97v57.4H82.2V183z M60.7,192.9h14.8v38.4H60.7C60.7,231.3,60.7,192.9,60.7,192.9z M38.9,202.8
+		                                        h14.8v19.1H38.9V202.8z M398.3,183.7h-14.8v57.4h14.8V183.7z M419.9,193.6h-14.8V232h14.8V193.6z M441.7,203.5h-14.8v19.1h14.8
+		                                        V203.5z M311.5,275.6v16.3c0,0.6,0.1,1.6,1.5,1.6s1.5-0.7,1.5-1.6v-16.5c0-0.3-0.2-1.3-1.5-1.3
+		                                        C311.8,274.1,311.5,275.4,311.5,275.6L311.5,275.6L311.5,275.6z M305.5,273.8c0-2.9,2.9-5.3,5.9-5.3h3.1c3.4,0,6,2.3,6,5.3v19.7
+		                                        c0,3.3-2.7,6-6,6h-3.1c-3.2,0-5.9-2.7-5.9-6V273.8L305.5,273.8L305.5,273.8z M139,175.9h15v26.9h6.7v-26.9h14.7v74.4h-14.7v-33.9
+		                                        H154v33.9h-15C139,250.3,139,175.9,139,175.9z M182.2,175.9h30V190l-14.9-0.7V205l15.4-0.2l-0.4,13.8h-14.9V236h14.9v14.3h-30
+		                                        v-74.4H182.2L182.2,175.9z M265.8,175.9c5.1,0,8.3,7.2,8.3,14.1v11.3l-14.8,0.2v-8.3c0-2.7-1.7-3.2-3.5-3.2s-4.1,0.3-4.1,2.6v39.2
+		                                        c0,5.1,1.9,5.1,4.1,5.1s3.5-0.4,3.5-5.4v-11.3h-3.8l0.3-13.3l18.3,0.1v43.3H267l-1.4-6.4c-1.7,1.8-3.3,6.4-6.3,6.4
+		                                        c-2.9,0-3.5,0-8.3,0c-7.6,0-13.7-2.4-13.7-14.3v-45.9c0-6.6,7.9-14.1,14.4-14.1 M276.5,175.9h15l4.2,25.7l4.1-25.7h14.5l-11.8,50
+		                                        l-0.1,24.4h-14v-24.8L276.5,175.9L276.5,175.9L276.5,175.9z M318.4,175.9h21.8l6.1,41.7h0.8l6.1-41.6l22.6-0.1v74.4h-13.3
+		                                        l-0.6-52.9l-8.2,52.9h-13.6L331,197l0.4,53.3h-13.1L318.4,175.9L318.4,175.9L318.4,175.9z"/>
+                                        </g>
+                                        </svg>
+                                        <!-- / Gym of Tucson logo light SVG-->
+                                        <div data-testid="form-row" class="needsclick  popup-set">
+                                            <div component="[object Object]" data-testid="form-component" class="needsclick popup-set">
+                                                <div class="popup-set go3176171171">
+                                                    <p>
+                                                        <span class="ql-font-kanit">Sign up to join our gym family.</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-testid="form-row" class="needsclick popup-set">
+                                            <div component="[object Object]" data-testid="form-component" class="needsclick popup-set">
+                                                <button id="firstClassButton" class="needsclick go952291206 popup-set" type="button" tabindex="0">Click here for your first class!</button>
+                                            </div>
+                                        </div>
+                                        <div data-testid="form-row" class="needsclick  popup-set">
+                                            <div component="[object Object]" data-testid="form-component" class="needsclick  popup-set">
+                                                <div class="popup-set go3176171171">
+                                                    <p>
+                                                        <span class="ql-font-kanit">Before your first class, please come to the gym early to sign a standard liability release waiver, we promise to take care of you!&nbsp;
+                                                        </span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-testid="form-row"  class="needsclick  popup-set">
+                                        <div component="[object Object]" data-testid="form-component" class="needsclick  popup-set">
+                                            <button class="needsclick go952291206 popup-set" type="button" tabindex="0" id="no-thanks-btn">Already signed up!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / Popup-->
+        <!--Scripts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwQc8R3PGEThAq2UsIk914xZquo3AirKM&libraries=maps,marker&callback=initMap"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script src="app.js"></script>
+        <!-- / Scripts-->
+    </div>
+</div>
+</body>
+</html>
