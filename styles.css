@@ -1847,7 +1847,7 @@ textarea {
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
     .popup-container {
-        padding: 20px; 
+        padding: 40px 20px; 
         width: 100%;
     }
 
