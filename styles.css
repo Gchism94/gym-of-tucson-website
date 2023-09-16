@@ -2128,13 +2128,14 @@ textarea {
     margin: 0 auto; /* To center the card */
 }
 
-#group-class-page .membership__perks ul {
+#group-class-page .membership__perks ul p {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: left;
     text-align: left;
     padding-left: 0;
+    font-size: clamp(1.2rem, 3vw, 1.8rem)
   }
   
   #group-class-page .membership__perks ul li {
@@ -2217,6 +2218,8 @@ textarea {
       align-items: center;
       font-size: clamp(1.5rem, 5vw, 2rem);
     } 
+
+    
   }
   /* END RESPONSIVE STYLES */
   /* END GROUP CLASSES PAGE */
