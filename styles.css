@@ -864,6 +864,12 @@ ul {
     justify-content: space-between;
 }
 
+.team__text_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 850px){
     .team {
@@ -926,9 +932,7 @@ ul {
         justify-content: center;  /* Centered content */
     }
 
-    .team__text_1 svg {
-        display: none;
-      }
+
 }
 /* END RESPONSIVE STYLES */
 /* END TEAM SECTION */
