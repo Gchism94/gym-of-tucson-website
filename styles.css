@@ -1074,6 +1074,10 @@ ul {
     border-radius: 5px;
     font-size:18px;
     font-weight: bold;
+    max-width: 500px;  /* Setting maximum width */
+    overflow: hidden;  /* In case the content exceeds the maximum size */
+    text-overflow: ellipsis;  /* For text that is too long to fit */
+    white-space: nowrap;  /* Prevents the text from breaking into multiple lines */
 }
 
 .membership__link:hover {
