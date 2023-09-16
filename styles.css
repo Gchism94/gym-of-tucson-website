@@ -1301,10 +1301,11 @@ ul {
         padding-right: 0; /* remove any right padding */
     }
 
-    .trainers__card {
-        flex-basis: auto; /* Reset flex-basis */
-        margin-left: auto; /* Center align */
-        margin-right: auto; /* Center align */
+    .trainers__wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
     }
 
     .trainers__wrapper {
@@ -1324,6 +1325,11 @@ ul {
       text-align: center;
       margin-top: 2rem;
       display: block;
+    }
+
+    .trainers__card {
+        width: 100%;  /* take full width */
+        margin: 0 auto;  /* center the card */
     }
   
     .trainers__card .accordion {
