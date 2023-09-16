@@ -2213,6 +2213,12 @@ textarea {
         margin: 0;
       }
 
+      .column.column1,
+      .column.column2,
+      .column.column3 {
+          margin: 0; /* Resetting margin for mobile view */
+      }
+
     .membership__card {
       flex-direction: column;
       align-items: center;
