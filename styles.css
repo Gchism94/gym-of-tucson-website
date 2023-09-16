@@ -903,6 +903,21 @@ ul {
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 768px){
+    .team__wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 0 2rem;  /* Wider cards */
+    }
+    
+    .team__card, .team__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  /* Centered content */
+    }
+}
 /* END RESPONSIVE STYLES */
 /* END TEAM SECTION */
 
