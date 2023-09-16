@@ -82,7 +82,7 @@ p, a, li {
       font-size: 26px;
     }
     p {
-      font-size: 18px;  /* Increase the font size to your liking */
+      font-size: 20px;  /* Increase the font size to your liking */
     }
   }
 
@@ -709,7 +709,7 @@ ul {
 
 .team__text .topline, .team__text .team_desc p {
     font-size: clamp(1.5rem, 4vw, 2rem);
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .team__card h2 {
