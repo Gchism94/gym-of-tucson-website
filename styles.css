@@ -872,8 +872,8 @@ ul {
       }
 
     .team__wrapper {
-        grid-template-columns: repeat(3, 1fr); /* sets 3 equally spaced columns */
-        grid-template-rows: repeat(2, 50%); /* sets 2 equally spaced rows */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         padding: 0;
         margin: 0;
     }
