@@ -876,11 +876,16 @@ ul {
     align-items: center;
 }
 
+.animate-team {
+    position: relative;
+  }
+
 .center-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 850px){
@@ -938,7 +943,7 @@ ul {
     }
     
     .team__card{
-        max-width: 800px; /* or any max-width you prefer */
+        min-width: 300px; /* or any max-width you prefer */
         display: flex;
         flex-direction: column;
         align-items: center;
