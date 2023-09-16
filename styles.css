@@ -1296,13 +1296,21 @@ ul {
 
 
 @media screen and (max-width: 850px) {
+    .trainers {
+        padding-left: 0; /* remove any left padding */
+        padding-right: 0; /* remove any right padding */
+    }
+
     .trainers__card {
-      flex-direction: column;
-      align-items: center;
+        flex-basis: auto; /* Reset flex-basis */
+        width: 100%; /* take up all available space */
+        margin-left: auto; /* Center align */
+        margin-right: auto; /* Center align */
     }
 
     .trainers__wrapper {
       justify-content: center; /* Center the cards */
+      width: 100%; /* take up all available space */
     }
   
     .card-image {
