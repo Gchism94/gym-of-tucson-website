@@ -917,6 +917,7 @@ ul {
 
     .team__card h2 {
         font-size: clamp(1rem, 6vw, 5rem);
+        text-align: center;
     }
 
     .team__text_1 svg {
@@ -933,6 +934,10 @@ ul {
     .team__text_1 svg {
         display: none;
       }
+
+    .team__card h2 {
+        text-align: center;
+      }
 }
 
 @media screen and (max-width: 768px){
@@ -941,6 +946,10 @@ ul {
         grid-template-rows: auto;
         padding: 0 2rem;  /* Wider cards */
     }
+
+    .team__card h2 {
+        text-align: center;
+      }
     
     .team__card{
         display: flex;
