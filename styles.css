@@ -2173,11 +2173,11 @@ textarea {
   }
   
   #group-class-page .card-content p {
-    font-size: clamp(1rem, 2vw, 1.5em); /* adjust as necessary */
+    font-size: clamp(1.2rem, 2vw, 1.5em); /* adjust as necessary */
   }
 
   #group-class-page .card-content ul {
-    font-size: clamp(1rem, 2vw, 1.5em); /* adjust as necessary */
+    font-size: clamp(1.2rem, 2vw, 1.5em); /* adjust as necessary */
   }
 
   /* RESPONSIVE STYLES */
