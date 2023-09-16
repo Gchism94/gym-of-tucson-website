@@ -379,10 +379,14 @@ ul {
         top: -20px; /* Adjust the value 20px as needed */
         background-color: black; /* Restores background-color */
     }
-       
+    
+    .navbar__link {
+        font-size: 24px;
+    }
+
     .navbar__link,
     .dropdown-content a {
-        font-size: clamp(1rem, 4vw, 1.25rem); /* adjust these values as needed */
+        font-size: clamp(1.15rem, 4vw, 1.25rem); /* adjust these values as needed */
         display: flex;
         align-items: center;
         justify-content: center;
