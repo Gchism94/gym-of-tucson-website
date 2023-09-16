@@ -919,7 +919,7 @@ ul {
         font-size: clamp(1rem, 6vw, 5rem);
     }
 
-    .team p {
+    .team__text.topline .team__text.team_desc p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
@@ -938,7 +938,7 @@ ul {
         display: none;
       }
 
-    .team p {
+    .team__text.topline .team__text.team_desc p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 }
@@ -956,8 +956,8 @@ ul {
         align-items: center;
         justify-content: center;  /* Centered content */
     }
-
-    .team p {
+    
+    .team__text.topline .team__text.team_desc p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
