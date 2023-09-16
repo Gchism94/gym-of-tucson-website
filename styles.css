@@ -1614,6 +1614,7 @@ ul {
 
     .bottom-band p {
         font-size: 16px;
+        padding: 0 2em;  /* adjust the padding as you see fit */
     }
 }
 
@@ -1632,6 +1633,7 @@ ul {
 
     .bottom-band p {
         font-size: 16px;
+        padding: 0 2em;  /* adjust the padding as you see fit */
     }
 }
 
