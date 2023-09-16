@@ -369,9 +369,9 @@ ul {
     }
 
     .navbar__social-media i {
-        font-size: 16px;  /* adjust this value to make it smaller on mobile */
+        font-size: 22px;  /* adjust this value to make it smaller on mobile */
     }
-    
+
     .dropdown-content {
         display: none;
         padding: 0;
