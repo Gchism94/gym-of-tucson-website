@@ -990,8 +990,15 @@ ul {
     border-radius: 5px;
     font-size:18px;
     font-weight: bold;
+    max-width: 1000px; /* Add this line to set the maximum width */
+    overflow: hidden; /* To handle overflow content */
+    white-space: nowrap; /* Prevents text from breaking to the next line */
+    text-overflow: ellipsis; /* Truncate text if needed */
 }
 
+.button-container {
+    text-align: center;
+}
 
 .membership__link:hover {
     background-color: var(--red);
