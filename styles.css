@@ -870,6 +870,10 @@ ul {
     align-items: center;
 }
 
+.animate-team img {
+    display: inline-block;
+}
+
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 850px){
     .team {
