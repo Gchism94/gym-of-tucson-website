@@ -1900,33 +1900,42 @@ textarea {
 
     .popup-content {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px; /* No change */
     }
 
     .popup-content p {
-        font-size: 10px;
+        font-size: 10px; /* Smaller text */
     }
 
     .popup-image {
-        max-width: 200px;
+        max-width: 200px; /* Smaller image */
     }
 
     #firstClassButton, #no-thanks-btn {
         font-size: 16px;
-        width: 100%;
+        width: 100%; /* No change */
     }
 
     .close-button {
         top: 1px;
-        right: 1px;}
+        right: 1px;
+    }
 
     .close-button svg {
-        top: -1px;
-        width: 35px;
-        height: 35px;
+        width: 35px; /* Smaller close button */
+        height: 35px; /* Smaller close button */
     }
 
     [data-testid="form-row"] > div {
-        padding: 5px 2px;
+        padding: 5px 2px; /* Less padding */
+    }
+
+    [data-testid="form-row"] > div > div.go3176171171 p {
+        font-size: 10px; /* Smaller text */
     }
 }
 /* END RESPONSIVE STYLES */
