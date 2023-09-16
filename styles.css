@@ -592,6 +592,9 @@ ul {
 /* END HERO VIDEO */
 
 /* TEAM SECTION */
+.team{
+    padding: 6rem 3rem;
+}
 
 .team {
     width: 100%; /* ensures it takes the full width of its container */
@@ -863,9 +866,10 @@ ul {
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 850px){
-    .team{
-        padding: 6rem 6rem;
-    }
+    .team {
+        width: 100%; /* ensures it takes the full width of its container */
+        box-sizing: border-box; /* includes padding and border in the element's total width */
+      }
 
     .team__wrapper {
         grid-template-columns: 1fr;
