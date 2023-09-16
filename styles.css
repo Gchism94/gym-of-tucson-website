@@ -709,22 +709,7 @@ ul {
 
 .team__text .topline, .team__text .team_desc p {
     font-size: clamp(1.5rem, 4vw, 2rem);
-    line-height: 1.5;
-}
-
-.team__text_1{
-    position:relative;
-    padding: 1rem;
-}
-
-.team__text_1::after {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;  
+    line-height: 2;
 }
 
 .team__card h2 {
@@ -914,7 +899,7 @@ ul {
         font-size: clamp(1rem, 6vw, 5rem);
     }
 
-    .team__text.topline .team__text.team_desc p {
+    .team__text .topline .team__text .team_desc p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
@@ -937,7 +922,7 @@ ul {
         display: none;
       }
 
-    .team__text.topline .team__text.team_desc p {
+    .team__text .topline .team__text .team_desc p {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
@@ -959,6 +944,10 @@ ul {
         align-items: center;
         justify-content: center;  /* Centered content */
     }
+
+    .topline {
+        font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
+      }
     
     .team_desc p {
         font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
