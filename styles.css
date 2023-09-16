@@ -953,13 +953,6 @@ ul {
         align-items: center;
       }
     
-      .team__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    
       .team__card h2 {
         text-align: center;
       }
