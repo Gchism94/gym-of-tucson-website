@@ -368,10 +368,6 @@ ul {
         gap: 10px; /* adjust as needed for more or less space between icons */
     }
 
-    .navbar__social-media i {
-        font-size: 22px;  /* adjust this value to make it smaller on mobile */
-    }
-
     .dropdown-content {
         display: none;
         padding: 0;
@@ -385,7 +381,7 @@ ul {
     .navbar__link,
     .dropdown-content a {
         font-size: clamp(1rem, 4vw, 1.25rem); /* adjust these values as needed */
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
     }
