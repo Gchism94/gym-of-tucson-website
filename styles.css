@@ -1374,11 +1374,11 @@ ul {
 
 .badge-container a {
     display: block;
-    height: 30px;
+    height: 25px;
 }
 
 .badge-container a img {
-    height: 100%;
+    height: 125%;
     border-radius: 8px;
 }
 
