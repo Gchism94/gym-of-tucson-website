@@ -647,6 +647,12 @@ ul {
     font-weight: 700;
 }
 
+.team_desc {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
 .team__content {
     z-index: 1;
     position: absolute;
