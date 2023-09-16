@@ -947,7 +947,7 @@ ul {
       }
 
       #main-page .team__card::after {
-        height: 30%; /* Adjust this to change the height of the black block */
+        height: 125px; /* Adjust this to change the height of the black block */
     }
 }
 
