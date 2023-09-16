@@ -727,6 +727,11 @@ ul {
     z-index: -1;  
 }
 
+.topline {
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+
+}
+
 .team__desc{
     font-size: clamp(1.15rem, 3vw, 1.5rem);
     line-height: 1.4;
