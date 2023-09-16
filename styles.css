@@ -77,7 +77,11 @@ p, a, li {
     /*font-family: 'Milliard Light', sans-serif*/
 }
 
-
+@media only screen and (max-width: 768px) {
+    p {
+      font-size: 18px;  /* Increase the font size to your liking */
+    }
+  }
 
 /* This is the scrollbar track */
 ::-webkit-scrollbar {
