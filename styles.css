@@ -919,6 +919,10 @@ ul {
         font-size: clamp(1rem, 6vw, 5rem);
     }
 
+    .team__card p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
+    }
+
     .team__text_1 svg {
         display: none;
       }
@@ -933,6 +937,10 @@ ul {
     .team__text_1 svg {
         display: none;
       }
+
+    .team__card p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -947,6 +955,10 @@ ul {
         flex-direction: column;
         align-items: center;
         justify-content: center;  /* Centered content */
+    }
+
+    .team__card p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
 
