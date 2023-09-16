@@ -888,6 +888,7 @@ ul {
     .team {
         width: 100%; /* ensures it takes the full width of its container */
         box-sizing: border-box; /* includes padding and border in the element's total width */
+        padding: 6rem 0rem;
       }
 
     .team__wrapper {
