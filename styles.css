@@ -1022,6 +1022,18 @@ ul {
       width: 100%;  /* Make the card wider */
       padding: 1rem;  /* Reduce padding */
     }
+
+    .membership__card h3{
+        font-size: clamp(1.8rem, 6vw, 2.5rem);  /* Increase font size */
+    }
+
+    .membership__card p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
+    }
+
+    .membership__link {
+        font-size: 22px;  /* Increase font size */
+    }
     
     .card-image {
       width: 100%;
