@@ -1366,6 +1366,79 @@ ul {
         order: 1; /* Move card-image above card-content */
     }
   }
+
+  @media screen and (max-width: 468px) {
+    .trainers {
+        padding-left: 0; /* remove any left padding */
+        padding-right: 0; /* remove any right padding */
+    }
+
+    .trainers__wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .grid figure {
+        display: flex;
+     }
+     
+    .grid figure img {
+        object-fit: cover; /* also try `contain` and `fill` */
+     }
+
+    .trainers__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0;
+    }
+  
+    .card-image {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .card-content {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      display: block;
+    }
+
+    .trainers__card {
+        width: 100%;  /* take full width */
+        margin: auto;  /* center the card */
+    }
+  
+    .trainers__card .accordion {
+      display: none;
+    }
+  
+    .trainers__card .panel {
+      display: none;
+    }
+
+    .trainers__card:nth-child(even){
+        flex-direction: column; /* Stack the elements on top of each other */
+    }
+
+    .team__content, .social-icons {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;  /* Makes it vertical */
+        align-items: center;
+      }
+
+    .card-content {
+        order: 2; /* Move card-content below card-image */
+    }
+
+    .card-image {
+        order: 1; /* Move card-image above card-content */
+    }
+  }
+  
 /* END RESPONSIVE STYLES */
 /* END TRAINERS SECTION */
 
