@@ -1311,7 +1311,7 @@ ul {
     .trainers__wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
+        gap: 0;
     }
   
     .card-image {
