@@ -906,6 +906,10 @@ ul {
     .content-wrapper {
         flex-direction: column;
     }
+
+    .team__text_1 svg {
+        display: none;
+      }
 }
 
 @media screen and (max-width: 768px){
