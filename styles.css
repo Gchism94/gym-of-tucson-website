@@ -1908,7 +1908,7 @@ textarea {
     }
 
     .popup-content p {
-        font-size: 10px; /* Smaller text */
+        font-size: 12px; /* Smaller text */
     }
 
     .popup-image {
@@ -1926,8 +1926,8 @@ textarea {
     }
 
     .close-button svg {
-        width: 35px; /* Smaller close button */
-        height: 35px; /* Smaller close button */
+        width: 38px; /* Smaller close button */
+        height: 38px; /* Smaller close button */
     }
 
     [data-testid="form-row"] > div {
@@ -1935,7 +1935,7 @@ textarea {
     }
 
     [data-testid="form-row"] > div > div.go3176171171 p {
-        font-size: 10px; /* Smaller text */
+        font-size: 12px; /* Smaller text */
     }
 }
 /* END RESPONSIVE STYLES */
