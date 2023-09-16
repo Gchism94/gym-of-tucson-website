@@ -992,10 +992,6 @@ ul {
     font-weight: bold;
 }
 
-.button-container {
-    text-align: center;
-}
-
 .membership__link:hover {
     background-color: var(--red);
 }
