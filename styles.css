@@ -1078,6 +1078,9 @@ ul {
     overflow: hidden;  /* In case the content exceeds the maximum size */
     text-overflow: ellipsis;  /* For text that is too long to fit */
     white-space: nowrap;  /* Prevents the text from breaking into multiple lines */
+    flex-direction: column;
+    align-items: center;  /* Centers the content horizontally */
+    justify-content: center; /* Center horizontally */
 }
 
 .membership__link:hover {
