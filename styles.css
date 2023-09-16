@@ -927,7 +927,7 @@ ul {
         display: none;
       }
 
-    .team_desc {
+    .team_desc p {
         font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
 
@@ -946,7 +946,7 @@ ul {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
-    .team_desc {
+    .team_desc p {
         font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
 }
@@ -965,7 +965,7 @@ ul {
         justify-content: center;  /* Centered content */
     }
     
-    .team_desc {
+    .team_desc p {
         font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
 
