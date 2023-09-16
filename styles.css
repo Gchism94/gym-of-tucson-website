@@ -870,10 +870,10 @@ ul {
     align-items: center;
 }
 
-.animate-team {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* RESPONSIVE STYLES */
