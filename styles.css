@@ -1296,21 +1296,13 @@ ul {
 
 
 @media screen and (max-width: 850px) {
-    .trainers {
-        padding-left: 0; /* remove any left padding */
-        padding-right: 0; /* remove any right padding */
+    .trainers__card {
+      flex-direction: column;
+      align-items: center;
     }
 
     .trainers__wrapper {
-        width: 100%;
-        padding: 0;
-        margin: 0 auto;
-    }
-
-    .trainers__wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 0;
+      justify-content: center; /* Center the cards */
     }
   
     .card-image {
@@ -1323,11 +1315,6 @@ ul {
       text-align: center;
       margin-top: 2rem;
       display: block;
-    }
-
-    .trainers__card {
-        width: 100%;  /* take full width */
-        margin: 0 auto;  /* center the card */
     }
   
     .trainers__card .accordion {
