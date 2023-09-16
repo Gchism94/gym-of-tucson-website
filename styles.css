@@ -1862,7 +1862,7 @@ textarea {
     }
 
     .popup-content p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .popup-image {
@@ -1870,7 +1870,7 @@ textarea {
     }
 
     #firstClassButton, #no-thanks-btn {
-        font-size: 14px;
+        font-size: 16px;
         width:100%;
     }
 
@@ -1879,8 +1879,8 @@ textarea {
         right: 1px;}
 
     .close-button svg {
-        width: 35px;
-        height: 35px;
+        width: 38px;
+        height: 38px;
     }
 
     [data-testid="form-row"] > div {
@@ -1888,7 +1888,7 @@ textarea {
     }
 
     [data-testid="form-row"] > div > div.go3176171171 p {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
