@@ -947,21 +947,21 @@ ul {
         padding: 0 2rem;  /* Wider cards */
     }
 
-    .team__card h2 {
-        text-align: center;
+    .team__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     
-    .team__card{
-        display: flex;
-        align-items: center;
-        justify-content: center;  /* Centered content */
-    }
-
-    .team__content {
+      .team__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+    
+      .team__card h2 {
+        text-align: center;
       }
 
 }
