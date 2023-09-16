@@ -2190,17 +2190,27 @@ textarea {
     #group-class-page .membership__wrapper,
     .three-column-wrapper,
     .column {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center align the content */
-      justify-content: center; /* Center align the content vertically */
-    }
-
-    .three-column-wrapper, .column {
+        width: 100%; /* takes the full width available */
+        max-width: 100%; /* overrides the desktop max-width */
         display: flex;
         flex-direction: column;
         align-items: center; /* Center align the content */
         justify-content: center; /* Center align the content vertically */
+    }
+
+    .three-column-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .three-column-wrapper, .column {
+        width: 100%; /* takes the full width available */
+        max-width: 100%; /* overrides the desktop max-width */
+        flex-direction: column;
+        align-items: center; /* Center align the content */
+        justify-content: center; /* Center align the content vertically */
+        margin: 0;
       }
 
     .membership__card {
