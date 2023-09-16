@@ -934,10 +934,6 @@ ul {
     .team__text_1 svg {
         display: none;
       }
-
-    .team__card h2 {
-        text-align: center;
-      }
 }
 
 @media screen and (max-width: 768px){
@@ -951,10 +947,6 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-    
-      .team__card h2 {
-        text-align: center;
       }
 
 }
