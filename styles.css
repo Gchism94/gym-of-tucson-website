@@ -1598,6 +1598,10 @@ ul {
         grid-template-columns: 1fr;
     }
 
+    .bottom-band {
+        height: 100px; 
+    }
+
     .bottom-band p {
         font-size: 16px;
     }
