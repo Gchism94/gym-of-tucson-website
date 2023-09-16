@@ -1677,6 +1677,11 @@ ul {
   outline:0;
 }
 
+.footer__form {
+    width: 100%;
+    padding: 0em 1em 1em;
+}
+
 .footer__form select {
     border:2px solid gray;
     background-color: transparent;
