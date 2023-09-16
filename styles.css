@@ -1335,7 +1335,7 @@ ul {
 
     .trainers__card {
         width: 100%;  /* take full width */
-        margin: 0 auto;  /* center the card */
+        margin: auto;  /* center the card */
     }
   
     .trainers__card .accordion {
@@ -1349,6 +1349,14 @@ ul {
     .trainers__card:nth-child(even){
         flex-direction: column; /* Stack the elements on top of each other */
     }
+
+    .team__content, .social-icons {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;  /* Makes it vertical */
+        align-items: center;
+      }
 
     .card-content {
         order: 2; /* Move card-content below card-image */
