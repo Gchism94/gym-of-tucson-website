@@ -1849,7 +1849,7 @@ textarea {
     .popup-container {
         padding: 40px 20px; 
         width: 100%;
-        justify-content: space-between;
+        min-height: 400px; /* Adjust to your need */
     }
 
     .popup-content {
