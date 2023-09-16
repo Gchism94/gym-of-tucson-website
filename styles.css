@@ -1132,11 +1132,13 @@ ul {
       }
 
       .card-content {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;  /* Centers the content horizontally */
-    }
-    
+        justify-content: center; /* Center horizontally */
+      } 
+
     .membership__card .card-content {
       margin-top: 1rem;
       text-align: center;
