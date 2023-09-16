@@ -670,6 +670,11 @@ ul {
     width: 100%;
 }
 
+.team__content h2 {
+    word-wrap: break-word;
+}
+
+
 .team__card .team__content h4 {
     color: var(--white);
     font-size: clamp(1.5rem, 5vw, 3rem);
