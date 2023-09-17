@@ -1209,8 +1209,7 @@ ul {
     flex-basis: 100%;
     margin: 1rem 1rem; /* Top and bottom margins */
     padding: 2rem;
-    min-height: 450px;
-    max-height: 900px;
+    min-height: auto;
     background: var(--white);
     color: var(--black);
     border-radius: 10px;
