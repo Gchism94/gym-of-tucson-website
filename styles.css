@@ -1025,8 +1025,8 @@ ul {
     flex-basis: 100%;
     margin: 1rem 0; /* Top and bottom margins */
     padding: 2rem;
-    min-height: auto;
     max-height: 500px;
+    max-height: 700px;
     overflow: auto; /* Add this to handle overflow */
     background: var(--white);
     color: var(--black);
