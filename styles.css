@@ -881,6 +881,8 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 400px;  /* Set a larger width for desktop */
+    height: 400px;  /* Set a larger height for desktop */
   }
 
 #main-page .team__card--logo::after {
@@ -935,6 +937,11 @@ ul {
 
     .team__card--logo {
         order: 1;  /* Normally the last element would have the highest order */
+    }
+
+    .center-image {
+        width: 200px;  /* Set a larger width for desktop */
+        height: 200px;  /* Set a larger height for desktop */
     }
 
 }
