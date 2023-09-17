@@ -933,8 +933,8 @@ ul {
         order: 1;  /* Normally the last element would have the highest order */
     }
 
-    .team__card--last {
-        order: -1;  /* This will move it before the logo */
+    #main-page .team__card--logo::after {
+        display:none ;
     }
 
 }
@@ -956,7 +956,7 @@ ul {
         font-size: clamp(1.7rem, 3vw, 1.8rem);  /* Increased font-size for paragraph */
       }
 
-      #main-page .team__card::after {
+    #main-page .team__card::after {
         height: 120px; /* Adjust this to change the height of the black block */
     }
     
