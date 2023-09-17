@@ -700,7 +700,7 @@ ul {
 
 .team__text{
     position:relative;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .team__text::after {
@@ -1030,6 +1030,14 @@ ul {
     justify-content: center; /* Center horizontally */
 }
 
+.card-content p {
+    font-size: clamp(1.2rem, 3vw, 1.5em); /* adjust as necessary */
+  }
+
+.card-content ul {
+    font-size: clamp(1.2rem, 3vw, 1.5em); /* adjust as necessary */
+  }
+
 
 .card-image {
     width: 50%;
@@ -1208,7 +1216,7 @@ ul {
 .trainers__card {
     flex-basis: 100%;
     margin: 1rem 1rem; /* Top and bottom margins */
-    padding: 2rem;
+    padding: 1.25rem;
     min-height: auto;
     background: var(--white);
     color: var(--black);
@@ -2199,16 +2207,16 @@ textarea {
   }
 
   #group-class-page .card-content membership__perks h4 {
-    font-size: clamp(1rem, 2vw, 1.5em); /* adjust as necessary */
+    font-size: clamp(1rem, 3vw, 1.5em); /* adjust as necessary */
     margin-bottom: 10px; /* Adjust the margin as needed */
   }
   
   #group-class-page .card-content p {
-    font-size: clamp(1.2rem, 2vw, 1.5em); /* adjust as necessary */
+    font-size: clamp(1.2rem, 3vw, 1.5em); /* adjust as necessary */
   }
 
   #group-class-page .card-content ul {
-    font-size: clamp(1.2rem, 2vw, 1.5em); /* adjust as necessary */
+    font-size: clamp(1.2rem, 3vw, 1.5em); /* adjust as necessary */
   }
 
   /* RESPONSIVE STYLES */
