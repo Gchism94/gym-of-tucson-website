@@ -1059,11 +1059,15 @@ ul {
     width: 50%;
 }
 
+
+
 .card-image img {
-    width: 95%;
-    height: 95%;
-    object-fit: cover;
-}
+    max-width: 500px;  /* Set the maximum width */
+    max-height: 500px;  /* Set the maximum height */
+    width: auto;  /* Width will automatically adjust */
+    height: auto;  /* Height will automatically adjust */
+    object-fit: contain;
+  }
 
 .membership__perks{
     min-height: 150px;
