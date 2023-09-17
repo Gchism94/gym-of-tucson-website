@@ -1057,8 +1057,10 @@ ul {
 
 .card-image {
     width: 50%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
-
 
 
 .card-image img {
