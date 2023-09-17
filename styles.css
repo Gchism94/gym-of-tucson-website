@@ -883,6 +883,10 @@ ul {
     transform: translate(-50%, -50%);
   }
 
+#main-page .team__card--logo::after {
+    display:none ;
+}
+
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 850px){
     .team {
@@ -931,10 +935,6 @@ ul {
 
     .team__card--logo {
         order: 1;  /* Normally the last element would have the highest order */
-    }
-
-    #main-page .team__card--logo::after {
-        display:none ;
     }
 
 }
