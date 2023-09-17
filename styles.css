@@ -896,6 +896,7 @@ ul {
         grid-template-rows: repeat(2, 50%); /* sets 2 equally spaced rows */
         padding: 0;
         margin: 0;
+        padding: 0 rem;
     }
 
     .team__text:nth-of-type(n) {
@@ -956,7 +957,7 @@ ul {
     .team__wrapper{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        padding: 0 2rem;  /* Wider cards */
+        padding: 0rem;  /* Wider cards */
     }
     
     .team__card{
@@ -1109,6 +1110,10 @@ ul {
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 720px) {
+    .memberships {
+    padding: 6rem 1.5rem;
+    }
+
     .membership__desc {
         font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase paragraph font size */
     }
