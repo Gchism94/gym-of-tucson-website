@@ -1071,7 +1071,7 @@ ul {
 
 .membership__card p {
     margin-bottom: 1rem;
-    font-size: clamp(1rem, 2vw, 1.5em); /* adjust as necessary */
+    font-size: clamp(1rem, 3vw, 1.5em); /* adjust as necessary */
     line-height: 1.5;
 }
 
