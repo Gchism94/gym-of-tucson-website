@@ -2160,14 +2160,6 @@ textarea {
     justify-content: center;
   }
 
-.column.column1 {
-    margin-right: 20px; /* Add margin to create space between columns */
-}
-
-.column.column3 {
-    margin-left: 20px; /* Add margin to create space between columns */
-}
-
 #group-class-page .team__card {
     display: flex;
     flex-direction: column;
