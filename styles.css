@@ -2160,7 +2160,7 @@ textarea {
     justify-content: center;
   }
 
-  .membership__wrapper {
+.membership__wrapper {
     display: flex;
     justify-content: center; /* Center align the inner flex container */
     align-items: center; /* Vertically align the items */
