@@ -1070,6 +1070,8 @@ ul {
     min-width: auto;
     width: auto;  /* Width will automatically adjust */
     height: auto;  /* Height will automatically adjust */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     object-fit: contain;
   }
 
