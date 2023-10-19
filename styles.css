@@ -1263,6 +1263,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center; /* Center vertically */
     padding: 20px;
 }
 
@@ -2174,6 +2175,8 @@ textarea {
     flex-direction: column;
     text-align: center;
     height: 100%;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     width: 50%; /* Set the width to 100% */
     padding: 20px; /* Adjust the padding as needed */
 }
