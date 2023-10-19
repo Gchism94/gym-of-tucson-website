@@ -1263,7 +1263,6 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* Center vertically */
     padding: 20px;
 }
 
