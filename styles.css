@@ -1313,10 +1313,10 @@ ul {
 }
 
 #trainers-page .card-image img {
-    height: 100%;
-    border-radius: 10px; /* make the container circular */
-    object-fit: cover;
-    margin: auto;
+    max-width: 100%;      /* This ensures the image never exceeds its container's width */
+    height: auto;         /* The height auto will make it proportional to the width */
+    border-radius: 10px;
+    object-fit: cover;    /* This will make sure your image covers the space without warping */
 }
 
 #trainers-page .trainers__perks {
