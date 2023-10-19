@@ -1064,7 +1064,7 @@ ul {
 
 
 .card-image img {
-    max-width: 800px;  /* Set the maximum width */
+    max-width: 100%;  /* Set the maximum width */
     max-height: 1000px;  /* Set the maximum height */
     min-height: auto;
     min-width: auto;
