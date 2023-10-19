@@ -1073,6 +1073,8 @@ ul {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     object-fit: contain;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
 .membership__perks{
