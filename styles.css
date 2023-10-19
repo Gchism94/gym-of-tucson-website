@@ -1040,10 +1040,10 @@ ul {
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem; /* add padding as necessary */
     flex-direction: column;
     align-items: center;  /* Centers the content horizontally */
     justify-content: center; /* Center horizontally */
+    padding: 20px;
 }
 
 .card-content p {
@@ -1259,7 +1259,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 1rem; /* add padding as necessary */
+    padding: 20px;
 }
 
 .trainers__title {
@@ -2181,7 +2181,7 @@ textarea {
     text-align: center;
     height: 100%;
     width: 100%; /* Set the width to 100% */
-    padding: 0 20px; /* Adjust the padding as needed */
+    padding: 20px; /* Adjust the padding as needed */
 }
 
 #group-class-page .services-image {
@@ -2291,6 +2291,7 @@ textarea {
     .membership__card .card-content {
       margin-top: 1rem;
       text-align: center;
+      padding: 20px;
     }
   
     .membership__card:nth-child(2),
