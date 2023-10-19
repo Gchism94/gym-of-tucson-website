@@ -2174,7 +2174,7 @@ textarea {
     flex-direction: column;
     text-align: center;
     height: 100%;
-    width: 100%; /* Set the width to 100% */
+    width: 50%; /* Set the width to 100% */
     padding: 20px; /* Adjust the padding as needed */
 }
 
