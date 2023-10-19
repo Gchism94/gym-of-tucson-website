@@ -621,7 +621,7 @@ ul {
 .team__card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     margin: 1.5rem;
     border-radius: 10px;
     position: relative;
@@ -1262,7 +1262,6 @@ ul {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
 }
 
