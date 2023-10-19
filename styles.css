@@ -2167,7 +2167,7 @@ textarea {
     line-height: 2;
 }
 
-#group-class-page .card-content {
+#group-class-page .three-column-wrapper .card-content {
     display: flex;
     flex-direction: column;
     text-align: center;
