@@ -1270,9 +1270,12 @@ ul {
     align-items: flex-start; /* Aligns items to the left */
 }
 
-#trainers-page .card-image { 
-    width: auto;
-    height: 100%;
+#trainers-page .card-image {
+    width: 100%;          /* This ensures the container takes full width */
+    height: auto;         /* Makes the height responsive */
+    display: flex;        /* Uses flexbox to center the image */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center;  /* Vertically center the image */
 }
 
 .trainer-social-icons {
