@@ -2161,22 +2161,7 @@ textarea {
     width: 100%;
 }
 
-#group-class-page .team__card {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 100%;
-    line-height: 2;
-}
 
-#group-class-page .card-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 100%;
-    width: 100%; /* Set the width to 100% */
-    padding: 20px; /* Adjust the padding as needed */
-}
 
 #group-class-page .services-image {
     display: block;
