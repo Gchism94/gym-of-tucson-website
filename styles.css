@@ -1274,6 +1274,8 @@ ul {
     width: auto;
     height: 100%;
     display: flex;        /* Uses flexbox to center the image */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center;  /* Vertically center the image */
 }
 
 #trainers-page .card-image img {
