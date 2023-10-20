@@ -1592,16 +1592,21 @@ ul {
     justify-content: center;
     gap: 20px;  /*This is to provide space between icons. Adjust as per requirement*/
 }
-
+/* Making the map responsive */
 .map-container {
-    height: auto;  /* This will allow the container to expand vertically */
-    width: 90%;  /* adjust to your preference */
-    margin: auto;  /* centers the block horizontally */
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* This is for 4:3 aspect ratio. Adjust accordingly if you want a different aspect ratio. */
+    overflow: hidden;
 }
 
-#map {
-    height: 500px;  /* adjust to your preference */
-    width: 100%;  /* it will take full width of .map-container */
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .bottom-band {
@@ -2335,7 +2340,7 @@ textarea {
     #privacy-page .team {
         line-height: 1.5;
         font-family: 'Uniform Light', sans-serif;
-        padding: 6rem 3rem;
+        padding: 6rem 34rem;
       }
   }
   /* END RESPONSIVE STYLES */
