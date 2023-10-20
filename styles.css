@@ -1115,6 +1115,12 @@ ul {
     margin: 0 auto; /* To center the card */
 }
 
+#services-page .trainer-social-icons {
+    display: flex;
+    justify-content: center; /* Horizontally centers the child elements */
+    align-items: center;     /* Vertically centers the child elements */
+}
+
 .membership__link {
     text-transform: uppercase;
     display: inline-block;
