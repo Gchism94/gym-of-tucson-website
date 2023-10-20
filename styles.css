@@ -2053,7 +2053,7 @@ textarea {
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
     .popup-content #Layer_1 {
-        max-width: 8vw;
+        max-width: 85vw;
     }
 
     .popup-container {
@@ -2104,9 +2104,9 @@ textarea {
 
 @media (max-width: 480px) {
     .popup-content #Layer_1 {
-        max-width: 8vw;
+        max-width: 85vw;
     }
-    
+
     .popup-container {
         padding: 15px; 
         width: 100%;
