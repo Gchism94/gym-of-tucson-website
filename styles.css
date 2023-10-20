@@ -2312,6 +2312,7 @@ textarea {
   #privacy-page .team {
     line-height: 1.5;
     font-family: 'Uniform Light', sans-serif;
+    padding: 6rem 10rem;
   }
 
   #privacy-page .team h1 {
