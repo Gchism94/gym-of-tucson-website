@@ -1632,6 +1632,11 @@ ul {
   
 
 @media screen and (max-width: 768px) {
+    .map-container {
+        padding-left: 15px;  /* Adjust this value as needed */
+        padding-right: 15px; /* Adjust this value as needed */
+    }
+    
     .email{
         width: 85%;
         margin: 0 auto;  /* centers the block horizontally */
