@@ -858,8 +858,8 @@ ul {
 }
 
 .team__wrapper > *:nth-child(11) {
-    grid-row: 11 / 13;
-    grid-column: 1 / 2;
+    grid-row: 10 / 11;
+    grid-column: 2 / 3;
     height: 350px; /* adjust this to the height of your image */
 
 }
