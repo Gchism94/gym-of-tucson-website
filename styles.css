@@ -2051,10 +2051,16 @@ textarea {
 
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
+
+    .popup-content #Layer_1 {
+        max-width: 80vw;
+    }
+
     .popup-container {
-        padding: 40px 20px; 
-        width: 100%;
-        min-height: 400px; /* Adjust to your need */
+        padding: 1.5rem; 
+        max-width: 90%;
+        max-height: 80vh; /* Adjust to 80% of screen height on medium devices */
+        overflow-y: auto; /* Add scrollbar if content exceeds this height */
     }
 
     .popup-content {
@@ -2072,6 +2078,7 @@ textarea {
 
     .popup-image {
         max-width: 300px;
+        margin-bottom: 20px; /* adds some space below the image */
     }
 
     #firstClassButton, #no-thanks-btn {
@@ -2098,9 +2105,16 @@ textarea {
 }
 
 @media (max-width: 480px) {
+
+    .popup-content #Layer_1 {
+        max-width: 80vw;
+    }
+    
     .popup-container {
-        padding: 15px; 
-        width: 100%;
+        padding: 2rem; 
+        max-width: 85%;
+        max-height: 70vh; /* Adjust to 70% of screen height on smaller devices */
+        overflow-y: auto; /* Add scrollbar if content exceeds this height */
     }
 
     .popup-content {
@@ -2118,6 +2132,8 @@ textarea {
 
     .popup-image {
         max-width: 200px; /* Smaller image */
+        margin-bottom: 15px; /* adds some space below the image */
+
     }
 
     #firstClassButton, #no-thanks-btn {
@@ -2141,6 +2157,13 @@ textarea {
 
     [data-testid="form-row"] > div > div.go3176171171 p {
         font-size: 12px; /* Smaller text */
+    }
+}
+
+/* Screen height specific adjustments */
+@media (max-height: 667px) {
+    .popup-container {
+        max-height: 60vh; /* reducing a bit more for shorter screens */
     }
 }
 /* END RESPONSIVE STYLES */
