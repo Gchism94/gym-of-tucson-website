@@ -2355,7 +2355,9 @@ textarea {
     #privacy-page .team {
         line-height: 1.5;
         font-family: 'Uniform Light', sans-serif;
-        padding: 6rem 34rem;
+        padding-left: 2rem;
+        padding-right:2rem;
+
       }
   }
   /* END RESPONSIVE STYLES */
