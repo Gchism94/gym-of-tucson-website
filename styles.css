@@ -850,13 +850,18 @@ ul {
 .team__wrapper > *:nth-child(9) {
     grid-row: 9 / 10;
     grid-column: 1 / 2;
-    height: 350px; /* adjust this to the height of your image */
-
 }
 
 .team__wrapper > *:nth-child(10) {
     grid-row: 8 / 10;
     grid-column: 2 / 3;
+}
+
+.team__wrapper > *:nth-child(11) {
+    grid-row: 9 / 10;
+    grid-column: 2 / 3;
+    height: 350px; /* adjust this to the height of your image */
+
 }
 
 /*Container for form and footer*/
