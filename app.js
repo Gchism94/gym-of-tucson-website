@@ -46,7 +46,7 @@ dropdownContent.addEventListener('mouseenter', function() {
 dropdownContent.addEventListener('mouseleave', function() {
     timeout = setTimeout(function() {
         dropdownContent.style.display = 'none';
-    }, 200); 
+    }, 400); 
 });
 
 // when DOM is fully loaded
@@ -290,5 +290,23 @@ for (var i = 0; i < acc.length; i++) {
       activeIcon.style.display = 'none';
     }
   });
+}
+
+// Powerlifting page image carosel
+let slideIndex = 1;
+showSlide(slideIndex);
+
+function moveSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+    let slides = document.getElementsByClassName("carousel-slide");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex-1].style.display = "block";  
 }
 

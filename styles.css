@@ -2060,6 +2060,7 @@ textarea {
 @media (max-width: 768px) {
     .popup-content #Layer_1 {
         max-width: 85vw;
+        max-height: 0vh;
     }
 
     .popup-container {
@@ -2111,6 +2112,7 @@ textarea {
 @media (max-width: 480px) {
     .popup-content #Layer_1 {
         max-width: 85vw;
+        max-height: 0vh;
     }
 
     .popup-container {
@@ -2362,3 +2364,49 @@ textarea {
   }
   /* END RESPONSIVE STYLES */
   /* END POLICY PAGE */
+
+  /* IMAGE CAROSEL */
+  .carousel-container {
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-height: 400px;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}
+/* END IMAGE CAROSEL */
