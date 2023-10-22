@@ -2360,6 +2360,11 @@ textarea {
     text-decoration: none !important;
   }
 
+  .membership__desc p:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
 /* RESPONSIVE STYLES */
   @media screen and (max-width: 820px) {
     #privacy-page .team {
@@ -2373,48 +2378,38 @@ textarea {
   /* END RESPONSIVE STYLES */
   /* END POLICY PAGE */
 
-  /* IMAGE CAROSEL */
-  .carousel-container {
-    max-width: 700px;
-    margin: auto;
-    position: relative;
+  /* IMAGE GALLERY */
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
 }
 
-.carousel {
-    position: relative;
-    overflow: hidden;
+.photo-gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.carousel-slide {
-    display: none;
-    text-align: center;
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+/* END RESPONSIVE STYLES */
+/* END IMAGE GALLERY */
+
+/* POWERCLEAN PAGE */
+#group-class-page .memberships a {
+    color: var(--red);
+    text-decoration: none;
 }
 
-.carousel-slide img {
-    width: 100%;
-    max-height: 400px;
+#group-class-page .memberships a:hover {
+    color: var(--white);
 }
 
-.carousel-caption {
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 10px;
-}
-
-.carousel-prev, .carousel-next {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.carousel-prev {
-    left: 0;
-}
-
-.carousel-next {
-    right: 0;
-}
-/* END IMAGE CAROSEL */
+/* END POWERCLEAN PAGE */
