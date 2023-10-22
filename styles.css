@@ -2107,6 +2107,10 @@ textarea {
     [data-testid="form-row"] > div > div.go3176171171 p {
         font-size: 14px;
     }
+
+    [data-testid="form-row"] > div:nth-child(1) {
+        padding: 8px 0px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2158,6 +2162,10 @@ textarea {
 
     [data-testid="form-row"] > div > div.go3176171171 p {
         font-size: 12px; /* Smaller text */
+    }
+
+    [data-testid="form-row"] > div:nth-child(1) {
+        padding: 8px 0px;
     }
 }
 /* END RESPONSIVE STYLES */
