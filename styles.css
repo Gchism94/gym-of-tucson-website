@@ -1325,6 +1325,14 @@ ul {
     flex-direction: row-reverse;
 }
 
+#trainers-page .trainers__card a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+#trainers-page .trainers__card a:hover {
+    color: var(--black);
+}
 
 .card-icon {
     font-size: 3rem;
