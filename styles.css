@@ -2411,12 +2411,12 @@ textarea {
 /* END IMAGE GALLERY */
 
 /* POWERCLEAN PAGE */
-#group-class-page .memberships a {
+#group-class-page .memberships .membership__desc a {
     color: var(--red);
     text-decoration: none;
 }
 
-#group-class-page .memberships a:hover {
+#group-class-page .memberships .membership__desc a:hover {
     color: var(--white);
 }
 /* END POWERCLEAN PAGE */
