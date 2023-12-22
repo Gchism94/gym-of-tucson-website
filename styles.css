@@ -566,8 +566,8 @@ ul {
   .hero-image {
     width: 100%;
     height: auto;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 /* RESPONSIVE STYLES */
@@ -705,10 +705,10 @@ ul {
 
 .team__text::after {
     content: "";
-    background-image: url(/images/gym-of-tucson-trainers.svg);
+    background-image: url(/images/SkullGym3.svg);
     background-repeat: no-repeat;
-    background-size: 50%; /* Adjust this value to resize the image */
-    background-position: 50% 30%;
+    background-size: 75%; /* Adjust this value to resize the image */
+    background-position: 50% 25%;
     opacity: 0.25;
     top: 0;
     left: 0;
