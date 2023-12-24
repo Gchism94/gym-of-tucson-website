@@ -2018,14 +2018,14 @@ textarea {
     text-align: center !important
 }
 
-[data-testid="form-row"] > div > div.go3176171171 p span.ql-font-kanit:nth-child(1) {
+[data-testid="form-row"] > div > div.go3176171171 p span.ql-font-kanit {
     font-size: 34px;
     color: #373f47;
     font-weight: bold;
     text-align: center !important
 }
 
-[data-testid="form-row"] > div > div.go3176171171 p span.ql-font-kanit-1:nth-child(1) {
+[data-testid="form-row"] > div > div.go3176171171 p span.ql-font-kanit-1 {
     color: #373f47;
     font-size: 20px;
     font-weight: 400;
