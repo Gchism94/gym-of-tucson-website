@@ -2006,34 +2006,30 @@ textarea {
     width: 100%;
 }
 
+[data-testid="form-row"] > div > div.go31761711711 p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left !important
+}
+
 [data-testid="form-row"] > div > div.go3176171171 p {
     font-size: 14px;
     font-weight: 400;
-    text-align: left;
+    text-align: center !important
 }
 
 [data-testid="form-row"] > div > div.go3176171171 p span.ql-font-kanit:nth-child(1) {
     font-size: 34px;
     color: #373f47;
     font-weight: bold;
+    text-align: center !important
 }
 
-[data-testid="form-row"] > div > div.go3176171171 p span.ql-font-kanit:nth-child(2) {
+[data-testid="form-row"] > div > div.go3176171171 p span.ql-font-kanit-1:nth-child(1) {
     color: #373f47;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-}
-
-[data-testid="form-row"].needsclick:nth-of-type(3) div.go3176171171 p span.ql-font-kanit {
-    color: #373f47;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-[data-testid="form-row"].needsclick:nth-of-type(5) div.go3176171171 p span.ql-font-kanit {
-    color: #606a72;
-    font-size: 15px;
-    font-weight: 400;
+    text-align: center !important
 }
 
 .popup-container-outer.hidden {
