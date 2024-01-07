@@ -1293,6 +1293,7 @@ ul {
     z-index: 1;
     display: flex;
     opacity: 1;
+    padding: 7px 0px 0px 0px;
 }
 
 .trainer-social-icons a {
