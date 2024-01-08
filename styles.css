@@ -7,12 +7,14 @@
 @font-face {
     font-family: 'Gotham Pro';
     src: url('/fonts/Gotham_Pro/gothamProRegular/gothamProRegular.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* IMPORT GOTHAM PRO LIGHT FONT */
 @font-face {
     font-family: 'Gotham Pro Light';
     src: url('/fonts/Gotham_Pro/gothamProLight/gothamProLight.ttf') format('truetype');
+    font-display: swap;
 }
 
 
@@ -20,36 +22,42 @@
 @font-face {
     font-family: 'Avenir';
     src: url('/fonts/Avenir/AvenirRegular.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* IMPORT AVENIR LIGHT (METROPOLIS-LIGHT) FONT */
 @font-face {
     font-family: 'Avenir Light';
     src: url('/fonts/Avenir/Metropolis-Light.otf') format('truetype');
+    font-display: swap;
 }
 
 /* IMPORT UNIFORM FONT */
 @font-face {
     font-family: 'Uniform';
     src: url('/fonts/Uniform/Uniform.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* IMPORT UNIFORM LIGHT FONT */
 @font-face {
     font-family: 'Uniform Light';
     src: url('/fonts/Uniform/UniformLight.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* IMPORT MILLIARD BOOK FONT */
 @font-face {
     font-family: 'Milliard Book';
     src: url('/fonts/Milliard/MilliardBook.otf') format('truetype');
+    font-display: swap;
 }
 
 /* IMPORT MILLIARD LIGHT FONT */
 @font-face {
     font-family: 'Milliard Light';
     src: url('/fonts/Milliard/MilliardLight.otf') format('truetype');
+    font-display: swap;
 }
 
 /* GLOBAL SETTINGS */
