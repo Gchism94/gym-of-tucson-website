@@ -936,7 +936,7 @@ ul {
     .team__card h2 {
         font-size: clamp(2.75rem, 6vw, 5rem);
         padding: 0px 0px 10px 0px;
-        bottom: 30px;
+        bottom: 40px;
     }
 
     .team__text .topline .team__text .team_desc p {
@@ -960,8 +960,12 @@ ul {
         height: 300px;  /* Set a larger height for desktop */
     }
 
+    #main-page .team__card::after {
+        height: 200px; /* Adjust this to change the height of the black block */
+    }
+
     .social-icons a {
-        font-size: 1.45rem;
+        font-size: 1.65rem;
     }
 
 }
@@ -986,15 +990,15 @@ ul {
     .team__card h2 {
         font-size: clamp(2.75rem, 6vw, 5rem);
         padding: 0px 0px 10px 0px;
-        bottom: 30px;
+        bottom: 40px;
     }
 
     #main-page .team__card::after {
-        height: 175px; /* Adjust this to change the height of the black block */
+        height: 200px; /* Adjust this to change the height of the black block */
     }
 
     .social-icons a {
-        font-size: 1.45rem;
+        font-size: 1.65rem;
     }
     
 }
@@ -1016,7 +1020,7 @@ ul {
     .team__card h2 {
         font-size: clamp(2.75rem, 6vw, 5rem);
         padding: 0px 0px 10px 0px;
-        bottom: 30px;
+        bottom: 40px;
     }
 
     .topline {
@@ -1028,7 +1032,11 @@ ul {
       }
 
     .social-icons a {
-        font-size: 1.45rem;    }
+        font-size: 1.65rem;    }
+
+     #main-page .team__card::after {
+        height: 200px; /* Adjust this to change the height of the black block */
+    }
 
 }
 /* END RESPONSIVE STYLES */
