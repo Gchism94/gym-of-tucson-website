@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /no-index/
+
+Sitemap: http://www.gymoftucson.com/sitemap.xml
