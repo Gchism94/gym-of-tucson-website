@@ -933,12 +933,12 @@ ul {
     }
 
     .team__card h2 {
-        font-size: clamp(1.63rem, 6vw, 5rem);
+        font-size: clamp(2.75rem, 6vw, 5rem);
         padding: 0px 0px 5px 0px
     }
 
     .team__text .topline .team__text .team_desc p {
-        font-size: clamp(1.2rem, 3vw, 1.8rem);  /* Increase font size */
+        font-size: clamp(2rem, 3vw, 1.8rem);  /* Increase font size */
     }
 
     .team__text_1 svg {
@@ -978,7 +978,7 @@ ul {
       }
 
     #main-page .team__card::after {
-        height: 120px; /* Adjust this to change the height of the black block */
+        height: 175px; /* Adjust this to change the height of the black block */
     }
     
 }
