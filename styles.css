@@ -1129,7 +1129,8 @@ ul {
 }
 
 .membership__card:nth-child(2), .membership__card:nth-child(4), 
-.membership__card:nth-child(6), .membership__card:nth-child(8){
+.membership__card:nth-child(6), .membership__card:nth-child(8)
+.membership__card:nth-child(10){
     flex-direction: row-reverse;
 }
 
@@ -1254,7 +1255,8 @@ ul {
     }
   
     .membership__card:nth-child(2),
-    .membership__card:nth-child(4) {
+    .membership__card:nth-child(4),
+    .membership__card:nth-child(6) {
         flex-direction: column; /* Stack the elements on top of each other */
     }
     
@@ -2357,6 +2359,7 @@ textarea {
         margin: 0;
       }
 
+      .column.column0
       .column.column1,
       .column.column2,
       .column.column3 {
