@@ -3,79 +3,95 @@ const menuLinks = document.querySelector('.navbar__menu');
 const navlogo = document.querySelector('#navbar__logo');
 const body = document.querySelector('body');
 
-// Select the navbar element
-const navbar = document.querySelector('.navbar');
+document.addEventListener("DOMContentLoaded", function() {
+  setupInitialStates();
+  setupEventListeners();
+  setupAnimations();
+  checkForPopupDisplay();
+});
 
-// Function to handle the scroll event
-function shrinkNavbar() {
-  if (window.scrollY > 0) {
-    navbar.classList.add('shrink');
-  } else {
-    navbar.classList.remove('shrink');
+function setupInitialStates() {
+  // Set initial states for elements like hiding the callout
+  const callout = document.querySelector('.hero-video .callout');
+  if (callout) {
+      gsap.set(callout, { autoAlpha: 0 }); // Prepare the callout for a smooth fadeIn
   }
 }
 
-// Get the dropdown element
-var dropdown = document.getElementById('servicesDropdown');
+function setupEventListeners() {
+  // Navbar interactions
+  const menu = document.querySelector('#mobile-menu');
+  const menuLinks = document.querySelector('.navbar__menu');
+  const body = document.querySelector('body');
+  menu.addEventListener('click', function() {
+      menu.classList.toggle('is-active');
+      menuLinks.classList.toggle('active');
+      body.classList.toggle('active');
+  });
 
-// Get the dropdown content
-var dropdownContent = dropdown.getElementsByClassName('dropdown-content')[0];
-
-// Variable to hold setTimeout
-var timeout;
-
-// Add an event listener for when the mouse enters the dropdown
-dropdown.addEventListener('mouseenter', function() {
-    clearTimeout(timeout);
-    dropdownContent.style.display = 'block';
-});
-
-// Add an event listener for when the mouse leaves the dropdown
-dropdown.addEventListener('mouseleave', function() {
-    timeout = setTimeout(function() {
-        dropdownContent.style.display = 'none';
-    }, 200); 
-});
-
-// Add an event listener for when the mouse enters the dropdown content
-dropdownContent.addEventListener('mouseenter', function() {
-    clearTimeout(timeout);
-});
-
-// Add an event listener for when the mouse leaves the dropdown content
-dropdownContent.addEventListener('mouseleave', function() {
-    timeout = setTimeout(function() {
-        dropdownContent.style.display = 'none';
-    }, 400); 
-});
-
-// when DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-  const callout = document.querySelector('.hero-video .callout');
-  if (callout) {
-    callout.classList.add('hidden-callout');
-  }
-
-  // Add click event to dropdown trigger for mobile
-  if (window.innerWidth <= 768) { 
-    dropdown.addEventListener('click', function() {
-      if (dropdownContent.style.display === 'none' || dropdownContent.style.display === '') {
-        dropdownContent.style.display = 'block';
+  // Scroll interactions
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 0) {
+          navbar.classList.add('shrink');
       } else {
-        dropdownContent.style.display = 'none';
+          navbar.classList.remove('shrink');
       }
-    });
+  });
 
-    // Remove hover event listeners for desktop
-    dropdown.removeEventListener('mouseenter', showDropdown);
-    dropdown.removeEventListener('mouseleave', hideDropdown);
+  // Popup interaction
+  const closeButton = document.getElementById('close-popup-btn');
+  const noThanksBtn = document.getElementById('no-thanks-btn');
+  if (closeButton) closeButton.addEventListener('click', closePopup);
+  if (noThanksBtn) noThanksBtn.addEventListener('click', closePopup);
+}
+
+function setupAnimations() {
+  // Define any GSAP animations for parts of your site here
+  gsap.registerPlugin(ScrollTrigger);
+  const animateElements = document.querySelectorAll('.animate-element');
+  animateElements.forEach(elem => {
+      gsap.from(elem, {
+          scrollTrigger: elem,
+          duration: 1,
+          opacity: 0,
+          y: -150,
+          stagger: 0.1,
+          delay: 0.2
+      });
+  });
+}
+
+function checkForPopupDisplay() {
+  // Check if the popup should be displayed or not
+  const popupContainer = document.querySelector('.popup-container-outer');
+  const navigatedFromSite = sessionStorage.getItem('navigatedFromSite');
+  if (!navigatedFromSite && popupContainer) {
+      popupContainer.classList.remove('hidden');
   }
-});
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-  var navbar = document.querySelector(".navbar__link, .navbar__logo"); // Replace ".navbar" with the appropriate selector for your navbar element
-  navbar.classList.add("loaded");
-});
+function closePopup() {
+  const popupContainer = document.querySelector('.popup-container-outer');
+  const callout = document.querySelector('.hero-video .callout');
+  popupContainer.classList.add('hidden');
+
+  if (callout) {
+      gsap.to(callout, {
+          autoAlpha: 1,
+          duration: 0.25,
+          ease: "power3.out"
+      });
+  }
+
+  // Optionally play the video here, if applicable
+  const videoElement = document.querySelector('.hero-video video');
+  if (videoElement) videoElement.play();
+}
+
+// Add any additional functions or event listeners you need below
+// For example, accordion interactions, carousel logic, etc.
+
 
 // ACTIVE LINK HOVER EFFECT
 // Get all navigation links and dropdown links
@@ -222,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power3.out"
       });
     }
-
+  
     // Select the video element and play it
     const videoElement = document.querySelector('.hero-video video');
     if (videoElement) {
@@ -231,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Fade in "Better Every Day" text
     fadeInBetterEveryDayText();
-  };
+  };  
   
 
   const firstClassButton = document.getElementById("firstClassButton");
