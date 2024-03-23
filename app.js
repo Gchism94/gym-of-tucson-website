@@ -51,6 +51,11 @@ dropdownContent.addEventListener('mouseleave', function() {
 
 // when DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
+  const callout = document.querySelector('.hero-video .callout');
+  if (callout) {
+    callout.classList.add('hidden-callout');
+  }
+
   // Add click event to dropdown trigger for mobile
   if (window.innerWidth <= 768) { 
     dropdown.addEventListener('click', function() {
@@ -203,12 +208,31 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeInBetterEveryDayText();
   }
 
-  const closePopup = () => {
-      popupContainer.classList.add('hidden'); // Here we add 'hidden' class instead of setting display to 'none'
 
-      // Fade in "Better Every Day" text
+  const closePopup = () => {
+    popupContainer.classList.add('hidden'); // This hides the popup
+  
+    // Fade in the .callout element
+    const callout = document.querySelector('.hero-video .callout');
+    if (callout) {
+      callout.classList.remove('hidden-callout'); // Remove the class that hides the element
+      gsap.to(callout, {
+        autoAlpha: 1, // GSAP will handle the opacity and visibility
+        duration: 1,
+        ease: "power3.out"
+      });
+    }
+
+    // Select the video element and play it
+    const videoElement = document.querySelector('.hero-video video');
+    if (videoElement) {
+      videoElement.play();
+    }
+  
+    // Fade in "Better Every Day" text
     fadeInBetterEveryDayText();
   };
+  
 
   const firstClassButton = document.getElementById("firstClassButton");
   if (firstClassButton) {
