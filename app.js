@@ -1,13 +1,28 @@
+// Selecting elements from the DOM
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navlogo = document.querySelector('#navbar__logo');
 const body = document.querySelector('body');
 
+// Event listener to run the script after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
   setupInitialStates();
   setupEventListeners();
   setupAnimations();
   checkForPopupDisplay();
+
+  // Handle the first class button
+  const firstClassButton = document.getElementById("firstClassButton");
+  console.log(firstClassButton); // Should log the button element or null if not found
+  if (firstClassButton) {
+      firstClassButton.addEventListener("click", function() {
+          console.log("Button clicked!"); // This should log when the button is clicked
+          window.open("https://www.wellnessliving.com/rs/catalog-view.html?k_business=291139&id_sale=1&k_id=824943", "_blank");
+          closePopup();
+      });
+  } else {
+      console.error("firstClassButton not found in the DOM.");
+  }
 });
 
 function setupInitialStates() {
@@ -20,9 +35,6 @@ function setupInitialStates() {
 
 function setupEventListeners() {
   // Navbar interactions
-  const menu = document.querySelector('#mobile-menu');
-  const menuLinks = document.querySelector('.navbar__menu');
-  const body = document.querySelector('body');
   menu.addEventListener('click', function() {
       menu.classList.toggle('is-active');
       menuLinks.classList.toggle('active');
@@ -30,20 +42,22 @@ function setupEventListeners() {
   });
 
   // Scroll interactions
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', function() {
-      if (window.scrollY > 0) {
-          navbar.classList.add('shrink');
-      } else {
-          navbar.classList.remove('shrink');
-      }
-  });
+  window.addEventListener('scroll', shrinkNavbar);
 
   // Popup interaction
   const closeButton = document.getElementById('close-popup-btn');
   const noThanksBtn = document.getElementById('no-thanks-btn');
   if (closeButton) closeButton.addEventListener('click', closePopup);
   if (noThanksBtn) noThanksBtn.addEventListener('click', closePopup);
+}
+
+function shrinkNavbar() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 0) {
+      navbar.classList.add('shrink');
+  } else {
+      navbar.classList.remove('shrink');
+  }
 }
 
 function setupAnimations() {
@@ -89,12 +103,19 @@ function closePopup() {
   if (videoElement) videoElement.play();
 }
 
-// Add any additional functions or event listeners you need below
-// For example, accordion interactions, carousel logic, etc.
-
+function fadeInBetterEveryDayText() {
+  const betterEveryDayText = document.querySelector('.callout h2');
+  if (betterEveryDayText) {
+      gsap.to(betterEveryDayText, {
+          duration: 3,
+          opacity: 1,
+          y: 0,
+          ease: 'power3.out',
+      });
+  }
+}
 
 // ACTIVE LINK HOVER EFFECT
-// Get all navigation links and dropdown links
 let links = document.querySelectorAll('.navbar__link, .dropdown-content a');
 
 // Get the current page URL
@@ -117,7 +138,7 @@ links.forEach((link) => {
   }
 });
 
-// Get all dropdown-content links
+// Handle dropdown link clicks
 let dropdownLinks = document.querySelectorAll('.dropdown-content a');
 
 dropdownLinks.forEach((link) => {
@@ -144,9 +165,6 @@ navLinks.forEach((link) => {
     });
   });
 });
-
-// Add the scroll event listener
-window.addEventListener('scroll', shrinkNavbar);
 
 // Display Mobile Menu
 const mobileMenu = () => {
@@ -224,7 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeInBetterEveryDayText();
   }
 
-
   const closePopup = () => {
     popupContainer.classList.add('hidden'); // This hides the popup
   
@@ -247,16 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Fade in "Better Every Day" text
     fadeInBetterEveryDayText();
-  };  
-  
-
-  const firstClassButton = document.getElementById("firstClassButton");
-  if (firstClassButton) {
-      firstClassButton.addEventListener("click", function() {
-          window.open("https://www.wellnessliving.com/rs/catalog-view.html?k_business=291139&id_sale=1&k_id=824943", "_blank");
-          closePopup();
-      });
-  }
+  };
 
   if(closeButton) {
       closeButton.addEventListener('click', closePopup);
@@ -279,16 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
               closePopup(); // Hide the popup container
           }
       });
-  }
-  function fadeInBetterEveryDayText() {
-    if (betterEveryDayText) {
-      gsap.to(betterEveryDayText, {
-        duration: 3,
-        opacity: 1,
-        y: 0,
-        ease: 'power3.out',
-      });
-    }
   }
 });
 
@@ -332,7 +330,7 @@ for (var i = 0; i < acc.length; i++) {
   });
 }
 
-// Powerlifting page image carosel
+// Powerlifting page image carousel
 let slideIndex = 1;
 showSlide(slideIndex);
 
@@ -349,4 +347,3 @@ function showSlide(n) {
     }
     slides[slideIndex-1].style.display = "block";  
 }
-

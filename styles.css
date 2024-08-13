@@ -1969,6 +1969,11 @@ textarea {
     background-color: var(--black);
 }
 
+#firstClassButton {
+    z-index: 100001;
+    position: relative;
+}
+
 #no-thanks-btn {
     background-color: rgb(255, 255, 255);
     border-radius: 2px;
