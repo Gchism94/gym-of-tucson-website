@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (firstClassButton) {
       firstClassButton.addEventListener("click", function() {
           console.log("Button clicked!"); // This should log when the button is clicked
-          window.open("https://www.wellnessliving.com/rs/catalog-view.html?k_business=291139&id_sale=1&k_id=824943", "_blank");
+          window.open("https://www.wellnessliving.com/rs/catalog-view.html?k_business=291139&id_sale=1&k_id=3107614", "_blank");
           closePopup();
       });
   } else {
