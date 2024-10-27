@@ -131,133 +131,348 @@ ul {
 
 /* NAVBAR */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--white);
+    background: var(--black);
+    height: 75px;
+    padding: 1% calc((100vw - 100%) / 2);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
     z-index: 100;
+    transition: height 0.3s ease-in-out;
+    transition: background-position 1s ease;
 }
 
-.navbar.active {
-    transform: translateX(100%);
+.navbar.shrink {
+  height: 50px; /* Adjust the height as needed */
 }
 
 .navbar__logo {
-    color: var(--black);
-    font-size: 2rem;
+    color: var(--white);
     text-decoration: none;
-    margin-bottom: 2rem;
-}
-
-.navbar__menu {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.navbar__link {
-    color: var(--black);
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.navbar__link:hover {
-    color: var(--orange-web);
-}
-
-.nav-close-btn {
-    align-self: flex-end;
-    background: none;
-    border: none;
-    cursor: pointer;
+    padding-left: 3rem;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    position: relative; /* add this line to set relative positioning for pseudo-elements */
+    overflow: hidden; 
+    background: linear-gradient(270deg, var(--red) 50%, var(--white) 50% );
+    background-size: 200% 100%;
+    background-position: left;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s;
 }
 
-.nav-close-btn ion-icon {
-    color: var(--black);
+.navbar__logo:hover {
+    background-position: left !important;
 }
 
-/* Navbar Social Media Links */
-.navbar__social-media {
+.navbar__logo.loaded:hover {
+    background-position: right !important;
+  }
+
+.navbar__link{
+    color: var(--white);
+    text-decoration: none;
+    padding: 0rem 1rem;
+    font-size: clamp(1rem, 2vw, 1.15rem); /* adjust these values as needed */
+    position: relative; /* add this line to set relative positioning for pseudo-elements */
+    overflow: hidden; 
+    background: linear-gradient(270deg, var(--red) 50%, var(--white) 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease;
+}
+
+
+.navbar__link::before {
+    content: "";
     position: absolute;
-    top: 20px;
-    right: 20px;
+    width: 0;
+    height: 1.5px; /* adjust height as needed */
+    bottom: -5px;
+    left: 10%; /* adjust left to start from beginning of link */
+    right: 10%; /* adjust this value to make the line shorter on the right */
+    background-color: var(--red); /* adjust color as needed */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar__link:hover::before {
+    width: 80%; /* adjust width as needed to extend the line when the link is hovered */
+}
+
+.navbar__link.loaded {
+    background-position: left;
+}
+
+.navbar__phone {
     display: flex;
-    gap: 15px;
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+.navbar__phone-link {
+    color: gray; /* sets icon color to gray */
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar__phone-link:hover {
+    color:#79992F; /* adjust as needed */
+}
+
+.navbar__social-media {
+    display: flex;
+    gap: 20px; /* adjust as needed for more or less space between icons */
+    margin-right: 5rem;
 }
 
 .navbar__social-link {
-    color: gray;
+    color: gray; /* sets icon color to gray */
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .navbar__social-link:hover {
+    color: var(--red); /* adjust as needed */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.15rem); /* adjust these values as needed */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: black;
+    left: 50%; /* Centers the dropdown */
+    top: 100%; /* Adjust this */
+    transform: translateX(-50%); /* Adjusts for the width of the dropdown */
+    text-align: center; /* Centers the text within the dropdown */
+    padding: 10px 0; /* Add padding to fill in the gap */
+    margin: 5px 0; /* Add margin above and below */
+    font-size: clamp(1rem, 2vw, 1.15rem); /* adjust these values as needed */
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative; /* Add this line */
+}
+
+.dropdown-content a:hover {
     color: var(--red);
+    text-decoration: none;
 }
 
-/* Overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 99;
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -15px; /* Adjust this value to move triangle up/down */
+    left: 50%;
+    transform: translate(-50%, 100%) scaleY(0);
+    transform-origin: 50% 0%; /* Change this to start animation from top */
+    border-left: 10px solid transparent;  /* adjust as needed */
+    border-right: 10px solid transparent;  /* adjust as needed */
+    border-top: 10px solid white;  /* adjust as needed */
+    transition: transform 0.3s ease-out; /* transition properties */
 }
 
-.overlay.active {
-    opacity: 1;
-    pointer-events: all;
+.dropdown-content a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0; /* adjust this value to move the line down */
+    left: 10%; /* adjust this value to make the line shorter on the left */
+    right: 10%; /* adjust this value to make the line shorter on the right */
+    background-color: var(--red);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Responsive Styles */
-@media screen and (min-width: 768px) {
-    .navbar {
-        left: -300px;
-        transform: translateX(0);
+.dropdown-content a:hover::before {
+    visibility: visible;
+    width: 80%; /* adjust this value to match the left and right values in the .dropdown-content a::before */
+}
+
+.dropdown:hover .dropdown-content::before {
+    transform: translate(-50%, 100%) scaleY(1); /* extends the triangle to full height */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    top: 100%
+}
+
+.navbar__link, .dropdown-content a {
+    background: linear-gradient(270deg, var(--red) 50%, var(--white) 50%);
+    background-size: 200% 100%;
+    background-position: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease;
+}
+
+.navbar__link:hover, .dropdown-content a:hover {
+    background-position: 100%;
+}
+
+/* style of active link */
+.active-link {
+    color: #79992F; /* or any color you want */
+}
+  
+.dropdown.active-child > .navbar__link,
+.dropdown.dropdown-active > .navbar__link {
+    color: #79992F; /* your hover color */
+}
+  
+.navbar__link.active-link {
+    color: #79992F;
+} 
+  
+.dropdown-content a.active-link {
+    color: #79992F; /* or any color you want */
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .navbar__logo {
+        font-size: clamp(1.25rem, 1.25vw, 1.75rem); /* adjust these values as needed */
     }
-
-    .navbar__menu {
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-    }
-
+    
     .navbar__link {
-        padding: 0;
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 1vw, 1.15rem); /* adjust these values as needed */
     }
 
-    .navbar.active {
-        transform: translateX(0);
+    .dropdown-content {
+        font-size: clamp(0.9rem, 1vw, 1.15rem); /* adjust these values as needed */
     }
 
-    .nav-close-btn {
-        display: none;
-    }
-
-    .overlay {
-        display: none;
+    .dropdown-content a {
+        font-size: clamp(0.9rem, 1vw, 1.15rem); /* adjust these values as needed */
     }
 }
+
+@media screen and (max-width: 768px){
+    body.active{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding-bottom: 0; /* Remove bottom padding for mobile menu */
+    }
+
+    .navbar__phone, .navbar__social-media {
+        position: absolute;
+        left: 57%; /* adjust as needed */
+        top: 50%; /* adjust as needed */
+        transform: translateY(-50%); /* centers vertically */
+        display: flex;
+        align-items: center;
+        gap: 10px; /* adjust as needed for more or less space between icons */
+    }
+
+    .dropdown-content {
+        display: none !important;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-content.active {
+        display: block;
+        top: -20px; /* Adjust the value 20px as needed */
+        background-color: black; /* Restores background-color */
+    }
+    
+    .navbar__link {
+        font-size: 35px;
+    }
+
+    .navbar__link,
+    .dropdown-content a {
+        font-size: clamp(1.15rem, 4vw, 1.25rem); /* adjust these values as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar__link,
+    .dropdown {
+        margin-bottom: 20px; /* Adjust this to set the desired spacing */
+    }
+
+    .navbar__logo {
+        font-size: clamp(1.5rem, 1.25vw, 1.75rem); /* adjust these values as needed */
+        padding-left: 1rem;  /* Reduced from 3rem to 1rem */
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 100px);
+        position: absolute;
+        width: 100%;
+        top: -1000px;
+    }
+
+    .navbar__menu.active{
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        height: 100vh;
+        font-size: 1.75rem;
+        background: var(--black);
+        grid-template-rows: 120px 80px 80px 60px; /* Adjust the number of rows as needed */
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background:var(--white);
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar.shrink {
+        height: 75px; /* Adjust the height as needed */
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 23.5%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    } 
+    
+    #mobile-menu.shrink{
+        top: 10%; /* Adjust the top as needed */
+    }
+}
+/* END RESPONSIVE STYLES */
+/* END NAVBAR */
 
 
 /* HERO VIDEO */
