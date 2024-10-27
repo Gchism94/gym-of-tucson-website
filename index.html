@@ -77,23 +77,26 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <!-- Navigation Bar-->
-        <nav class="navbar">
+        <!-- Navigation Bar-->
+        <nav class="navbar" data-navbar>
             <a href="/" class="navbar__logo">Better Every Day</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <!-- Open Menu Button (for mobile) -->
+            <button class="navbar__toggle" id="mobile-menu" aria-label="Open menu" data-nav-toggler>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
             <div class="navbar__menu">
-                <a href="/" class="navbar__link">Home</a>
+                <!-- Close Button for Navbar (for mobile) -->
+                <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+                <a href="/" class="navbar__link" data-nav-link>Home</a>
                 <div class="dropdown" id="servicesDropdown">
-                    <a href="/services-plans.html" class="navbar__link">Services & Programs</a>
+                    <a href="/services-plans.html" class="navbar__link" data-nav-link>Services & Programs</a>
                     <div class="dropdown-content">
                         <!-- Services section -->
                         <div class="dropdown-title">Services</div>
                         <a href="/personal-training.html">Personal Training</a>
                         <a href="/nutrition-consult.html">Nutrition Consults</a>
-                        <!-- <a href="#">Stretch/Recovery</a> -->
                         <!-- Programs section -->
                         <div class="dropdown-title">Programs</div>
                         <a href="/group-classes.html">Group Classes</a>
@@ -102,15 +105,17 @@
                         <a href="/open-gym.html">Open Gym</a>
                     </div>
                 </div>
-                <a href="/trainers.html" class="navbar__link">Trainers</a>
-                <div id="marker"></div>
+                <a href="/trainers.html" class="navbar__link" data-nav-link>Trainers</a>
             </div>
             <div class="navbar__social-media">
                 <a class="navbar__social-link" href="tel:+1 520-389-8890"><i title="Call Us" class="fas fa-phone fa-2x"></i></a>
                 <a class="navbar__social-link" href="https://www.instagram.com/thegymoftucson/?hl=en" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram fa-2x"></i></a>
                 <a class="navbar__social-link" href="https://www.facebook.com/thegymoftucson" target="_blank" title="Like us on Facebook"><i class="fab fa-facebook fa-2x"></i></a>
             </div>
+            <!-- Overlay for mobile menu -->
+            <div class="overlay" data-nav-toggler data-overlay></div>
         </nav>
+
         <!-- / Navigation Bar-->
         <!--Hero Section-->
         <section class="outter hero-video">
