@@ -81,12 +81,11 @@
                     <a href="/services-plans.html" class="navbar__link">Services & Programs</a>
                     <div class="dropdown-content">
                         <!-- Services section -->
-                        <div class="dropdown-title">Services</div>
+                        <a href="/services.html" class="dropdown-title"><h3>Services</h3></a>
                         <a href="/personal-training.html">Personal Training</a>
                         <a href="/nutrition-consult.html">Nutrition Consults</a>
-                        <!-- <a href="#">Stretch/Recovery</a> -->
                         <!-- Programs section -->
-                        <div class="dropdown-title">Programs</div>
+                        <a href="/plans.html" class="dropdown-title"><h3>Programs</h3></a>
                         <a href="/group-classes.html">Group Classes</a>
                         <a href="/plump-rumps.html">Plump Rumps</a>
                         <a href="/power-lifting.html">Powerlifting</a>
@@ -95,8 +94,17 @@
                 </div>
                 <a href="/trainers.html" class="navbar__link">Trainers</a>
                 <div id="marker"></div>
+                <!-- Mobile Social Media Links inside Dropdown -->
+                <div class="navbar__social-media mobile-only">
+                    <a class="navbar__social-link" href="https://www.wellnessliving.com/rs/schedule/the_gym_of_tucson?k_business=291139&id_class_tab=1#dt_date=2024-12-03&f_distance=50&f_latitude=&f_longitude=&filter=1&&id_screen=3&is_appointment_cancel_recurring=&is_appointment_cancel_single=&is_class_cancel=0&&&is_remove=0&is_week=1&&id_screen=3&k_business=291139&&&k_class_tab=0&&is_location=1&k_promotion=0&k_skin=0&&&s_period=week&&sort=&a_day[]=7%2C1%2C2%2C3%2C4%2C5%2C6&a_class[]=681816%2C698082%2C707863%2C626816%2C249693%2C109074&a_staff[]=441746%2C475742%2C480170%2C608846%2C614357%2C628427%2C273932%2C277752%2C279233%2C400701&a_time[]=1%2C2%2C3&a_virtual[]=2%2C1&a_location[]=226166"><i title="Schedule with Us" class="fas fa-calendar fa-2x"></i></a>
+                    <a class="navbar__social-link" href="tel:+1 520-389-8890"><i title="Call Us" class="fas fa-phone fa-2x"></i></a>
+                    <a class="navbar__social-link" href="https://www.instagram.com/thegymoftucson/?hl=en" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a class="navbar__social-link" href="https://www.facebook.com/thegymoftucson" target="_blank" title="Like us on Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+                </div>
             </div>
-            <div class="navbar__social-media">
+            <!-- Social Media Links for Desktop -->
+            <div class="navbar__social-media desktop-only">
+                <a class="navbar__social-link" href="https://www.wellnessliving.com/rs/schedule/the_gym_of_tucson?k_business=291139&id_class_tab=1#dt_date=2024-12-03&f_distance=50&f_latitude=&f_longitude=&filter=1&&id_screen=3&is_appointment_cancel_recurring=&is_appointment_cancel_single=&is_class_cancel=0&&&is_remove=0&is_week=1&&id_screen=3&k_business=291139&&&k_class_tab=0&&is_location=1&k_promotion=0&k_skin=0&&&s_period=week&&sort=&a_day[]=7%2C1%2C2%2C3%2C4%2C5%2C6&a_class[]=681816%2C698082%2C707863%2C626816%2C249693%2C109074&a_staff[]=441746%2C475742%2C480170%2C608846%2C614357%2C628427%2C273932%2C277752%2C279233%2C400701&a_time[]=1%2C2%2C3&a_virtual[]=2%2C1&a_location[]=226166"><i title="Schedule with Us" class="fas fa-calendar fa-2x"></i></a>
                 <a class="navbar__social-link" href="tel:+1 520-389-8890"><i title="Call Us" class="fas fa-phone fa-2x"></i></a>
                 <a class="navbar__social-link" href="https://www.instagram.com/thegymoftucson/?hl=en" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram fa-2x"></i></a>
                 <a class="navbar__social-link" href="https://www.facebook.com/thegymoftucson" target="_blank" title="Like us on Facebook"><i class="fab fa-facebook fa-2x"></i></a>
@@ -203,17 +211,19 @@
             <div class="footer__content">
                 <div class="footer__wrapper">
                     <div class="footer__desc">
+                        <br>
                         <h1>The Gym of Tucson</h1>
                         <p>Personal Training, Small Group Classes, Nutrition, Recovery</p>
-                        <p class="phone-link"><i class="fas fa-phone"></i> +1 520-389-8890</p>
                     </div>
                     <div class="footer__link-wrapper">
                         <div class="footer__links">
                         <a href="index.html#contact-us" class="footer__link"><h2 class="footer__title">Contact Us</h2></a>
                         <a href="https://www.google.com/maps/place/The+Gym+of+Tucson/@32.3386859,-111.0564662,17z/data=!3m1!4b1!4m6!3m5!1s0x86d60b1c4e751df5:0x2a94a77555c9c73!8m2!3d32.3386814!4d-111.0538859!16s%2Fg%2F11h2q49j89?entry=ttu" class="footer__link" target="_blank"> 4140 W Ina Rd <br>Suite 118 <br>Tucson,AZ 85741</a>
-                        </div>
+                        <p class="phone-link"><i class="fas fa-phone-square"></i> +1 520-389-8890</p>    
+                    </div>
                         <div class="footer__links">
                             <h2 class="footer__title">The Gym</h2>
+                            <a class="footer__link" href="/index.html">Home</a>
                             <a class="footer__link" href="/services.html">Services</a>
                             <a class="footer__link" href="/plans.html">Programs</a>
                             <a class="footer__link" href="/trainers.html">Trainers</a>
@@ -223,7 +233,7 @@
                 <div>
                     <img src="/images/SkullGym.svg" alt="The Gym Logo" class="footer-image">
                 </div>
-            </div>
+            </div>  
         </div>
         <!-- / Footer Section-->
         <!--Bottom Band Section-->
@@ -232,7 +242,7 @@
                 <a href="/terms-and-conditions.html">Terms & Conditions</a> | <a href="/privacy-policy.html">Privacy Policy</a>
             </div>
             <div class="bottom-band__right">
-                <p>© THE GYM OF TUCSON 2023. ALL RIGHTS RESERVED.</p>
+                <p>© THE GYM OF TUCSON 2024. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
         <!-- / Bottom Band Section-->
