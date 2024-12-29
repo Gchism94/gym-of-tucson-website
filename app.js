@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     handleFirstClassButton();
   
     // Set up the popup to display after 3 seconds
-    setTimeout(checkForPopupDisplay, 3000);
+    setTimeout(checkForPopupDisplay, 5000);
     
     function setupInitialStates() {
         const callout = document.querySelector('.hero-video .callout');

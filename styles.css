@@ -85,12 +85,24 @@ p, a, li {
     /*font-family: 'Milliard Light', sans-serif*/
 }
 
+b {
+    color:#79992F
+}
+
+.fa-15x {
+    font-size: 1.75em;
+}
+
 @media only screen and (max-width: 768px) {
     h1 {
       font-size: 26px;
     }
     p {
       font-size: 20px;  /* Increase the font size to your liking */
+    }
+
+    .fa-15x {
+        font-size: 1.75em;
     }
   }
 
@@ -354,7 +366,7 @@ ul {
     }
 
     .navbar__link {
-        font-size: clamp(1.25rem, 4vw, 1.25rem);
+        font-size: clamp(1.5rem, 4vw, 1.5rem);
     }
 
     .navbar__link, .dropdown {
@@ -408,8 +420,8 @@ ul {
         justify-content: center;
         align-items: center;
         gap: 20px; /* Adjust for horizontal spacing */
-        margin-top: -200px; /* Reduced margin to align better */
-        font-size: 1.25rem; /* Reduced icon size */
+        margin-top: -300px; /* Reduced margin to align better */
+        font-size: 1rem; /* Reduced icon size */
     }
 
     /* Hide the desktop version of social media links */
@@ -1078,8 +1090,6 @@ ul {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     object-fit: contain;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
 .membership__perks{
