@@ -58,19 +58,29 @@ document.addEventListener("DOMContentLoaded", function() {
         const menu = document.querySelector('#mobile-menu');
         const menuLinks = document.querySelector('.navbar__menu');
         const body = document.querySelector('body');
-  
+        const links = document.querySelectorAll('.navbar__social-link, .navbar__link');
+    
         if (menu && menuLinks) {
             menu.addEventListener('click', function() {
                 menu.classList.toggle('is-active');
                 menuLinks.classList.toggle('active');
                 body.classList.toggle('active');
             });
+    
+            // Close the menu when a link is clicked
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    menu.classList.remove('is-active');
+                    menuLinks.classList.remove('active');
+                    body.classList.remove('active');
+                });
+            });
         } else {
             console.error("#mobile-menu or .navbar__menu not found");
         }
-  
+    
         window.addEventListener('scroll', shrinkNavbar);
-  
+    
         const closeButton = document.getElementById('close-popup-btn');
         const noThanksBtn = document.getElementById('no-thanks-btn');
         if (closeButton) closeButton.addEventListener('click', closePopup);
