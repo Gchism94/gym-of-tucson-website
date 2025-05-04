@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (firstClassButton) {
             firstClassButton.addEventListener("click", function() {
                 console.log("Button clicked!");
-                window.open("https://www.wellnessliving.com/rs/catalog-view.html?k_business=291139&id_sale=1&k_id=3374746", "_blank");
+                window.open("https://app.glofox.com/portal/#/branch/6793fe663ab733c6800a4510/memberships/6814f346b302b1661c0a6b47/plan/1746203423691/buy", "_blank");
                 closePopup();
             });
         } else {
