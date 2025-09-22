@@ -5,3 +5,4 @@ services-old.html
 plans-old.html
 images/non-web/
 images/original-trainer/
+node_modules/*
