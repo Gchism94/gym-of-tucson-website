@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const firstClassButton = document.getElementById("firstClassButton");
     if (firstClassButton) {
       firstClassButton.addEventListener("click", function() {
-        window.open("https://app.glofox.com/portal/#/branch/6793fe663ab733c6800a4510/memberships/6814f346b302b1661c0a6b47/plan/1746203423691/buy", "_blank");
+        window.open("https://www.wellnessliving.com/login/the_gym_of_tucson-lhtbdh", "_blank");
         closePopup();
       });
     }
