@@ -2527,22 +2527,13 @@ h3 { margin-bottom: 0.75rem; line-height: 1.15; }
   transform: scale(1.25);
 }
 
-/* Mobile: native-feeling swipe — kill arrows/pagination, add scroll-snap */
+/* Mobile: hide arrows/pagination — Splide's native drag handles swipe */
 @media (max-width: 767px) {
   .trainers-carousel .splide__arrows,
   .trainers-carousel .splide__pagination,
   .pl-carousel .splide__arrows,
   .pl-carousel .splide__pagination {
     display: none;
-  }
-  .trainers-carousel .splide__list,
-  .pl-carousel .splide__list {
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-  }
-  .trainers-carousel .splide__slide,
-  .pl-carousel .splide__slide {
-    scroll-snap-align: start;
   }
 }
 
