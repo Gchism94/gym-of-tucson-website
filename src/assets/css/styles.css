@@ -2527,8 +2527,35 @@ h3 { margin-bottom: 0.75rem; line-height: 1.15; }
   transform: scale(1.25);
 }
 
-/* Mobile: hide arrows/pagination — Splide's native drag handles swipe */
+/* Mobile: Splide destroys itself at ≤767px — CSS takes over with a native
+   horizontal-scroll strip on the same .splide__list / .splide__slide markup. */
 @media (max-width: 767px) {
+  .trainers-carousel .splide__track,
+  .pl-carousel .splide__track {
+    overflow: visible;
+  }
+
+  .trainers-carousel .splide__list,
+  .pl-carousel .splide__list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+    padding: 0 1rem;
+    scrollbar-width: none;
+  }
+  .trainers-carousel .splide__list::-webkit-scrollbar,
+  .pl-carousel .splide__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trainers-carousel .splide__slide,
+  .pl-carousel .splide__slide {
+    flex: 0 0 78vw;
+    scroll-snap-align: start;
+  }
+
   .trainers-carousel .splide__arrows,
   .trainers-carousel .splide__pagination,
   .pl-carousel .splide__arrows,
