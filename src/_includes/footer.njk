@@ -1,0 +1,499 @@
+{% if showContactForm !== false %}
+{# Build a single Google directions URL used by BOTH the map image and the card CTA.
+   Destination = "The Gym of Tucson, <full address>" from the schema. #}
+{%- set _directionsDest = "The Gym of Tucson, " + site.address.full -%}
+{%- set _directionsUrl  = "https://www.google.com/maps/dir/?api=1&destination=" + (_directionsDest | urlencode) -%}
+<!-- Contact + Location Section -->
+<section class="footer-contact" id="contact-us">
+  <div class="footer-contact__inner">
+    <div class="location-card">
+        <div class="location-card__pin">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#79992F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="location-card__info">
+          <p class="location-card__name">The Gym of Tucson</p>
+          <p class="location-card__address">{{ site.address.street }}<br>{{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}</p>
+          <p class="location-card__hours">
+            <span class="location-card__hours-label">Open Today</span>
+            Mon–Thu 5AM–1PM &amp; 3:30–6:30PM<br>
+            Fri 5AM–1PM &amp; 3:30–5:30PM<br>
+            Sat 8AM–12PM
+          </p>
+        </div>
+        <a href="{{ _directionsUrl }}" target="_blank" rel="noopener noreferrer" class="location-card__cta">
+          Get Directions <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    <div class="footer-form">
+      {% if footerForm == "pt" %}
+        <h2>Train with a coach.</h2>
+        <p class="form-sub">Tell us about your goals — we'll match you with a trainer and get back within a day.</p>
+        <form class="pt-inquiry-form" id="pt-inquiry"
+              action="https://formspree.io/f/xqkowrlq" method="POST" novalidate>
+          <input type="hidden" name="_subject" id="pt-subject" value="PT Inquiry — No preference">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="form-group">
+            <label class="form-label" for="pt-name">Name</label>
+            <input id="pt-name" class="form-field" type="text" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pt-email">Email</label>
+            <input id="pt-email" class="form-field" type="email" name="_replyto" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pt-phone">Phone</label>
+            <input id="pt-phone" class="form-field" type="tel" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pt-coach">Preferred coach</label>
+            <select id="pt-coach" class="form-field" name="coach">
+              <option value="No preference">No preference — help me choose</option>
+              {% for t in trainers %}{% if t.name != "Wayne Cook" %}
+              <option value="{{ t.name }}">{{ t.name }}</option>
+              {% endif %}{% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pt-goal">Primary goal</label>
+            <select id="pt-goal" class="form-field" name="goal">
+              <option value="">Select a goal…</option>
+              <option>Strength</option>
+              <option>Powerlifting</option>
+              <option>Weight loss &amp; conditioning</option>
+              <option>Pain-free / returning from injury</option>
+              <option>Sport-specific</option>
+              <option>General fitness</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <fieldset class="pt-availability">
+            <legend>Availability</legend>
+            <label><input type="checkbox" name="availability" value="Weekday mornings"> Weekday mornings</label>
+            <label><input type="checkbox" name="availability" value="Weekday evenings"> Weekday evenings</label>
+            <label><input type="checkbox" name="availability" value="Weekends"> Weekends</label>
+          </fieldset>
+
+          <div class="form-group">
+            <label class="form-label" for="pt-message">Anything else? (optional)</label>
+            <textarea id="pt-message" class="form-field" name="message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" style="margin-top:0.5rem;">Request a session</button>
+
+          <p class="form-error" id="pt-error" role="alert" hidden>
+            Something went wrong — please call us at {{ site.phone }} or email {{ site.email }}.
+          </p>
+        </form>
+        <div class="form-success" id="pt-success" role="status" aria-live="polite" hidden>
+          <p>Thanks — your request is in. A coach will reach out soon to get you set up.</p>
+        </div>
+        <script>
+        (function(){
+          var form = document.getElementById('pt-inquiry');
+          var sel  = document.getElementById('pt-coach');
+          var subj = document.getElementById('pt-subject');
+          var ok   = document.getElementById('pt-success');
+          var err  = document.getElementById('pt-error');
+
+          /* Pre-select coach from a bio button click or ?coach= URL param */
+          function setCoach(v){
+            if(!sel) return;
+            Array.prototype.forEach.call(sel.options, function(o){ if(o.value === v) sel.value = v; });
+            if(subj) subj.value = 'PT Inquiry — ' + sel.value;
+          }
+          document.querySelectorAll('[data-coach]').forEach(function(el){
+            el.addEventListener('click', function(){ setCoach(el.getAttribute('data-coach')); });
+          });
+          var p = new URLSearchParams(window.location.search).get('coach');
+          if(p) setCoach(p);
+          if(sel) sel.addEventListener('change', function(){ if(subj) subj.value = 'PT Inquiry — ' + sel.value; });
+
+          /* AJAX submit — no Formspree redirect; inline success/error states */
+          if (form) {
+            form.addEventListener('submit', function(e){
+              e.preventDefault();
+              if (err) err.hidden = true;
+              var btn = form.querySelector('[type="submit"]');
+              var label = btn ? btn.textContent : '';
+              if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+              fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+              }).then(function(res){
+                if (res.ok) {
+                  form.hidden = true;
+                  if (ok) { ok.hidden = false; ok.scrollIntoView({behavior:'smooth', block:'center'}); }
+                } else {
+                  if (err) err.hidden = false;
+                  if (btn) { btn.disabled = false; btn.textContent = label; }
+                }
+              }).catch(function(){
+                if (err) err.hidden = false;
+                if (btn) { btn.disabled = false; btn.textContent = label; }
+              });
+            });
+          }
+        })();
+        </script>
+      {% elif footerForm == "nutrition" %}
+        <h2>Nourish your training.</h2>
+        <p class="form-sub">Tell us a bit about your goals — a nutrition coach will reach out to schedule.</p>
+        <form class="pt-inquiry-form" id="nutrition-inquiry"
+              action="https://formspree.io/f/xqkowrlq" method="POST" novalidate>
+          <input type="hidden" name="_subject" id="nutrition-subject" value="Nutrition Inquiry — No selection">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="form-group">
+            <label class="form-label" for="nutrition-name">Name</label>
+            <input id="nutrition-name" class="form-field" type="text" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nutrition-email">Email</label>
+            <input id="nutrition-email" class="form-field" type="email" name="_replyto" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nutrition-phone">Phone</label>
+            <input id="nutrition-phone" class="form-field" type="tel" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nutrition-service">Service</label>
+            <select id="nutrition-service" class="form-field" name="service" required>
+              <option value="">Select a consult type…</option>
+              <option value="Initial Consultation">Initial Consultation</option>
+              <option value="Follow-up Consultation">Follow-up Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nutrition-coach">Preferred coach</label>
+            <select id="nutrition-coach" class="form-field" name="coach">
+              <option value="No preference">No preference — help me choose</option>
+              {%- for t in trainers -%}
+                {%- set _certBlob = (t.certifications | default([])) | join('|') | lower -%}
+                {%- if 'nutrition' in _certBlob %}
+              <option value="{{ t.name }}">{{ t.name }}</option>
+                {%- endif -%}
+              {%- endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nutrition-message">Anything else? (optional)</label>
+            <textarea id="nutrition-message" class="form-field" name="message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" style="margin-top:0.5rem;">Request a consultation</button>
+
+          <p class="form-error" id="nutrition-error" role="alert" hidden>
+            Something went wrong — please call us at {{ site.phone }} or email {{ site.email }}.
+          </p>
+        </form>
+        <div class="form-success" id="nutrition-success" role="status" aria-live="polite" hidden>
+          <p>Thanks — a nutrition coach will reach out soon to schedule your consultation.</p>
+        </div>
+        <script>
+        (function(){
+          var form    = document.getElementById('nutrition-inquiry');
+          var svcSel  = document.getElementById('nutrition-service');
+          var coachSel= document.getElementById('nutrition-coach');
+          var subj    = document.getElementById('nutrition-subject');
+          var ok      = document.getElementById('nutrition-success');
+          var err     = document.getElementById('nutrition-error');
+
+          /* Keep the hidden _subject synced with service + coach selections */
+          function updateSubject(){
+            if (!subj) return;
+            var svc = svcSel && svcSel.value ? svcSel.value : 'No selection';
+            var c   = coachSel && coachSel.value ? coachSel.value : 'No preference';
+            subj.value = 'Nutrition Inquiry — ' + svc + ' — ' + c;
+          }
+          if (svcSel)   svcSel.addEventListener('change', updateSubject);
+          if (coachSel) coachSel.addEventListener('change', updateSubject);
+
+          /* AJAX submit — no Formspree redirect; inline success/error states */
+          if (form) {
+            form.addEventListener('submit', function(e){
+              e.preventDefault();
+              if (err) err.hidden = true;
+              var btn = form.querySelector('[type="submit"]');
+              var label = btn ? btn.textContent : '';
+              if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+              fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+              }).then(function(res){
+                if (res.ok) {
+                  form.hidden = true;
+                  if (ok) { ok.hidden = false; ok.scrollIntoView({behavior:'smooth', block:'center'}); }
+                } else {
+                  if (err) err.hidden = false;
+                  if (btn) { btn.disabled = false; btn.textContent = label; }
+                }
+              }).catch(function(){
+                if (err) err.hidden = false;
+                if (btn) { btn.disabled = false; btn.textContent = label; }
+              });
+            });
+          }
+        })();
+        </script>
+      {% elif footerForm == "powerlifting" %}
+        <h2>Train with Southwest Strength Club.</h2>
+        <p class="form-sub">Tell us about your lifting — a coach will reach out to talk about programming and meets.</p>
+        <form class="pt-inquiry-form" id="powerlifting-inquiry"
+              action="https://formspree.io/f/xqkowrlq" method="POST" novalidate>
+          <input type="hidden" name="_subject" id="pl-subject" value="SSC Inquiry —  — ">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="form-group">
+            <label class="form-label" for="pl-name">Name</label>
+            <input id="pl-name" class="form-field" type="text" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pl-email">Email</label>
+            <input id="pl-email" class="form-field" type="email" name="_replyto" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pl-phone">Phone</label>
+            <input id="pl-phone" class="form-field" type="tel" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pl-experience">Experience level</label>
+            <select id="pl-experience" class="form-field" name="experience" required>
+              <option value="">Select your experience…</option>
+              <option>New to powerlifting</option>
+              <option>1–2 years training on my own</option>
+              <option>3+ years lifting</option>
+              <option>Currently competing</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pl-competition">Competition history</label>
+            <select id="pl-competition" class="form-field" name="competition">
+              <option value="">Select…</option>
+              <option>Haven't competed yet</option>
+              <option>Interested but haven't started</option>
+              <option>1–2 meets</option>
+              <option>3+ meets</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pl-lifts">Approximate best lifts (optional)</label>
+            <input id="pl-lifts" class="form-field" type="text" name="lifts" placeholder="e.g., 315/225/405 S/B/D">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pl-goal">What are you looking for?</label>
+            <select id="pl-goal" class="form-field" name="goal" required>
+              <option value="">Select…</option>
+              <option>Join the competition team</option>
+              <option>Get stronger with coached programming</option>
+              <option>Try a session first</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <fieldset class="pt-availability">
+            <legend>Availability</legend>
+            <label><input type="checkbox" name="availability" value="Weekday mornings"> Weekday mornings</label>
+            <label><input type="checkbox" name="availability" value="Weekday evenings"> Weekday evenings</label>
+            <label><input type="checkbox" name="availability" value="Weekends"> Weekends</label>
+          </fieldset>
+
+          <div class="form-group">
+            <label class="form-label" for="pl-message">Anything else? (optional)</label>
+            <textarea id="pl-message" class="form-field" name="message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" style="margin-top:0.5rem;">Request a session</button>
+
+          <p class="form-error" id="pl-error" role="alert" hidden>
+            Something went wrong — please call us at {{ site.phone }} or email {{ site.email }}.
+          </p>
+        </form>
+        <div class="form-success" id="pl-success" role="status" aria-live="polite" hidden>
+          <p>Thanks — a Southwest Strength Club coach will reach out soon to talk about your training.</p>
+        </div>
+        <script>
+        (function(){
+          var form = document.getElementById('powerlifting-inquiry');
+          var exp  = document.getElementById('pl-experience');
+          var goal = document.getElementById('pl-goal');
+          var subj = document.getElementById('pl-subject');
+          var ok   = document.getElementById('pl-success');
+          var err  = document.getElementById('pl-error');
+
+          /* Keep the hidden _subject synced with experience + goal selections */
+          function syncSubj(){
+            if (!subj) return;
+            subj.value = 'SSC Inquiry — ' +
+              (exp ? exp.value : '') + ' — ' + (goal ? goal.value : '');
+          }
+          if (exp)  exp.addEventListener('change', syncSubj);
+          if (goal) goal.addEventListener('change', syncSubj);
+
+          /* AJAX submit — no Formspree redirect; inline success/error states */
+          if (form) {
+            form.addEventListener('submit', function(e){
+              e.preventDefault();
+              if (err) err.hidden = true;
+              var btn = form.querySelector('[type="submit"]');
+              var label = btn ? btn.textContent : '';
+              if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+              fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+              }).then(function(res){
+                if (res.ok) {
+                  form.hidden = true;
+                  if (ok) { ok.hidden = false; ok.scrollIntoView({behavior:'smooth', block:'center'}); }
+                } else {
+                  if (err) err.hidden = false;
+                  if (btn) { btn.disabled = false; btn.textContent = label; }
+                }
+              }).catch(function(){
+                if (err) err.hidden = false;
+                if (btn) { btn.disabled = false; btn.textContent = label; }
+              });
+            });
+          }
+        })();
+        </script>
+      {% else %}
+        <h2>Start a Conversation.</h2>
+        <p class="form-sub">Rosemary and the team respond personally — no bots, no runaround.</p>
+        <form action="https://formspree.io/f/xqkowrlq" method="POST" novalidate>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Your Name</label>
+            <input id="contact-name" name="name" type="text" class="form-field" placeholder="Jane Smith" aria-label="Your name" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address</label>
+            <input id="contact-email" name="email" type="email" class="form-field" placeholder="jane@email.com" aria-label="Your email" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-interest">What Are You Interested In?</label>
+            <select id="contact-interest" name="subject" class="form-field" aria-label="Interest area">
+              <option value="" selected>Select a program</option>
+              <option value="Personal Training">Personal Training</option>
+              <option value="Group Classes">Group Classes</option>
+              <option value="Nutrition Consult">Nutrition Consult</option>
+              <option value="Powerlifting Team">Powerlifting Team</option>
+              <option value="Open Gym">Open Gym</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea id="contact-message" name="text" class="form-field" placeholder="Tell us about your goals..." aria-label="Your message" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" style="margin-top:0.5rem;">Send Message</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="/images/SkullGymlight.svg" alt="{{ site.name }} logo" width="94" height="72" loading="lazy" class="footer__brand-logo">
+      <p class="footer__wordmark">The Gym of Tucson</p>
+      <p class="footer__tagline">{{ site.tagline }}</p>
+      <div class="footer__social">
+        <a href="{{ site.phoneHref }}" aria-label="Call Us">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+        </a>
+        <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fab fa-facebook" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__links-col footer__col-nav">
+      <h3>Navigate</h3>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services-plans.html">Services &amp; Programs</a>
+      <a href="/trainers.html">Trainers</a>
+      <a href="/plans.html">Plans</a>
+    </div>
+
+    <div class="footer__links-col footer__col-programs">
+      <h3>Programs</h3>
+      <a href="/group-classes.html">Group Classes</a>
+      <a href="/personal-training.html">Personal Training</a>
+      <a href="/nutrition-consult.html">Nutrition Consults</a>
+      <a href="/power-lifting.html">Powerlifting</a>
+      <a href="/open-gym.html">Open Gym</a>
+    </div>
+
+    <div class="footer__links-col footer__col-contact">
+      <h3>Contact</h3>
+      <a href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener" class="footer__address">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        4140 W Ina Rd<br>Suite 118<br>Tucson, AZ 85741
+      </a>
+      <a href="{{ site.phoneHref }}" class="footer__phone">
+        <i class="fas fa-phone" aria-hidden="true"></i> {{ site.phone }}
+      </a>
+      <a href="mailto:{{ site.email }}" class="footer__email">
+        <i class="fas fa-envelope" aria-hidden="true"></i> {{ site.email }}
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bottom Band -->
+<div class="bottom-band">
+  <div>
+    <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+    <span aria-hidden="true"> &nbsp;|&nbsp; </span>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+  </div>
+  <div>
+    <p>&copy; THE GYM OF TUCSON {{ site.year }}. ALL RIGHTS RESERVED.</p>
+  </div>
+</div>
+
+<!-- Mobile floating CTA bar -->
+<div class="mobile-cta-bar" id="mobile-cta-bar" role="complementary" aria-label="Book a class">
+  <a href="/#wl-schedule" class="mobile-cta-bar__link">
+    Book a Class
+  </a>
+  <button class="mobile-cta-bar__dismiss" id="mobile-cta-dismiss" aria-label="Dismiss booking bar">
+    <i class="fas fa-times" aria-hidden="true"></i>
+  </button>
+</div>

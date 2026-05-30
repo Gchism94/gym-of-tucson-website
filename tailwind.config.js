@@ -1,20 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './*.html', // This includes all HTML files in the root directory
-    './src/**/*.js', // If you have any JS files in a src directory (optional)
-    './app.js', // Include this specific JavaScript file
-    './styles.css' // Include the main CSS file if you use Tailwind classes in it
-  ],
+  content: ["./src/**/*.{njk,js,html}"],
   theme: {
     extend: {
-      // Add customizations or overrides to the default theme
+      colors: {
+        green: {
+          DEFAULT: "#79992F",
+          light: "#8aad35",
+          dark: "#5c751f",
+        },
+        dark: {
+          DEFAULT: "#0f0f0f",
+          card: "#1a1a1a",
+          border: "#2a2a2a",
+        },
+      },
+      fontFamily: {
+        heading: ['"Barlow Condensed"', "sans-serif"],
+        body: ["Inter", "sans-serif"],
+      },
+      screens: {
+        sm: "480px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
     },
   },
-  darkMode: 'media', // You can set this to 'class' or remove it if not using dark mode
-  plugins: [
-    // Add any third-party plugins here
-  ],
-}
-
-
+  plugins: [],
+};

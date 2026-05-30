@@ -1,8 +1,27 @@
-power-lifting-full.html
-zombie.*
-images/old-logo/
-services-old.html
-plans-old.html
-images/non-web/
-images/original-trainer/
-node_modules/*
+# Build output
+_site/
+dist/
+src/assets/css/output.css
+
+# Build-derived Instagram thumbnail cache (regenerated each build from Behold feed)
+images/instagram/
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/

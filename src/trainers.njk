@@ -1,0 +1,163 @@
+---
+layout: base.njk
+permalink: /trainers.html
+bodyId: trainers-page
+pageTitle: "Personal Trainers in Tucson, AZ | Expert Coaches — The Gym of Tucson"
+pageDesc: "Meet The Gym of Tucson's certified personal trainers. ACE-certified coaches, a DPT, and powerlifting specialists dedicated to your results."
+pageKeywords: "Certified Personal Trainers Tucson, Fitness Coaches Tucson, Rosemary Bietendorf trainer, powerlifting coach Tucson"
+footerForm: "pt"
+showPopup: false
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Rosemary Bietendorf",
+      "jobTitle": "Personal Trainer, Owner",
+      "description": "ACE Certified Personal Trainer with 16 years of experience. Owner of The Gym of Tucson. Specializes in strength training, powerlifting coaching, and nutrition.",
+      "worksFor": { "@id": "https://www.gymoftucson.com/#gym" },
+      "url": "https://www.gymoftucson.com/trainers.html",
+      "sameAs": ["https://www.instagram.com/thecoach_rose/"]
+    },
+    {
+      "@type": "Person",
+      "name": "Dustin Schroeder",
+      "jobTitle": "Personal Trainer, Physical Therapist Assistant",
+      "description": "Personal trainer and physical therapist assistant specializing in injury prevention, athletic training, and rehabilitation.",
+      "worksFor": { "@id": "https://www.gymoftucson.com/#gym" },
+      "url": "https://www.gymoftucson.com/trainers.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Kristen Fitzpatrick",
+      "jobTitle": "Personal Trainer, Nutrition Coach",
+      "description": "Certified personal trainer and nutrition coach with a background in social work. Specializes in holistic wellness and emotional support.",
+      "worksFor": { "@id": "https://www.gymoftucson.com/#gym" },
+      "url": "https://www.gymoftucson.com/trainers.html"
+    },
+    {
+      "@type": "Person",
+      "name": "David Skolnik",
+      "jobTitle": "Doctor of Physical Therapy, Certified Powerlifting Coach",
+      "description": "DPT and certified powerlifting coach with 7+ years experience. Competed at IPF World level. Specializes in pain-free performance and longevity.",
+      "worksFor": { "@id": "https://www.gymoftucson.com/#gym" },
+      "url": "https://www.gymoftucson.com/trainers.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Cameron Dowling",
+      "jobTitle": "Personal Trainer, Master Kettlebell Trainer",
+      "description": "RKC Master Kettlebell Trainer and group fitness coach. Specializes in kettlebell training, mobility, and strength.",
+      "worksFor": { "@id": "https://www.gymoftucson.com/#gym" },
+      "url": "https://www.gymoftucson.com/trainers.html"
+    },
+    {
+      "@type": "Person",
+      "name": "Angie Moore",
+      "jobTitle": "Personal Trainer, Pelvic Floor Specialist",
+      "description": "Personal trainer and certified pelvic floor specialist. Focuses on functional fitness, mobility, and women's health.",
+      "worksFor": { "@id": "https://www.gymoftucson.com/#gym" },
+      "url": "https://www.gymoftucson.com/trainers.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.gymoftucson.com/"},
+    {"@type":"ListItem","position":2,"name":"Trainers","item":"https://www.gymoftucson.com/trainers.html"}
+  ]
+}
+</script>
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-labelledby="trainers-heading">
+  <div class="page-hero__bg" style="background-image:url('/images/583A3282.webp'); background-position: center 40%;"></div>
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <span class="section-label">Our Team</span>
+    <h1 class="page-hero__title" id="trainers-heading">Meet your coaches</h1>
+    <p class="page-hero__desc">Every trainer here is certified, experienced, and invested in your progress — not just your membership.</p>
+  </div>
+</section>
+
+<!-- TRAINERS — full-bleed panel list -->
+<section class="trainers-section" aria-label="Trainer profiles">
+  {% for trainer in trainers %}
+  <article class="trainer-panel" id="trainer-{{ trainer.id }}" aria-labelledby="{{ trainer.id }}-name">
+
+    <div class="trainer-panel__img-wrap">
+      <img
+        src="{{ trainer.image }}"
+        alt="{{ trainer.alt or trainer.name + ' — ' + trainer.title }}"
+        width="{{ trainer.imageWidth }}"
+        height="{{ trainer.imageHeight }}"
+        loading="lazy"
+        class="trainer-panel__img">
+    </div>
+
+    <div class="trainer-panel__body">
+      <span class="section-label trainer-panel__role">{{ trainer.title }}</span>
+      <h2 class="trainer-panel__name" id="{{ trainer.id }}-name">{{ trainer.name }}</h2>
+
+      {% if trainer.specialties.length %}
+      <div class="trainer-panel__specialties">
+        {% for spec in trainer.specialties %}
+        <span class="specialty-badge">{{ spec }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <p class="trainer-panel__bio">{{ trainer.bio }}</p>
+
+      {% if trainer.passion %}
+      <p class="trainer-panel__section-label">My Passion</p>
+      <p class="trainer-panel__bio">{{ trainer.passion }}</p>
+      {% endif %}
+
+      {% if trainer.community %}
+      <p class="trainer-panel__section-label">My Community</p>
+      <p class="trainer-panel__bio">{{ trainer.community }}</p>
+      {% endif %}
+
+      {% if trainer.certifications.length %}
+      <p class="trainer-panel__section-label">Certifications</p>
+      <ul class="trainer-panel__certs">
+        {% for cert in trainer.certifications %}
+        <li>{{ cert }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      <div class="trainer-panel__social">
+        <a href="{{ trainer.instagram }}" target="_blank" rel="noopener" aria-label="{{ trainer.name }} on Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        {% if trainer.facebook %}
+        <a href="{{ trainer.facebook }}" target="_blank" rel="noopener" aria-label="{{ trainer.name }} on Facebook">
+          <i class="fab fa-facebook" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+        <a href="#pt-inquiry" data-coach="{{ trainer.name }}" class="btn btn--primary btn--sm" style="margin-left:0.5rem;">
+          Train with {{ trainer.name.split(' ')[0] }}
+        </a>
+      </div>
+    </div>
+
+  </article>
+  {% endfor %}
+</section>
+
+<!-- CTA -->
+<section class="cta-section has-grain">
+  <h2 class="cta-section__title">Ready to work with a real coach?</h2>
+  <p class="cta-section__desc">Every trainer here is ready to meet you where you are and take you further than you thought possible.</p>
+  <div class="cta-section__actions">
+    <a href="#pt-inquiry" class="btn btn--primary btn--lg">Book Your First Session</a>
+  </div>
+</section>

@@ -1,18 +1,20 @@
 {
+  "name": "gym-of-tucson-website",
+  "version": "1.0.0",
+  "description": "The Gym of Tucson — boutique strength training in Tucson, AZ. Static site built with Eleventy + Tailwind.",
+  "private": true,
   "scripts": {
-    "build": "npx postcss styles.css -o output.css"
+    "build": "npm run css && npx @11ty/eleventy",
+    "css": "npx tailwindcss -i ./src/assets/css/styles.css -o ./src/assets/css/output.css --minify",
+    "start": "concurrently \"npx tailwindcss -i ./src/assets/css/styles.css -o ./src/assets/css/output.css --watch\" \"npx @11ty/eleventy --serve\"",
+    "dev": "npm run start"
   },
   "devDependencies": {
-    "cssnano": "^6.1.1",
-    "imagemin-cli": "^8.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^10.0.0",
-    "postcss": "^8.4.24",
-    "postcss-cli": "^10.1.0",
-    "tailwindcss": "^3.3.2"
-  },
-  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "autoprefixer": "^10.4.14",
-    "http-server": "^14.1.1"
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.24",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.3.2"
   }
 }

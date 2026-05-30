@@ -1,0 +1,71 @@
+<nav class="navbar" id="navbar" aria-label="Main navigation">
+
+  <a href="/" class="navbar__logo" aria-label="{{ site.name }} home">
+    <img src="/images/SkullGymlight.svg" alt="" aria-hidden="true" width="63" height="48" class="navbar__logo-icon">
+    <span class="navbar__dot" aria-hidden="true"></span>
+    <span class="navbar__logo-text">The Gym of Tucson</span>
+  </a>
+
+  <!-- Hamburger toggle -->
+  <button class="navbar__toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- Nav links -->
+  <div class="navbar__menu" id="nav-menu" role="navigation">
+    <a href="/" class="navbar__link">Home</a>
+    <a href="/about.html" class="navbar__link">About</a>
+
+    <div class="dropdown" id="servicesDropdown">
+      <a href="/services-plans.html" class="navbar__link" aria-haspopup="true">Services &amp; Programs</a>
+      <div class="dropdown-content" role="menu">
+        <a href="/personal-training.html" role="menuitem" class="dropdown__item">Personal Training</a>
+        <a href="/nutrition-consult.html" role="menuitem" class="dropdown__item">Nutrition Consults</a>
+        <a href="/group-classes.html" role="menuitem" class="dropdown__item">Group Classes</a>
+        <a href="/power-lifting.html" role="menuitem" class="dropdown__item">Powerlifting</a>
+        <a href="/open-gym.html" role="menuitem" class="dropdown__item">Open Gym</a>
+      </div>
+    </div>
+
+    <a href="/trainers.html" class="navbar__link">Trainers</a>
+    <a href="/plans.html" class="navbar__link">Plans</a>
+
+    <!-- Mobile social icons -->
+    <div class="navbar__social-media mobile-only">
+      <a class="navbar__social-link" href="{{ site.social.instagram }}" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+        <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
+      </a>
+      <a class="navbar__social-link" href="{{ site.social.facebook }}" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+        <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+      </a>
+      <a class="navbar__social-link" href="{{ site.phoneHref }}" title="Call Us" aria-label="Call Us">
+        <i class="fas fa-phone fa-lg" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!-- Mobile Book CTA (pinned at bottom of menu) -->
+    <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn btn--primary btn--full mobile-book-cta">
+      Book a Class
+    </a>
+  </div>
+
+  <!-- Desktop right group -->
+  <div class="navbar__right desktop-only">
+    <div class="navbar__social-media">
+      <a class="navbar__social-link" href="{{ site.phoneHref }}" title="Call Us" aria-label="Call Us">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+      </a>
+      <a class="navbar__social-link" href="{{ site.social.instagram }}" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="navbar__social-link" href="{{ site.social.facebook }}" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+        <i class="fab fa-facebook" aria-hidden="true"></i>
+      </a>
+    </div>
+    <span class="navbar__divider" aria-hidden="true"></span>
+    <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn btn--primary btn--nav navbar__cta">Book a Class<span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+
+</nav>

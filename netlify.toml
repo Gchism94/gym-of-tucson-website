@@ -1,0 +1,33 @@
+[build]
+  command   = "npm run build"
+  publish   = "_site"
+
+[[redirects]]
+  from   = "https://gymoftucson.com/*"
+  to     = "https://www.gymoftucson.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/services.html"
+  to     = "/services-plans.html"
+  status = 301
+
+# Catch-all — serves the custom 404 page for any unmatched URL.
+# MUST stay last so earlier redirects win.
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-XSS-Protection = "1; mode=block"
+
+[build.environment]
+  BEHOLD_FEED_URL="https://feeds.behold.so/roimfxfRXxtocB0K3lK7" 

@@ -1,0 +1,185 @@
+---
+layout: base.njk
+permalink: /plans.html
+bodyId: plans-page
+pageTitle: "Gym Membership Pricing Tucson | Personal Training Packages — The Gym of Tucson"
+pageDesc: "Transparent gym pricing in Tucson. Group classes from $165/mo, personal training from $70/session, nutrition consults from $150. No hidden fees."
+pageKeywords: "Gym Membership Tucson, Fitness Plans Tucson, Gym Pricing Tucson, Strength Training Membership Tucson"
+---
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a group fitness membership cost?","acceptedAnswer":{"@type":"Answer","text":"Group fitness memberships start at $165/month for a 12-month commitment, $185/month for 6 months, and $195/month for 3 months. All plans include unlimited classes."}},{"@type":"Question","name":"How much does personal training cost at The Gym of Tucson?","acceptedAnswer":{"@type":"Answer","text":"Personal training sessions are $70 for a single session, $260 for 4 sessions, $520 for 8 sessions, and $780 for 12 sessions. All sessions are 1 hour with a certified trainer."}}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.gymoftucson.com/"},
+    {"@type":"ListItem","position":2,"name":"Plans & Pricing","item":"https://www.gymoftucson.com/plans.html"}
+  ]
+}
+</script>
+
+<!-- PAGE HERO -->
+<section class="page-hero page-hero--compact" aria-labelledby="plans-heading">
+  <div class="page-hero__skull-bg" aria-hidden="true">
+    <img src="/images/SkullGymlight.svg" alt="" width="500" height="500" loading="lazy" style="opacity:0.05;">
+  </div>
+  <span class="hero-ghost hero-ghost--right" aria-hidden="true" style="font-size:clamp(3rem,5vw,5rem); font-weight:900; color:rgba(255,255,255,0.06); line-height:0.85;">FROM<br>$70</span>
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <span class="section-label">Plans &amp; Pricing</span>
+    <h1 class="page-hero__title" id="plans-heading">Invest in results.</h1>
+    <p class="page-hero__desc">Clear, honest pricing for every service. No hidden fees, no gimmicks — just great coaching at a fair price.</p>
+  </div>
+</section>
+
+<!-- GROUP CLASSES -->
+<section style="background:#000; padding:clamp(4rem,8vw,7rem) var(--gutter);" aria-labelledby="plans-gc-heading">
+  <div style="max-width:1000px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:clamp(2rem,4vw,3.5rem);">
+      <span class="section-label">Group Classes</span>
+      <h2 class="section-title" id="plans-gc-heading">Strength &amp; Conditioning memberships</h2>
+      <p class="section-desc" style="margin:0 auto;">Unlimited class access. The longer you commit, the more you save.</p>
+    </div>
+    <div class="pricing-grid pricing-grid--3">
+      <div class="pricing-card">
+        <p class="pricing-card__label">3 Months</p>
+        <p class="pricing-card__price">$195</p>
+        <p class="pricing-card__per">/month · unlimited</p>
+        <p class="pricing-card__detail">Build a strong foundation over 3 months.</p>
+        <a href="{{ booking.unlimited3mo }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Start</a>
+      </div>
+      <div class="pricing-card pricing-card--featured">
+        <p class="pricing-card__label">6 Months</p>
+        <p class="pricing-card__price">$185</p>
+        <p class="pricing-card__per">/month · unlimited</p>
+        <p class="pricing-card__detail">Half a year of consistent group training.</p>
+        <a href="{{ booking.unlimited6mo }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Start</a>
+      </div>
+      <div class="pricing-card">
+        <p class="pricing-card__label">12 Months</p>
+        <p class="pricing-card__price">$165</p>
+        <p class="pricing-card__per">/month · unlimited</p>
+        <p class="pricing-card__detail">Best value. Full year of transformation.</p>
+        <a href="{{ booking.unlimited12mo }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Start</a>
+      </div>
+    </div>
+    <p style="text-align:center; color:var(--text-muted); font-size:0.875rem; margin-top:1.5rem; font-family:'Inter',sans-serif;">
+      <a href="/group-classes.html" style="color:var(--green);">Learn more about group classes →</a>
+    </p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- PERSONAL TRAINING -->
+<section style="padding:clamp(4rem,8vw,7rem) var(--gutter); background:var(--dark);" aria-labelledby="plans-pt-heading">
+  <div style="max-width:1000px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:clamp(2rem,4vw,3.5rem);">
+      <span class="section-label">Personal Training</span>
+      <h2 class="section-title" id="plans-pt-heading">1-on-1 session packages</h2>
+      <p class="section-desc" style="margin:0 auto;">All sessions are one hour with a certified trainer. No upsells, no surprises.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <p class="pricing-card__label">Single Session</p>
+        <p class="pricing-card__price">$70</p>
+        <p class="pricing-card__per">per hour</p>
+        <p class="pricing-card__detail">Try a trainer or book a one-off session.</p>
+        <a href="{{ booking.pt1 }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Book</a>
+      </div>
+      <div class="pricing-card pricing-card--featured">
+        <p class="pricing-card__label">4 Sessions</p>
+        <p class="pricing-card__price">$260</p>
+        <p class="pricing-card__per">$65 / session</p>
+        <p class="pricing-card__detail">Build real momentum over a focused block.</p>
+        <a href="{{ booking.pt4 }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Book</a>
+      </div>
+      <div class="pricing-card">
+        <p class="pricing-card__label">8 Sessions</p>
+        <p class="pricing-card__price">$520</p>
+        <p class="pricing-card__per">$65 / session</p>
+        <p class="pricing-card__detail">Two months of consistent weekly training.</p>
+        <a href="{{ booking.pt8 }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Book</a>
+      </div>
+      <div class="pricing-card">
+        <p class="pricing-card__label">12 Sessions</p>
+        <p class="pricing-card__price">$780</p>
+        <p class="pricing-card__per">$65 / session</p>
+        <p class="pricing-card__detail">Commit to the process. See real transformation.</p>
+        <a href="{{ booking.pt12 }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Book</a>
+      </div>
+    </div>
+    <p style="text-align:center; color:var(--text-muted); font-size:0.875rem; margin-top:1.5rem; font-family:'Inter',sans-serif;">
+      <a href="/personal-training.html" style="color:var(--green);">Learn more about personal training →</a>
+    </p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- NUTRITION -->
+<section style="padding:clamp(4rem,8vw,7rem) var(--gutter); background:#000;" aria-labelledby="plans-nutrition-heading">
+  <div style="max-width:700px; margin:0 auto; text-align:center;">
+    <div style="margin-bottom:clamp(2rem,4vw,3.5rem);">
+      <span class="section-label">Nutrition Consults</span>
+      <h2 class="section-title" id="plans-nutrition-heading">Eat to perform</h2>
+      <p class="section-desc" style="margin:0 auto;">Personalized plans from certified nutrition coaches. No fads, no gimmicks.</p>
+    </div>
+    <div class="pricing-grid pricing-grid--2">
+      <div class="pricing-card pricing-card--featured">
+        <p class="pricing-card__label">Initial Consult</p>
+        <p class="pricing-card__price">$150</p>
+        <p class="pricing-card__per">evaluation + plan</p>
+        <p class="pricing-card__detail">Full assessment and personalized nutrition plan.</p>
+        <a href="{{ booking.nutritionInitial }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Book</a>
+      </div>
+      <div class="pricing-card">
+        <p class="pricing-card__label">Follow-Up</p>
+        <p class="pricing-card__price">$75</p>
+        <p class="pricing-card__per">per adjustment</p>
+        <p class="pricing-card__detail">Plan check-in and adjustments as you progress.</p>
+        <a href="{{ booking.nutritionFollowup }}" target="_blank" rel="noopener" class="btn btn--primary btn--full">Book</a>
+      </div>
+    </div>
+    <p style="color:var(--text-muted); font-size:0.875rem; margin-top:1.5rem; font-family:'Inter',sans-serif;">
+      <a href="/nutrition-consult.html" style="color:var(--green);">Learn more about nutrition consults →</a>
+    </p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- FAQ -->
+<section style="padding:clamp(4rem,8vw,7rem) var(--gutter); background:var(--dark);" aria-labelledby="plans-faq-heading">
+  <div style="max-width:720px; margin:0 auto;">
+    <span class="section-label">Common Questions</span>
+    <h2 class="section-title" id="plans-faq-heading">Quick answers</h2>
+
+    <div style="margin-top:2.5rem; border-top:1px solid var(--dark-border);">
+      <div style="padding:1.75rem 0; border-bottom:1px solid var(--dark-border);">
+        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.4rem; font-weight:700; color:var(--white); margin-bottom:0.75rem;">Can I do group classes and personal training together?</h3>
+        <p style="color:var(--text-muted); line-height:1.78; font-family:'Inter',sans-serif; font-size:0.9375rem;">Yes — and many members do exactly that. Group classes are great for conditioning and community; personal training is great for focused skill work. Your coach can help you build a schedule that combines both effectively.</p>
+      </div>
+      <div style="padding:1.75rem 0; border-bottom:1px solid var(--dark-border);">
+        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.4rem; font-weight:700; color:var(--white); margin-bottom:0.75rem;">Do I need to be in shape before starting?</h3>
+        <p style="color:var(--text-muted); line-height:1.78; font-family:'Inter',sans-serif; font-size:0.9375rem;">Absolutely not. Every service here — classes, personal training, nutrition — is designed to meet you where you are. Rosemary and the team have worked with complete beginners many times. The only requirement is showing up.</p>
+      </div>
+    </div>
+
+    <p style="color:var(--text-muted); font-size:0.9rem; margin-top:2rem; font-family:'Inter',sans-serif;">
+      Have a question that isn't covered? <a href="/#contact-us" style="color:var(--green);">Send us a message →</a>
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section has-grain">
+  <h2 class="cta-section__title">Not sure where to start?</h2>
+  <p class="cta-section__desc">We're happy to help you find the right plan. Reach out — no sales pressure, just honest answers.</p>
+  <div class="cta-section__actions">
+    <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Book Now</a>
+    <a href="/#contact-us" class="cta-sublink">Send us a message <span aria-hidden="true">→</span></a>
+  </div>
+</section>

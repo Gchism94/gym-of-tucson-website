@@ -1,0 +1,26 @@
+module.exports = {
+  name: "The Gym of Tucson",
+  tagline: "Better Every Day",
+  url: "https://www.gymoftucson.com",
+  phone: "520-965-8962",
+  phoneHref: "tel:+15209658962",
+  email: "rosemary@thegymoftucson.com",
+  address: {
+    street: "4140 W Ina Rd, Suite 118",
+    city: "Tucson",
+    state: "AZ",
+    zip: "85741",
+    full: "4140 W Ina Rd, Suite 118, Tucson, AZ 85741",
+    mapsUrl: "https://www.google.com/maps/place/The+Gym+of+Tucson/@32.3386859,-111.0564662,17z/data=!3m1!4b1!4m6!3m5!1s0x86d60b1c4e751df5:0x2a94a77555c9c73!8m2!3d32.3386814!4d-111.0538859!16s%2Fg%2F11h2q49j89?entry=ttu",
+  },
+  social: {
+    instagram: "https://www.instagram.com/thegymoftucson/",
+    facebook: "https://www.facebook.com/thegymoftucson",
+  },
+  booking: "https://www.wellnessliving.com/signup/the_gym_of_tucson-lhtbdh",
+  bookingLogin: "https://www.wellnessliving.com/login/the_gym_of_tucson-lhtbdh",
+  ogImage: "https://www.gymoftucson.com/images/583A3311.webp",
+  gtm: "GTM-WZN5M6H6",
+  ga4: "G-Y50ER4J1S9",
+  year: new Date().getFullYear().toString(),
+};

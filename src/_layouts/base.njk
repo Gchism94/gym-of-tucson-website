@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.njk" %}
+<body id="{{ bodyId | default('page') }}" class="bg-dark text-white overflow-x-hidden">
+
+  <!-- GTM noscript -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id={{ site.gtm }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  {% include "nav.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  {% if showPopup !== false %}
+    {% include "popup.njk" %}
+  {% endif %}
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+
+  <!-- App JS -->
+  <script src="/assets/js/app.js" defer></script>
+
+  <script>
+    window.onbeforeunload = function () {
+      sessionStorage.setItem('navigatedFromSite', true);
+    };
+  </script>
+</body>
+</html>
