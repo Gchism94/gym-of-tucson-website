@@ -16,4 +16,8 @@ module.exports = {
   // Nutrition (appointment flow) — initial and follow-up intentionally share one page
   nutritionInitial:  "https://www.wellnessliving.com/rs/appointment-start.html?id_class_tab=3&id_mode=1&k_business=747687&k_class_tab=74091&k_service=300068",
   nutritionFollowup: "https://www.wellnessliving.com/rs/appointment-start.html?id_class_tab=3&id_mode=1&k_business=747687&k_class_tab=74091&k_service=300068",
+
+  // Events
+  muttsAndMuscles:      "https://www.wellnessliving.com/rs/event/the_gym_of_tucson-lhtbdh?k_class=980986",
+  muttsAndMusclesFlyer: "/events/mutts-and-muscles/",
 };

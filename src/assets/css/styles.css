@@ -21,6 +21,7 @@
   --gutter: clamp(1.5rem, 5vw, 5rem);
   --container: 1320px;
   --nav-height: 80px;
+  --promo-h: 0px;
 }
 
 /* ================================================
@@ -42,6 +43,8 @@ body {
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Push all content below the fixed event banner (0 when no banner) */
+  padding-top: var(--promo-h);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -240,9 +243,18 @@ img, video { max-width: 100%; height: auto; display: block; }
 /* ================================================
    NAVBAR
    ================================================ */
-.navbar {
+/* Event announcement banner — fixed above the header, height tracked via --promo-h */
+#event-banner {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100; /* above .navbar (1000) */
+}
+
+.navbar {
+  position: fixed;
+  top: var(--promo-h);
   left: 0;
   width: 100%;
   z-index: 1000;

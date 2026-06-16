@@ -1,0 +1,67 @@
+<div id="event-banner" role="region" aria-label="Event announcement" class="bg-[#2E6A3A] text-white">
+  <div class="mx-auto flex max-w-7xl flex-col items-center gap-1 px-10 py-2 text-center sm:flex-row sm:justify-center sm:gap-3">
+    <p class="text-sm leading-snug sm:text-base">
+      <span class="font-semibold">Mutts &amp; Muscles Fitness Challenge</span>
+      <span class="hidden sm:inline"> — </span>
+      <span class="block sm:inline">Sat, Aug 22 · benefiting Sol Dog Lodge</span>
+    </p>
+    <span class="flex items-center gap-3 sm:gap-4">
+      <a href="{{ booking.muttsAndMuscles }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="whitespace-nowrap font-semibold underline underline-offset-2 hover:text-white/80">
+        Register →
+      </a>
+      <a href="{{ booking.muttsAndMusclesFlyer }}"
+         class="whitespace-nowrap font-semibold underline underline-offset-2 hover:text-white/80">
+        View flyer
+      </a>
+    </span>
+  </div>
+
+  <button type="button"
+          id="event-banner-dismiss"
+          aria-label="Dismiss announcement"
+          class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-xl leading-none hover:text-white/80">
+    &times;
+  </button>
+</div>
+
+<script>
+  (function () {
+    var banner = document.getElementById('event-banner');
+    if (!banner) return;
+
+    var root = document.documentElement;
+    var KEY = 'muttsAndMuscles_dismissed';
+    var EXPIRES = new Date('2026-08-23T23:59:59');
+
+    // Measure the banner and offset the fixed header + content beneath it.
+    function syncH() { root.style.setProperty('--promo-h', banner.offsetHeight + 'px'); }
+    // Hide the banner and remove the offset so layout snaps back with no gap.
+    function hide() {
+      banner.style.display = 'none';
+      root.style.setProperty('--promo-h', '0px');
+    }
+
+    // Self-expire after the event, regardless of dismissal state.
+    if (new Date() > EXPIRES) { hide(); return; }
+
+    try {
+      if (localStorage.getItem(KEY) === 'true') { hide(); return; }
+    } catch (e) { /* localStorage unavailable — show banner */ }
+
+    // Banner is shown: apply the offset now and keep it in sync as the
+    // banner text wraps to more lines on smaller viewports.
+    syncH();
+    window.addEventListener('resize', syncH);
+
+    var btn = document.getElementById('event-banner-dismiss');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        try { localStorage.setItem(KEY, 'true'); } catch (e) {}
+        hide();
+      });
+    }
+  })();
+</script>
