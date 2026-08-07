@@ -1,7 +1,7 @@
 // src/_data/booking.js
 module.exports = {
   // Class memberships
-  freeClasses5:      "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=1&k_id=3911966",
+  freeClasses3:      "https://www.wellnessliving.com/rs/catalog-payment.html?k_id=4242694&sid_purchase_item=promotion&id_sale=1&k_business=747687",
   unlimited3mo:      "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=1&k_id=3911931",
   unlimited6mo:      "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=1&k_id=3911904",
   unlimited12mo:     "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=1&k_id=3911889",
