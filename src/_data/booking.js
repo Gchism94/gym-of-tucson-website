@@ -7,6 +7,12 @@ module.exports = {
   unlimited12mo:     "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=1&k_id=3911889",
   openGymMembership: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=1&k_id=3916489",
 
+  // Open gym passes
+  opendropin:     "https://www.wellnessliving.com/rs/catalog-payment.html?k_id=4247481&sid_purchase_item=promotion&id_sale=1&k_business=747687",
+  openprogram:    "https://www.wellnessliving.com/rs/catalog-payment.html?k_id=4226847&sid_purchase_item=promotion&id_sale=1&k_business=747687",
+  openunlimited:  "https://www.wellnessliving.com/rs/catalog-payment.html?k_id=3916489&sid_purchase_item=promotion&id_sale=1&k_business=747687",
+
+
   // Personal training
   pt1:  "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=2&k_id=3911830",
   pt4:  "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=2&k_id=3905804",
