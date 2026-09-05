@@ -26,4 +26,7 @@ module.exports = {
   // Events
   muttsAndMuscles:      "https://www.wellnessliving.com/rs/event/the_gym_of_tucson-lhtbdh?k_class=980986",
   muttsAndMusclesFlyer: "/events/mutts-and-muscles/",
+  pumpkinToss:          "/events/marana-pumpkin-toss/",
+  pumpkinTossFlyer:     "/images/marana-pumpkin-toss-flyer.webp",
+  pumpkinTossRegistration: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=747687&id_sale=3&k_id=1016253",
 };

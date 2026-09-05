@@ -1,20 +1,20 @@
-<div id="event-banner" role="region" aria-label="Event announcement" class="bg-[#2E6A3A] text-white">
+<div id="event-banner" role="region" aria-label="Event announcement" class="bg-[#D9520B] text-white">
   <div class="mx-auto flex max-w-7xl flex-col items-center gap-1 px-10 py-2 text-center sm:flex-row sm:justify-center sm:gap-3">
     <p class="text-sm leading-snug sm:text-base">
-      <span class="font-semibold">Mutts &amp; Muscles Fitness Challenge</span>
+      <span class="font-semibold">The Great Marana Pumpkin Toss</span>
       <span class="hidden sm:inline"> — </span>
-      <span class="block sm:inline">Sat, Aug 22 · benefiting Sol Dog Lodge</span>
+      <span class="block sm:inline">Sat, Oct 17 · 12 PM · benefiting Marana Food Bank</span>
     </p>
     <span class="flex items-center gap-3 sm:gap-4">
-      <a href="{{ booking.muttsAndMuscles }}"
+      <a href="{{ booking.pumpkinTossRegistration }}"
          target="_blank"
          rel="noopener noreferrer"
          class="whitespace-nowrap font-semibold underline underline-offset-2 hover:text-white/80">
         Register →
       </a>
-      <a href="{{ booking.muttsAndMusclesFlyer }}"
+      <a href="{{ booking.pumpkinToss }}"
          class="whitespace-nowrap font-semibold underline underline-offset-2 hover:text-white/80">
-        View flyer
+        Event details
       </a>
     </span>
   </div>
@@ -33,8 +33,8 @@
     if (!banner) return;
 
     var root = document.documentElement;
-    var KEY = 'muttsAndMuscles_dismissed';
-    var EXPIRES = new Date('2026-08-23T23:59:59');
+    var KEY = 'pumpkinToss2026_dismissed';
+    var EXPIRES = new Date('2026-10-18T06:59:59Z');
 
     // Measure the banner and offset the fixed header + content beneath it.
     function syncH() { root.style.setProperty('--promo-h', banner.offsetHeight + 'px'); }
